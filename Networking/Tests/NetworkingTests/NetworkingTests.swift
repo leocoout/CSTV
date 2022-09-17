@@ -29,6 +29,17 @@ final class NetworkingTests: XCTestCase {
             return
         }
     }
+    
+    func test_request_withValidURL_shouldCallDataForRequest() async {
+        urlFactorySpy.makeToBeReturned = URLRequest(url: .forcedURL())
+        
+        _ = await sut.request(
+            NetworkRequestFixture(),
+            responseModel: ResponseModelDummy.self
+        )
+        
+        XCTAssertTrue(urlSessionSpy.dataForRequestCalled)
+    }
 }
 
 fileprivate class ResponseModelDummy: Codable {}

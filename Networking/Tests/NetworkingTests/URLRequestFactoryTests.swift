@@ -12,7 +12,7 @@ final class URLRequestFactoryTests: XCTestCase {
         XCTAssertNil(expectedURLRequest)
     }
 
-    func test_make_withRequest_whenURLIsValid_shouldReturnCorrectURL() {
+    func test_make_withRequest_whenURLIsValid_shouldReturnCorrectURLRequest() {
         let networkRequest = NetworkRequestFixture(
             baseUrl: "teste.com",
             path: "/path",
@@ -21,6 +21,20 @@ final class URLRequestFactoryTests: XCTestCase {
         
         let expectedURL = sut.make(from: networkRequest)
     
-        XCTAssertEqual(expectedURL?.description, "https://teste.com/path")
+        XCTAssertEqual(expectedURL?.url?.description, "https://teste.com/path")
+    }
+    
+    func test_make_withValidURL_ifContainsHeader_shouldReturnCorrectURLRequest() {
+        let networkRequest = NetworkRequestFixture(
+            baseUrl: "teste.com",
+            path: "/path",
+            method: .get,
+            header: ["test header": "value"]
+        )
+        
+        let expectedURLRequest = sut.make(from: networkRequest)
+    
+        XCTAssertEqual(expectedURLRequest?.allHTTPHeaderFields?["test header"], "value")
+        XCTAssertEqual(expectedURLRequest?.description, "https://teste.com/path")
     }
 }

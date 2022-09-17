@@ -5,7 +5,7 @@ public struct NetworkRequestFixture: NetworkRequest {
     public let baseUrl: String
     public let path: String
     public let method: NetworkRequestMethod
-    public var header: [String: String]?
+    public var header: [String: String]
     public let body: [String: String]?
     
     public init(
@@ -13,7 +13,7 @@ public struct NetworkRequestFixture: NetworkRequest {
         baseUrl: String = "url.com",
         path: String = "path",
         method: NetworkRequestMethod = .post,
-        header: [String : String]? = nil,
+        header: [String : String] = [:],
         body: [String : String]? = nil
     ) {
         self.scheme = scheme
