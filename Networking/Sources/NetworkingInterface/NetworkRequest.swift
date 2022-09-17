@@ -3,7 +3,7 @@ public protocol NetworkRequest {
     var baseUrl: String { get }
     var path: String { get }
     var method: NetworkRequestMethod { get }
-    var header: [String: String]? { get }
+    var header: [String: String]? { get set }
     var body: [String: String]? { get }
 }
 

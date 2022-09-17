@@ -5,7 +5,7 @@ public struct NetworkRequestFixture: NetworkRequest {
     public let baseUrl: String
     public let path: String
     public let method: NetworkRequestMethod
-    public let header: [String: String]?
+    public var header: [String: String]?
     public let body: [String: String]?
     
     public init(

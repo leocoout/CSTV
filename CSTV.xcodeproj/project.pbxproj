@@ -21,12 +21,16 @@
 		FD634DA028D63F1400D18453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD634D9F28D63F1400D18453 /* Assets.xcassets */; };
 		FD634DA328D63F1400D18453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD634DA128D63F1400D18453 /* LaunchScreen.storyboard */; };
 		FD634DAE28D63F1500D18453 /* CSTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DAD28D63F1500D18453 /* CSTVTests.swift */; };
-		FD634DCD28D6457F00D18453 /* GetTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */; };
-		FD634DCF28D6458E00D18453 /* SetTokenToKeychainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */; };
+		FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCC28D6457F00D18453 /* TokenRepository.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
 		FDDED5B628D6609700EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B528D6609700EE12B2 /* NetworkingInterfaceTestUtils */; };
 		FDDED5B828D6609F00EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B728D6609F00EE12B2 /* NetworkingInterfaceTestUtils */; };
+		FDDED5BD28D6673400EE12B2 /* GameListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5BC28D6673400EE12B2 /* GameListService.swift */; };
+		FDDED5C028D6692300EE12B2 /* GameListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5BF28D6692300EE12B2 /* GameListResponse.swift */; };
+		FDDED5C328D66BE000EE12B2 /* GameListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C228D66BE000EE12B2 /* GameListRepository.swift */; };
+		FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */; };
+		FDDED5CA28D66D9F00EE12B2 /* NetworkRequestHomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C928D66D9F00EE12B2 /* NetworkRequestHomeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +61,12 @@
 		FD634DA428D63F1400D18453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD634DA928D63F1500D18453 /* CSTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD634DAD28D63F1500D18453 /* CSTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVTests.swift; sourceTree = "<group>"; };
-		FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokenUseCase.swift; sourceTree = "<group>"; };
-		FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTokenToKeychainUseCase.swift; sourceTree = "<group>"; };
+		FD634DCC28D6457F00D18453 /* TokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
+		FDDED5BC28D6673400EE12B2 /* GameListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListService.swift; sourceTree = "<group>"; };
+		FDDED5BF28D6692300EE12B2 /* GameListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListResponse.swift; sourceTree = "<group>"; };
+		FDDED5C228D66BE000EE12B2 /* GameListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListRepository.swift; sourceTree = "<group>"; };
+		FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesRequest.swift; sourceTree = "<group>"; };
+		FDDED5C928D66D9F00EE12B2 /* NetworkRequestHomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestHomeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 		FD5851D928D654DE00B9ACC9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FD634DCC28D6457F00D18453 /* TokenRepository.swift */,
 				FD5851DA28D654E500B9ACC9 /* KeychainProvider.swift */,
 			);
 			path = Data;
@@ -167,6 +176,7 @@
 		FD634D9528D63F1200D18453 /* CSTV */ = {
 			isa = PBXGroup;
 			children = (
+				FDDED5B928D6670A00EE12B2 /* Modules */,
 				FD634DCA28D6456300D18453 /* Security */,
 				FD634D9628D63F1200D18453 /* AppDelegate.swift */,
 				FD634D9828D63F1200D18453 /* SceneDelegate.swift */,
@@ -192,18 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				FD5851D928D654DE00B9ACC9 /* Data */,
-				FD634DCB28D6456E00D18453 /* Domain */,
 			);
 			path = Security;
-			sourceTree = "<group>";
-		};
-		FD634DCB28D6456E00D18453 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */,
-				FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */,
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -211,6 +211,50 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDDED5B928D6670A00EE12B2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5BA28D6672500EE12B2 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FDDED5BA28D6672500EE12B2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5BB28D6672B00EE12B2 /* Data */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FDDED5BB28D6672B00EE12B2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5C428D66C6C00EE12B2 /* Requests */,
+				FDDED5BE28D6691900EE12B2 /* Entities */,
+				FDDED5BC28D6673400EE12B2 /* GameListService.swift */,
+				FDDED5C228D66BE000EE12B2 /* GameListRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FDDED5BE28D6691900EE12B2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5BF28D6692300EE12B2 /* GameListResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FDDED5C428D66C6C00EE12B2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */,
+				FDDED5C928D66D9F00EE12B2 /* NetworkRequestHomeExtension.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,11 +370,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDED5BD28D6673400EE12B2 /* GameListService.swift in Sources */,
+				FDDED5CA28D66D9F00EE12B2 /* NetworkRequestHomeExtension.swift in Sources */,
 				FD634D9B28D63F1200D18453 /* ViewController.swift in Sources */,
+				FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */,
 				FD634D9728D63F1200D18453 /* AppDelegate.swift in Sources */,
 				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
-				FD634DCD28D6457F00D18453 /* GetTokenUseCase.swift in Sources */,
-				FD634DCF28D6458E00D18453 /* SetTokenToKeychainUseCase.swift in Sources */,
+				FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */,
+				FDDED5C028D6692300EE12B2 /* GameListResponse.swift in Sources */,
+				FDDED5C328D66BE000EE12B2 /* GameListRepository.swift in Sources */,
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
