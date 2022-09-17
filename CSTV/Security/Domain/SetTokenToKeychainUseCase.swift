@@ -1,14 +1,12 @@
-import SimpleKeychain
-
 protocol SetTokenToKeychainUseCaseProtocol {
-    func execute(_ token: String, for key: String) 
+    func execute(_ token: String, for key: String)
 }
 
 final class SetTokenToKeychainUseCase: SetTokenToKeychainUseCaseProtocol {
     
-    private let keychainProvider: SimpleKeychain
+    private let keychainProvider: KeychainProviderProtocol
     
-    init(keychainProvider: SimpleKeychain) {
+    init(keychainProvider: KeychainProviderProtocol) {
         self.keychainProvider = keychainProvider
     }
     

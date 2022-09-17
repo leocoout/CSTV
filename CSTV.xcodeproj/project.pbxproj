@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD5851CD28D64CD700B9ACC9 /* SimpleKeychain in Frameworks */ = {isa = PBXBuildFile; productRef = FD5851CC28D64CD700B9ACC9 /* SimpleKeychain */; };
+		FD5851D128D650E200B9ACC9 /* GetTokenUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D028D650E200B9ACC9 /* GetTokenUseCaseTests.swift */; };
+		FD5851D328D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D228D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift */; };
+		FD5851D628D651B900B9ACC9 /* GetTokenUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D528D651B900B9ACC9 /* GetTokenUseCaseSpy.swift */; };
+		FD5851D828D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D728D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift */; };
+		FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851DA28D654E500B9ACC9 /* KeychainProvider.swift */; };
+		FD5851DE28D655A800B9ACC9 /* KeychainProviderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851DD28D655A800B9ACC9 /* KeychainProviderSpy.swift */; };
 		FD634D9728D63F1200D18453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634D9628D63F1200D18453 /* AppDelegate.swift */; };
 		FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634D9828D63F1200D18453 /* SceneDelegate.swift */; };
 		FD634D9B28D63F1200D18453 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634D9A28D63F1200D18453 /* ViewController.swift */; };
@@ -14,6 +21,8 @@
 		FD634DA028D63F1400D18453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD634D9F28D63F1400D18453 /* Assets.xcassets */; };
 		FD634DA328D63F1400D18453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD634DA128D63F1400D18453 /* LaunchScreen.storyboard */; };
 		FD634DAE28D63F1500D18453 /* CSTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DAD28D63F1500D18453 /* CSTVTests.swift */; };
+		FD634DCD28D6457F00D18453 /* GetTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */; };
+		FD634DCF28D6458E00D18453 /* SetTokenToKeychainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD5851D028D650E200B9ACC9 /* GetTokenUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokenUseCaseTests.swift; sourceTree = "<group>"; };
+		FD5851D228D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTokenToKeychainUseCaseTests.swift; sourceTree = "<group>"; };
+		FD5851D528D651B900B9ACC9 /* GetTokenUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokenUseCaseSpy.swift; sourceTree = "<group>"; };
+		FD5851D728D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTokenToKeychainUseCaseSpy.swift; sourceTree = "<group>"; };
+		FD5851DA28D654E500B9ACC9 /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
+		FD5851DD28D655A800B9ACC9 /* KeychainProviderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProviderSpy.swift; sourceTree = "<group>"; };
 		FD634D9328D63F1200D18453 /* CSTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD634D9628D63F1200D18453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD634D9828D63F1200D18453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +52,8 @@
 		FD634DA428D63F1400D18453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD634DA928D63F1500D18453 /* CSTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD634DAD28D63F1500D18453 /* CSTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVTests.swift; sourceTree = "<group>"; };
+		FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokenUseCase.swift; sourceTree = "<group>"; };
+		FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTokenToKeychainUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5851CD28D64CD700B9ACC9 /* SimpleKeychain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +75,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD5851CE28D650D100B9ACC9 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				FD5851DC28D655A100B9ACC9 /* Data */,
+				FD5851CF28D650D800B9ACC9 /* Domain */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		FD5851CF28D650D800B9ACC9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FD5851D428D6510700B9ACC9 /* Doubles */,
+				FD5851D028D650E200B9ACC9 /* GetTokenUseCaseTests.swift */,
+				FD5851D228D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FD5851D428D6510700B9ACC9 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				FD5851D528D651B900B9ACC9 /* GetTokenUseCaseSpy.swift */,
+				FD5851D728D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		FD5851D928D654DE00B9ACC9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FD5851DA28D654E500B9ACC9 /* KeychainProvider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FD5851DC28D655A100B9ACC9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FD5851DF28D655AE00B9ACC9 /* Doubles */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FD5851DF28D655AE00B9ACC9 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				FD5851DD28D655A800B9ACC9 /* KeychainProviderSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
 		FD634D8A28D63F1100D18453 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +148,7 @@
 		FD634D9528D63F1200D18453 /* CSTV */ = {
 			isa = PBXGroup;
 			children = (
+				FD634DCA28D6456300D18453 /* Security */,
 				FD634D9628D63F1200D18453 /* AppDelegate.swift */,
 				FD634D9828D63F1200D18453 /* SceneDelegate.swift */,
 				FD634D9A28D63F1200D18453 /* ViewController.swift */,
@@ -92,9 +163,28 @@
 		FD634DAC28D63F1500D18453 /* CSTVTests */ = {
 			isa = PBXGroup;
 			children = (
+				FD5851CE28D650D100B9ACC9 /* Security */,
 				FD634DAD28D63F1500D18453 /* CSTVTests.swift */,
 			);
 			path = CSTVTests;
+			sourceTree = "<group>";
+		};
+		FD634DCA28D6456300D18453 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				FD5851D928D654DE00B9ACC9 /* Data */,
+				FD634DCB28D6456E00D18453 /* Domain */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		FD634DCB28D6456E00D18453 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */,
+				FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +203,9 @@
 			dependencies = (
 			);
 			name = CSTV;
+			packageProductDependencies = (
+				FD5851CC28D64CD700B9ACC9 /* SimpleKeychain */,
+			);
 			productName = CSTV;
 			productReference = FD634D9328D63F1200D18453 /* CSTV.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +256,9 @@
 				Base,
 			);
 			mainGroup = FD634D8A28D63F1100D18453;
+			packageReferences = (
+				FD5851CB28D64CD700B9ACC9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
+			);
 			productRefGroup = FD634D9428D63F1200D18453 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,6 +296,9 @@
 			files = (
 				FD634D9B28D63F1200D18453 /* ViewController.swift in Sources */,
 				FD634D9728D63F1200D18453 /* AppDelegate.swift in Sources */,
+				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
+				FD634DCD28D6457F00D18453 /* GetTokenUseCase.swift in Sources */,
+				FD634DCF28D6458E00D18453 /* SetTokenToKeychainUseCase.swift in Sources */,
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5851D128D650E200B9ACC9 /* GetTokenUseCaseTests.swift in Sources */,
+				FD5851DE28D655A800B9ACC9 /* KeychainProviderSpy.swift in Sources */,
+				FD5851D628D651B900B9ACC9 /* GetTokenUseCaseSpy.swift in Sources */,
 				FD634DAE28D63F1500D18453 /* CSTVTests.swift in Sources */,
+				FD5851D328D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift in Sources */,
+				FD5851D828D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +587,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD5851CB28D64CD700B9ACC9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/SimpleKeychain.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD5851CC28D64CD700B9ACC9 /* SimpleKeychain */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD5851CB28D64CD700B9ACC9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */;
+			productName = SimpleKeychain;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD634D8B28D63F1100D18453 /* Project object */;
 }

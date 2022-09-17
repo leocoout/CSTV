@@ -1,8 +1,13 @@
-//
-//  SetTokenToKeychainUseCaseSpy.swift
-//  CSTVTests
-//
-//  Created by Leonardo Coutinho Santos on 17/09/22.
-//
+@testable import CSTV
 
-import Foundation
+final class SetTokenToKeychainUseCaseSpy: SetTokenToKeychainUseCaseProtocol {
+    private(set) var executeCalled: Bool = false
+    private(set) var tokenPassed: String?
+    private(set) var keyPassed: String?
+
+    func execute(_ token: String, for key: String) {
+        executeCalled = true
+        tokenPassed = token
+        keyPassed = key
+    }
+}
