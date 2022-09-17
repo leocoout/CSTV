@@ -1,0 +1,25 @@
+public protocol NetworkRequest {
+    var scheme: String { get }
+    var baseUrl: String { get }
+    var path: String { get }
+    var method: NetworkRequestMethod { get }
+    var header: [String: String]? { get }
+    var body: [String: String]? { get }
+}
+
+public extension NetworkRequest {
+    var scheme: String {
+        "https"
+    }
+    
+    var baseUrl: String {
+        "hf-mobile-app.s3-eu-west-1.amazonaws.com"
+    }
+}
+
+public enum NetworkRequestMethod: String {
+    case delete = "DELETE"
+    case get = "GET"
+    case put = "PUT"
+    case post = "POST"
+}
