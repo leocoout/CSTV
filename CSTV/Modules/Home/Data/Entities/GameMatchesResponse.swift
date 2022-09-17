@@ -1,4 +1,4 @@
-struct GameListResponse: Codable {
+struct GameMatchesResponse: Codable {
     let id: Int
     let beginAt: String
     let endAt: String
