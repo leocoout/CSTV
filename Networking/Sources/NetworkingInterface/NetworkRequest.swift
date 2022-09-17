@@ -11,10 +11,6 @@ public extension NetworkRequest {
     var scheme: String {
         "https"
     }
-    
-    var baseUrl: String {
-        "hf-mobile-app.s3-eu-west-1.amazonaws.com"
-    }
 }
 
 public enum NetworkRequestMethod: String {
