@@ -23,6 +23,10 @@
 		FD634DAE28D63F1500D18453 /* CSTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DAD28D63F1500D18453 /* CSTVTests.swift */; };
 		FD634DCD28D6457F00D18453 /* GetTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */; };
 		FD634DCF28D6458E00D18453 /* SetTokenToKeychainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */; };
+		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
+		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
+		FDDED5B628D6609700EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B528D6609700EE12B2 /* NetworkingInterfaceTestUtils */; };
+		FDDED5B828D6609F00EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B728D6609F00EE12B2 /* NetworkingInterfaceTestUtils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,7 @@
 		FD5851D728D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTokenToKeychainUseCaseSpy.swift; sourceTree = "<group>"; };
 		FD5851DA28D654E500B9ACC9 /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
 		FD5851DD28D655A800B9ACC9 /* KeychainProviderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProviderSpy.swift; sourceTree = "<group>"; };
+		FD5851E428D6602D00B9ACC9 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		FD634D9328D63F1200D18453 /* CSTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD634D9628D63F1200D18453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD634D9828D63F1200D18453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +66,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDED5B228D6608200EE12B2 /* Networking in Frameworks */,
 				FD5851CD28D64CD700B9ACC9 /* SimpleKeychain in Frameworks */,
+				FDDED5B628D6609700EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */,
+				FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDED5B828D6609F00EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,12 +136,22 @@
 			path = Doubles;
 			sourceTree = "<group>";
 		};
+		FD5851E328D6602D00B9ACC9 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				FD5851E428D6602D00B9ACC9 /* Networking */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		FD634D8A28D63F1100D18453 = {
 			isa = PBXGroup;
 			children = (
+				FD5851E328D6602D00B9ACC9 /* Packages */,
 				FD634D9528D63F1200D18453 /* CSTV */,
 				FD634DAC28D63F1500D18453 /* CSTVTests */,
 				FD634D9428D63F1200D18453 /* Products */,
+				FDDED5B028D6608200EE12B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +206,13 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,6 +231,9 @@
 			name = CSTV;
 			packageProductDependencies = (
 				FD5851CC28D64CD700B9ACC9 /* SimpleKeychain */,
+				FDDED5B128D6608200EE12B2 /* Networking */,
+				FDDED5B328D6608500EE12B2 /* NetworkingInterface */,
+				FDDED5B528D6609700EE12B2 /* NetworkingInterfaceTestUtils */,
 			);
 			productName = CSTV;
 			productReference = FD634D9328D63F1200D18453 /* CSTV.app */;
@@ -224,6 +253,9 @@
 				FD634DAB28D63F1500D18453 /* PBXTargetDependency */,
 			);
 			name = CSTVTests;
+			packageProductDependencies = (
+				FDDED5B728D6609F00EE12B2 /* NetworkingInterfaceTestUtils */,
+			);
 			productName = CSTVTests;
 			productReference = FD634DA928D63F1500D18453 /* CSTVTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -604,6 +636,22 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FD5851CB28D64CD700B9ACC9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */;
 			productName = SimpleKeychain;
+		};
+		FDDED5B128D6608200EE12B2 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		FDDED5B328D6608500EE12B2 /* NetworkingInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkingInterface;
+		};
+		FDDED5B528D6609700EE12B2 /* NetworkingInterfaceTestUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkingInterfaceTestUtils;
+		};
+		FDDED5B728D6609F00EE12B2 /* NetworkingInterfaceTestUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkingInterfaceTestUtils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
