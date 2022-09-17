@@ -14,19 +14,10 @@
 		FD634DA028D63F1400D18453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD634D9F28D63F1400D18453 /* Assets.xcassets */; };
 		FD634DA328D63F1400D18453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD634DA128D63F1400D18453 /* LaunchScreen.storyboard */; };
 		FD634DAE28D63F1500D18453 /* CSTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DAD28D63F1500D18453 /* CSTVTests.swift */; };
-		FD634DB828D63F1500D18453 /* CSTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DB728D63F1500D18453 /* CSTVUITests.swift */; };
-		FD634DBA28D63F1500D18453 /* CSTVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DB928D63F1500D18453 /* CSTVUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		FD634DAA28D63F1500D18453 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FD634D8B28D63F1100D18453 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD634D9228D63F1200D18453;
-			remoteInfo = CSTV;
-		};
-		FD634DB428D63F1500D18453 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD634D8B28D63F1100D18453 /* Project object */;
 			proxyType = 1;
@@ -46,9 +37,6 @@
 		FD634DA428D63F1400D18453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD634DA928D63F1500D18453 /* CSTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD634DAD28D63F1500D18453 /* CSTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVTests.swift; sourceTree = "<group>"; };
-		FD634DB328D63F1500D18453 /* CSTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD634DB728D63F1500D18453 /* CSTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVUITests.swift; sourceTree = "<group>"; };
-		FD634DB928D63F1500D18453 /* CSTVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD634DB028D63F1500D18453 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +62,6 @@
 			children = (
 				FD634D9528D63F1200D18453 /* CSTV */,
 				FD634DAC28D63F1500D18453 /* CSTVTests */,
-				FD634DB628D63F1500D18453 /* CSTVUITests */,
 				FD634D9428D63F1200D18453 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +71,6 @@
 			children = (
 				FD634D9328D63F1200D18453 /* CSTV.app */,
 				FD634DA928D63F1500D18453 /* CSTVTests.xctest */,
-				FD634DB328D63F1500D18453 /* CSTVUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +95,6 @@
 				FD634DAD28D63F1500D18453 /* CSTVTests.swift */,
 			);
 			path = CSTVTests;
-			sourceTree = "<group>";
-		};
-		FD634DB628D63F1500D18453 /* CSTVUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FD634DB728D63F1500D18453 /* CSTVUITests.swift */,
-				FD634DB928D63F1500D18453 /* CSTVUITestsLaunchTests.swift */,
-			);
-			path = CSTVUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +135,6 @@
 			productReference = FD634DA928D63F1500D18453 /* CSTVTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FD634DB228D63F1500D18453 /* CSTVUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD634DC328D63F1500D18453 /* Build configuration list for PBXNativeTarget "CSTVUITests" */;
-			buildPhases = (
-				FD634DAF28D63F1500D18453 /* Sources */,
-				FD634DB028D63F1500D18453 /* Frameworks */,
-				FD634DB128D63F1500D18453 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FD634DB528D63F1500D18453 /* PBXTargetDependency */,
-			);
-			name = CSTVUITests;
-			productName = CSTVUITests;
-			productReference = FD634DB328D63F1500D18453 /* CSTVUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +149,6 @@
 						CreatedOnToolsVersion = 14.0;
 					};
 					FD634DA828D63F1500D18453 = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = FD634D9228D63F1200D18453;
-					};
-					FD634DB228D63F1500D18453 = {
 						CreatedOnToolsVersion = 14.0;
 						TestTargetID = FD634D9228D63F1200D18453;
 					};
@@ -221,7 +169,6 @@
 			targets = (
 				FD634D9228D63F1200D18453 /* CSTV */,
 				FD634DA828D63F1500D18453 /* CSTVTests */,
-				FD634DB228D63F1500D18453 /* CSTVUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +185,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FD634DA728D63F1500D18453 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FD634DB128D63F1500D18453 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,15 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD634DAF28D63F1500D18453 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD634DBA28D63F1500D18453 /* CSTVUITestsLaunchTests.swift in Sources */,
-				FD634DB828D63F1500D18453 /* CSTVUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,11 +219,6 @@
 			isa = PBXTargetDependency;
 			target = FD634D9228D63F1200D18453 /* CSTV */;
 			targetProxy = FD634DAA28D63F1500D18453 /* PBXContainerItemProxy */;
-		};
-		FD634DB528D63F1500D18453 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD634D9228D63F1200D18453 /* CSTV */;
-			targetProxy = FD634DB428D63F1500D18453 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -526,42 +452,6 @@
 			};
 			name = Release;
 		};
-		FD634DC428D63F1500D18453 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34HR7YPNJ4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.leocoout.CSTVUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CSTV;
-			};
-			name = Debug;
-		};
-		FD634DC528D63F1500D18453 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34HR7YPNJ4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.leocoout.CSTVUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CSTV;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,15 +478,6 @@
 			buildConfigurations = (
 				FD634DC128D63F1500D18453 /* Debug */,
 				FD634DC228D63F1500D18453 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FD634DC328D63F1500D18453 /* Build configuration list for PBXNativeTarget "CSTVUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD634DC428D63F1500D18453 /* Debug */,
-				FD634DC528D63F1500D18453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
