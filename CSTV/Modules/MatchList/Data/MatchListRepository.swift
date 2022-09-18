@@ -1,6 +1,6 @@
 import NetworkingInterface
 
-final class MatchListRepository {
+class MatchListRepository {
     private let service: MatchListService
     private let tokenRepository: TokenRepositoryProtocol
     

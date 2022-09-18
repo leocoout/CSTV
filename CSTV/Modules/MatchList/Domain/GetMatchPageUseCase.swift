@@ -6,16 +6,22 @@ protocol GetMatchesForPageUseCaseProtocol {
 
 final class GetMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol {
     private let repository: MatchListRepository
+    private let currentDate: Date
+    
     private var currentPage: Int = 1
     
-    init(repository: MatchListRepository) {
+    init(
+        repository: MatchListRepository,
+        currentDate: Date = .now
+    ) {
         self.repository = repository
+        self.currentDate = currentDate
     }
     
     func execute() async -> Result <[MatchList], MatchListError> {
         let result = await repository.getMatches(
             for: currentPage,
-            beginningAt: Date.now.getFormattedDate(format: .yyyyMMddTHHmmssZ)
+            beginningAt: currentDate.getFormattedDate(format: .yyyyMMddTHHmmssZ)
         )
         
         incrementPage()
@@ -30,7 +36,7 @@ final class GetMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol {
     }
 }
 
-extension GetMatchesForPageUseCase {
+private extension GetMatchesForPageUseCase {
     func incrementPage() {
         currentPage += 1
     }
