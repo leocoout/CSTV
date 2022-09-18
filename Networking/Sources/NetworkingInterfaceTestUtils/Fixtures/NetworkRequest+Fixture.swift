@@ -6,7 +6,7 @@ public struct NetworkRequestFixture: NetworkRequest {
     public let path: String
     public let method: NetworkRequestMethod
     public var header: [String: String]
-    public let body: [String: String]?
+    public let body: [String: Any]?
     
     public init(
         scheme: String = "https",
