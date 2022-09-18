@@ -50,9 +50,13 @@ extension MatchLeagueResponse {
     }
 }
 extension MatchOpponentResponse {
-    static func fixture(opponent: OpponentResponse = .fixture()) -> Self {
+    static func fixture(
+        opponent: OpponentResponse = .fixture(),
+        type: OpponentType = .team
+    ) -> Self {
         .init(
-            opponent: opponent
+            opponent: opponent,
+            type: type
         )
     }
 }
