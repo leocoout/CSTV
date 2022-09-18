@@ -1,7 +1,7 @@
 import NetworkingInterface
 import Foundation
 
-struct GetMatchesRequest: HomeNetworkRequest {
+struct GetMatchesRequest: MatchListNetworkRequest {
     private let token: String
     private let requestPage: Int
     private let beginAt: Date
@@ -24,7 +24,7 @@ struct GetMatchesRequest: HomeNetworkRequest {
         ["authorization": token]
     }
     
-    var parameters: [HomeNetworkRequestBodyKey: Any] {
+    var parameters: [MatchListNetworkRequestBodyKey: Any] {
         [
             .perPage: 10,
             .page: requestPage,

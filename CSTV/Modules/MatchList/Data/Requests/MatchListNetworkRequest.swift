@@ -1,10 +1,10 @@
 import NetworkingInterface
 
-protocol HomeNetworkRequest: NetworkRequest {
-    var parameters: [HomeNetworkRequestBodyKey: Any] { get }
+protocol MatchListNetworkRequest: NetworkRequest {
+    var parameters: [MatchListNetworkRequestBodyKey: Any] { get }
 }
 
-extension HomeNetworkRequest {
+extension MatchListNetworkRequest {
     var baseUrl: String {
         "api.pandascore.co"
     }
@@ -24,7 +24,7 @@ extension HomeNetworkRequest {
     }
 }
 
-enum HomeNetworkRequestBodyKey: String {
+enum MatchListNetworkRequestBodyKey: String {
     case page = "page"
     case perPage = "per_page"
     case beginAt = "begin_at"
