@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FD5851CD28D64CD700B9ACC9 /* SimpleKeychain in Frameworks */ = {isa = PBXBuildFile; productRef = FD5851CC28D64CD700B9ACC9 /* SimpleKeychain */; };
-		FD5851D128D650E200B9ACC9 /* GetTokenUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D028D650E200B9ACC9 /* GetTokenUseCaseTests.swift */; };
-		FD5851D328D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D228D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift */; };
-		FD5851D628D651B900B9ACC9 /* GetTokenUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D528D651B900B9ACC9 /* GetTokenUseCaseSpy.swift */; };
-		FD5851D828D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D728D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift */; };
+		FD5851D128D650E200B9ACC9 /* TokenRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D028D650E200B9ACC9 /* TokenRepositoryTests.swift */; };
+		FD5851D628D651B900B9ACC9 /* TokenRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851D528D651B900B9ACC9 /* TokenRepositorySpy.swift */; };
 		FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851DA28D654E500B9ACC9 /* KeychainProvider.swift */; };
 		FD5851DE28D655A800B9ACC9 /* KeychainProviderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851DD28D655A800B9ACC9 /* KeychainProviderSpy.swift */; };
 		FD634D9728D63F1200D18453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634D9628D63F1200D18453 /* AppDelegate.swift */; };
@@ -20,13 +18,22 @@
 		FD634D9E28D63F1200D18453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD634D9C28D63F1200D18453 /* Main.storyboard */; };
 		FD634DA028D63F1400D18453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD634D9F28D63F1400D18453 /* Assets.xcassets */; };
 		FD634DA328D63F1400D18453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD634DA128D63F1400D18453 /* LaunchScreen.storyboard */; };
-		FD634DAE28D63F1500D18453 /* CSTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DAD28D63F1500D18453 /* CSTVTests.swift */; };
-		FD634DCD28D6457F00D18453 /* GetTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */; };
-		FD634DCF28D6458E00D18453 /* SetTokenToKeychainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */; };
+		FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCC28D6457F00D18453 /* TokenRepository.swift */; };
+		FDC6613D28D6BB2A00234DA7 /* GetMatchesRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6613C28D6BB2A00234DA7 /* GetMatchesRequestTests.swift */; };
+		FDC6614028D6BC0600234DA7 /* Date+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6613F28D6BC0600234DA7 /* Date+Fixture.swift */; };
+		FDC6614228D6BE0F00234DA7 /* MatchListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6614128D6BE0F00234DA7 /* MatchListServiceTests.swift */; };
+		FDC6614528D6BE2100234DA7 /* MatchListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6614428D6BE2100234DA7 /* MatchListRepositoryTests.swift */; };
+		FDC6614728D6BE3500234DA7 /* MatchListSerivceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6614628D6BE3500234DA7 /* MatchListSerivceSpy.swift */; };
+		FDC6614A28D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6614928D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift */; };
+		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
 		FDDED5B628D6609700EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B528D6609700EE12B2 /* NetworkingInterfaceTestUtils */; };
 		FDDED5B828D6609F00EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B728D6609F00EE12B2 /* NetworkingInterfaceTestUtils */; };
+		FDDED5BD28D6673400EE12B2 /* MatchListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5BC28D6673400EE12B2 /* MatchListService.swift */; };
+		FDDED5C028D6692300EE12B2 /* GameMatchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5BF28D6692300EE12B2 /* GameMatchesResponse.swift */; };
+		FDDED5C328D66BE000EE12B2 /* MatchListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C228D66BE000EE12B2 /* MatchListRepository.swift */; };
+		FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FD5851D028D650E200B9ACC9 /* GetTokenUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokenUseCaseTests.swift; sourceTree = "<group>"; };
-		FD5851D228D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTokenToKeychainUseCaseTests.swift; sourceTree = "<group>"; };
-		FD5851D528D651B900B9ACC9 /* GetTokenUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokenUseCaseSpy.swift; sourceTree = "<group>"; };
-		FD5851D728D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTokenToKeychainUseCaseSpy.swift; sourceTree = "<group>"; };
+		FD5851D028D650E200B9ACC9 /* TokenRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepositoryTests.swift; sourceTree = "<group>"; };
+		FD5851D528D651B900B9ACC9 /* TokenRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepositorySpy.swift; sourceTree = "<group>"; };
 		FD5851DA28D654E500B9ACC9 /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
 		FD5851DD28D655A800B9ACC9 /* KeychainProviderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProviderSpy.swift; sourceTree = "<group>"; };
 		FD5851E428D6602D00B9ACC9 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
@@ -56,9 +61,18 @@
 		FD634DA228D63F1400D18453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD634DA428D63F1400D18453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD634DA928D63F1500D18453 /* CSTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD634DAD28D63F1500D18453 /* CSTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVTests.swift; sourceTree = "<group>"; };
-		FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokenUseCase.swift; sourceTree = "<group>"; };
-		FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTokenToKeychainUseCase.swift; sourceTree = "<group>"; };
+		FD634DCC28D6457F00D18453 /* TokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
+		FDC6613C28D6BB2A00234DA7 /* GetMatchesRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesRequestTests.swift; sourceTree = "<group>"; };
+		FDC6613F28D6BC0600234DA7 /* Date+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Fixture.swift"; sourceTree = "<group>"; };
+		FDC6614128D6BE0F00234DA7 /* MatchListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListServiceTests.swift; sourceTree = "<group>"; };
+		FDC6614428D6BE2100234DA7 /* MatchListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListRepositoryTests.swift; sourceTree = "<group>"; };
+		FDC6614628D6BE3500234DA7 /* MatchListSerivceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListSerivceSpy.swift; sourceTree = "<group>"; };
+		FDC6614928D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameMatchesResponse+Fixture.swift"; sourceTree = "<group>"; };
+		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
+		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
+		FDDED5BF28D6692300EE12B2 /* GameMatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMatchesResponse.swift; sourceTree = "<group>"; };
+		FDDED5C228D66BE000EE12B2 /* MatchListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListRepository.swift; sourceTree = "<group>"; };
+		FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				FD5851D428D6510700B9ACC9 /* Doubles */,
-				FD5851D028D650E200B9ACC9 /* GetTokenUseCaseTests.swift */,
-				FD5851D228D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift */,
+				FD5851D028D650E200B9ACC9 /* TokenRepositoryTests.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -106,8 +119,7 @@
 		FD5851D428D6510700B9ACC9 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
-				FD5851D528D651B900B9ACC9 /* GetTokenUseCaseSpy.swift */,
-				FD5851D728D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift */,
+				FD5851D528D651B900B9ACC9 /* TokenRepositorySpy.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -115,6 +127,7 @@
 		FD5851D928D654DE00B9ACC9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FD634DCC28D6457F00D18453 /* TokenRepository.swift */,
 				FD5851DA28D654E500B9ACC9 /* KeychainProvider.swift */,
 			);
 			path = Data;
@@ -167,6 +180,7 @@
 		FD634D9528D63F1200D18453 /* CSTV */ = {
 			isa = PBXGroup;
 			children = (
+				FDDED5B928D6670A00EE12B2 /* Modules */,
 				FD634DCA28D6456300D18453 /* Security */,
 				FD634D9628D63F1200D18453 /* AppDelegate.swift */,
 				FD634D9828D63F1200D18453 /* SceneDelegate.swift */,
@@ -182,8 +196,9 @@
 		FD634DAC28D63F1500D18453 /* CSTVTests */ = {
 			isa = PBXGroup;
 			children = (
+				FDC6613E28D6BBFB00234DA7 /* Extensions */,
+				FDC6613828D6BAA900234DA7 /* Modules */,
 				FD5851CE28D650D100B9ACC9 /* Security */,
-				FD634DAD28D63F1500D18453 /* CSTVTests.swift */,
 			);
 			path = CSTVTests;
 			sourceTree = "<group>";
@@ -192,18 +207,68 @@
 			isa = PBXGroup;
 			children = (
 				FD5851D928D654DE00B9ACC9 /* Data */,
-				FD634DCB28D6456E00D18453 /* Domain */,
 			);
 			path = Security;
 			sourceTree = "<group>";
 		};
-		FD634DCB28D6456E00D18453 /* Domain */ = {
+		FDC6613828D6BAA900234DA7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FD634DCC28D6457F00D18453 /* GetTokenUseCase.swift */,
-				FD634DCE28D6458E00D18453 /* SetTokenToKeychainUseCase.swift */,
+				FDC6613928D6BAC400234DA7 /* MatchList */,
 			);
-			path = Domain;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FDC6613928D6BAC400234DA7 /* MatchList */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6613B28D6BB1700234DA7 /* Data */,
+			);
+			path = MatchList;
+			sourceTree = "<group>";
+		};
+		FDC6613A28D6BB1100234DA7 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6613C28D6BB2A00234DA7 /* GetMatchesRequestTests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		FDC6613B28D6BB1700234DA7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6614828D6C08000234DA7 /* Fixtures */,
+				FDC6614328D6BE1500234DA7 /* Doubles */,
+				FDC6613A28D6BB1100234DA7 /* Requests */,
+				FDC6614128D6BE0F00234DA7 /* MatchListServiceTests.swift */,
+				FDC6614428D6BE2100234DA7 /* MatchListRepositoryTests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FDC6613E28D6BBFB00234DA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6613F28D6BC0600234DA7 /* Date+Fixture.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDC6614328D6BE1500234DA7 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6614628D6BE3500234DA7 /* MatchListSerivceSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		FDC6614828D6C08000234DA7 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6614928D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -211,6 +276,50 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDDED5B928D6670A00EE12B2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5BA28D6672500EE12B2 /* MatchList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FDDED5BA28D6672500EE12B2 /* MatchList */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5BB28D6672B00EE12B2 /* Data */,
+			);
+			path = MatchList;
+			sourceTree = "<group>";
+		};
+		FDDED5BB28D6672B00EE12B2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5C428D66C6C00EE12B2 /* Requests */,
+				FDDED5BE28D6691900EE12B2 /* Entities */,
+				FDDED5BC28D6673400EE12B2 /* MatchListService.swift */,
+				FDDED5C228D66BE000EE12B2 /* MatchListRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FDDED5BE28D6691900EE12B2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5BF28D6692300EE12B2 /* GameMatchesResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FDDED5C428D66C6C00EE12B2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */,
+				FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,11 +435,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDED5BD28D6673400EE12B2 /* MatchListService.swift in Sources */,
 				FD634D9B28D63F1200D18453 /* ViewController.swift in Sources */,
+				FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */,
 				FD634D9728D63F1200D18453 /* AppDelegate.swift in Sources */,
 				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
-				FD634DCD28D6457F00D18453 /* GetTokenUseCase.swift in Sources */,
-				FD634DCF28D6458E00D18453 /* SetTokenToKeychainUseCase.swift in Sources */,
+				FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */,
+				FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */,
+				FDDED5C028D6692300EE12B2 /* GameMatchesResponse.swift in Sources */,
+				FDDED5C328D66BE000EE12B2 /* MatchListRepository.swift in Sources */,
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,12 +452,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5851D128D650E200B9ACC9 /* GetTokenUseCaseTests.swift in Sources */,
+				FDC6613D28D6BB2A00234DA7 /* GetMatchesRequestTests.swift in Sources */,
+				FDC6614228D6BE0F00234DA7 /* MatchListServiceTests.swift in Sources */,
+				FDC6614728D6BE3500234DA7 /* MatchListSerivceSpy.swift in Sources */,
+				FD5851D128D650E200B9ACC9 /* TokenRepositoryTests.swift in Sources */,
+				FDC6614028D6BC0600234DA7 /* Date+Fixture.swift in Sources */,
 				FD5851DE28D655A800B9ACC9 /* KeychainProviderSpy.swift in Sources */,
-				FD5851D628D651B900B9ACC9 /* GetTokenUseCaseSpy.swift in Sources */,
-				FD634DAE28D63F1500D18453 /* CSTVTests.swift in Sources */,
-				FD5851D328D650ED00B9ACC9 /* SetTokenToKeychainUseCaseTests.swift in Sources */,
-				FD5851D828D651C100B9ACC9 /* SetTokenToKeychainUseCaseSpy.swift in Sources */,
+				FDC6614528D6BE2100234DA7 /* MatchListRepositoryTests.swift in Sources */,
+				FDC6614A28D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift in Sources */,
+				FD5851D628D651B900B9ACC9 /* TokenRepositorySpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

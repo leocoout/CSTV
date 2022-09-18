@@ -3,8 +3,8 @@ public protocol NetworkRequest {
     var baseUrl: String { get }
     var path: String { get }
     var method: NetworkRequestMethod { get }
-    var header: [String: String]? { get }
-    var body: [String: String]? { get }
+    var header: [String: String] { get }
+    var body: [String: Any]? { get }
 }
 
 public extension NetworkRequest {

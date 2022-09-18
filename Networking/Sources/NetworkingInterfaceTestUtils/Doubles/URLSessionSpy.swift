@@ -16,4 +16,15 @@ public final class URLSessionSpy: URLSessionProtocol {
         return dataToBeReturned
     }
     
+    public private(set) var dataForRequestCalled: Bool = false
+    public private(set) var dataForRequestPassed: URLRequest?
+    public private(set) var dataForRequestDelegatePassed: URLSessionTaskDelegate?
+    public var dataForRequestToBeReturned: (Data, URLResponse) = (Data(), URLResponse())
+    
+    public func data(for request: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse) {
+        dataForRequestCalled = true
+        dataForRequestPassed = request
+        dataForRequestDelegatePassed = delegate
+        return dataForRequestToBeReturned
+    }
 }

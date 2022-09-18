@@ -5,15 +5,15 @@ public struct NetworkRequestFixture: NetworkRequest {
     public let baseUrl: String
     public let path: String
     public let method: NetworkRequestMethod
-    public let header: [String: String]?
-    public let body: [String: String]?
+    public var header: [String: String]
+    public let body: [String: Any]?
     
     public init(
         scheme: String = "https",
         baseUrl: String = "url.com",
         path: String = "path",
         method: NetworkRequestMethod = .post,
-        header: [String : String]? = nil,
+        header: [String : String] = [:],
         body: [String : String]? = nil
     ) {
         self.scheme = scheme
