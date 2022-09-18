@@ -2,11 +2,15 @@
 
 extension Team {
     static func fixture(
-        teamId: Int = 0,
+        id: Int = 0,
+        name: String = "",
+        imageUrl: String = "",
         players: [Player] = []
     ) -> Self {
         .init(
-            teamId: teamId,
+            id: id,
+            name: name,
+            imageUrl: imageUrl,
             players: players
         )
     }

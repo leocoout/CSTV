@@ -14,8 +14,6 @@
 		FD5851DE28D655A800B9ACC9 /* KeychainProviderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5851DD28D655A800B9ACC9 /* KeychainProviderSpy.swift */; };
 		FD634D9728D63F1200D18453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634D9628D63F1200D18453 /* AppDelegate.swift */; };
 		FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634D9828D63F1200D18453 /* SceneDelegate.swift */; };
-		FD634D9B28D63F1200D18453 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634D9A28D63F1200D18453 /* ViewController.swift */; };
-		FD634D9E28D63F1200D18453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD634D9C28D63F1200D18453 /* Main.storyboard */; };
 		FD634DA028D63F1400D18453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD634D9F28D63F1400D18453 /* Assets.xcassets */; };
 		FD634DA328D63F1400D18453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD634DA128D63F1400D18453 /* LaunchScreen.storyboard */; };
 		FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCC28D6457F00D18453 /* TokenRepository.swift */; };
@@ -34,7 +32,7 @@
 		FDC6616A28D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616928D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift */; };
 		FDC6616D28D6DE2D00234DA7 /* GetTeamPlayersServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616C28D6DE2D00234DA7 /* GetTeamPlayersServiceSpy.swift */; };
 		FDC6617028D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616F28D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift */; };
-		FDC6617328D6E1D400234DA7 /* GetMatchPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617228D6E1D400234DA7 /* GetMatchPageUseCase.swift */; };
+		FDC6617328D6E1D400234DA7 /* GetMatchesForPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617228D6E1D400234DA7 /* GetMatchesForPageUseCase.swift */; };
 		FDC6617628D6E28C00234DA7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */; };
 		FDC6617928D6E35C00234DA7 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617828D6E35C00234DA7 /* MatchList.swift */; };
 		FDC6617B28D6E36100234DA7 /* MatchListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617A28D6E36100234DA7 /* MatchListError.swift */; };
@@ -55,6 +53,15 @@
 		FDC661A528D6FD8100234DA7 /* PlayerList+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661A428D6FD8100234DA7 /* PlayerList+Fixture.swift */; };
 		FDC661A728D6FF2200234DA7 /* TeamPlayersRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661A628D6FF2200234DA7 /* TeamPlayersRepositorySpy.swift */; };
 		FDC661AA28D701E200234DA7 /* GetMatchDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661A928D701E200234DA7 /* GetMatchDetailsUseCase.swift */; };
+		FDC661AD28D79D0C00234DA7 /* MatchListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661AC28D79D0C00234DA7 /* MatchListFactory.swift */; };
+		FDC661AF28D79D1400234DA7 /* MatchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661AE28D79D1400234DA7 /* MatchListViewModel.swift */; };
+		FDC661B128D79D1B00234DA7 /* MatchListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B028D79D1B00234DA7 /* MatchListModel.swift */; };
+		FDC661B328D79D2E00234DA7 /* MatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B228D79D2E00234DA7 /* MatchListViewController.swift */; };
+		FDC661B528D79F9600234DA7 /* ModuleFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */; };
+		FDC661BA28D7A68600234DA7 /* MatchListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */; };
+		FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */; };
+		FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */; };
+		FDC661C628D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -85,8 +92,6 @@
 		FD634D9328D63F1200D18453 /* CSTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD634D9628D63F1200D18453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD634D9828D63F1200D18453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FD634D9A28D63F1200D18453 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FD634D9D28D63F1200D18453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD634D9F28D63F1400D18453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD634DA228D63F1400D18453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD634DA428D63F1400D18453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,7 +112,7 @@
 		FDC6616928D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlayersRepositoryTests.swift; sourceTree = "<group>"; };
 		FDC6616C28D6DE2D00234DA7 /* GetTeamPlayersServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamPlayersServiceSpy.swift; sourceTree = "<group>"; };
 		FDC6616F28D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamPlayersResponse+Fixture.swift"; sourceTree = "<group>"; };
-		FDC6617228D6E1D400234DA7 /* GetMatchPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchPageUseCase.swift; sourceTree = "<group>"; };
+		FDC6617228D6E1D400234DA7 /* GetMatchesForPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesForPageUseCase.swift; sourceTree = "<group>"; };
 		FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		FDC6617828D6E35C00234DA7 /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
 		FDC6617A28D6E36100234DA7 /* MatchListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListError.swift; sourceTree = "<group>"; };
@@ -128,6 +133,15 @@
 		FDC661A428D6FD8100234DA7 /* PlayerList+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerList+Fixture.swift"; sourceTree = "<group>"; };
 		FDC661A628D6FF2200234DA7 /* TeamPlayersRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlayersRepositorySpy.swift; sourceTree = "<group>"; };
 		FDC661A928D701E200234DA7 /* GetMatchDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchDetailsUseCase.swift; sourceTree = "<group>"; };
+		FDC661AC28D79D0C00234DA7 /* MatchListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListFactory.swift; sourceTree = "<group>"; };
+		FDC661AE28D79D1400234DA7 /* MatchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModel.swift; sourceTree = "<group>"; };
+		FDC661B028D79D1B00234DA7 /* MatchListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListModel.swift; sourceTree = "<group>"; };
+		FDC661B228D79D2E00234DA7 /* MatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewController.swift; sourceTree = "<group>"; };
+		FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryProtocol.swift; sourceTree = "<group>"; };
+		FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelTests.swift; sourceTree = "<group>"; };
+		FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewControllerTests.swift; sourceTree = "<group>"; };
+		FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelSpy.swift; sourceTree = "<group>"; };
+		FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesForPageUseCaseFactory.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -243,8 +257,6 @@
 				FDDED5B928D6670A00EE12B2 /* Modules */,
 				FD634D9628D63F1200D18453 /* AppDelegate.swift */,
 				FD634D9828D63F1200D18453 /* SceneDelegate.swift */,
-				FD634D9A28D63F1200D18453 /* ViewController.swift */,
-				FD634D9C28D63F1200D18453 /* Main.storyboard */,
 				FD634D9F28D63F1400D18453 /* Assets.xcassets */,
 				FD634DA128D63F1400D18453 /* LaunchScreen.storyboard */,
 				FD634DA428D63F1400D18453 /* Info.plist */,
@@ -282,6 +294,7 @@
 		FDC6613928D6BAC400234DA7 /* MatchList */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661B828D7A67700234DA7 /* Presentation */,
 				FDC6618128D6EDC000234DA7 /* Domain */,
 				FDC6613B28D6BB1700234DA7 /* Data */,
 			);
@@ -418,9 +431,10 @@
 		FDC6617128D6E1B500234DA7 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661C428D7ABC700234DA7 /* Factories */,
 				FDC6617C28D6E56200234DA7 /* Adapters */,
 				FDC6617728D6E35500234DA7 /* Entities */,
-				FDC6617228D6E1D400234DA7 /* GetMatchPageUseCase.swift */,
+				FDC6617228D6E1D400234DA7 /* GetMatchesForPageUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -429,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */,
+				FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -533,6 +548,43 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		FDC661AB28D79C8D00234DA7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661AC28D79D0C00234DA7 /* MatchListFactory.swift */,
+				FDC661AE28D79D1400234DA7 /* MatchListViewModel.swift */,
+				FDC661B028D79D1B00234DA7 /* MatchListModel.swift */,
+				FDC661B228D79D2E00234DA7 /* MatchListViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FDC661B828D7A67700234DA7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661C128D7A90500234DA7 /* Doubles */,
+				FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */,
+				FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		FDC661C128D7A90500234DA7 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */,
+			);
+			name = Doubles;
+			sourceTree = "<group>";
+		};
+		FDC661C428D7ABC700234DA7 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +607,7 @@
 		FDDED5BA28D6672500EE12B2 /* MatchList */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661AB28D79C8D00234DA7 /* Presentation */,
 				FDC6617128D6E1B500234DA7 /* Domain */,
 				FDDED5BB28D6672B00EE12B2 /* Data */,
 			);
@@ -683,7 +736,6 @@
 			files = (
 				FD634DA328D63F1400D18453 /* LaunchScreen.storyboard in Resources */,
 				FD634DA028D63F1400D18453 /* Assets.xcassets in Resources */,
-				FD634D9E28D63F1200D18453 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,14 +755,18 @@
 			files = (
 				FDDED5BD28D6673400EE12B2 /* MatchListService.swift in Sources */,
 				FDC6616228D6D4C100234DA7 /* TeamsRepository.swift in Sources */,
-				FD634D9B28D63F1200D18453 /* ViewController.swift in Sources */,
 				FDC6619728D6FA8E00234DA7 /* TeamError.swift in Sources */,
+				FDC661B528D79F9600234DA7 /* ModuleFactoryProtocol.swift in Sources */,
 				FDC661AA28D701E200234DA7 /* GetMatchDetailsUseCase.swift in Sources */,
 				FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */,
 				FDC6619C28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift in Sources */,
 				FDC6615B28D6CE8F00234DA7 /* GetTeamsRequest.swift in Sources */,
+				FDC661AF28D79D1400234DA7 /* MatchListViewModel.swift in Sources */,
 				FDC6619A28D6FAD900234DA7 /* TeamResponseToPlayerListAdapter.swift in Sources */,
+				FDC661C628D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift in Sources */,
+				FDC661AD28D79D0C00234DA7 /* MatchListFactory.swift in Sources */,
 				FD634D9728D63F1200D18453 /* AppDelegate.swift in Sources */,
+				FDC661B128D79D1B00234DA7 /* MatchListModel.swift in Sources */,
 				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
 				FDC6615E28D6D34100234DA7 /* GetTeamsService.swift in Sources */,
 				FDC6618028D6E9E900234DA7 /* NetworkingErrorToMatchListErrorAdapter.swift in Sources */,
@@ -718,10 +774,11 @@
 				FDC6619528D6FA4300234DA7 /* Team.swift in Sources */,
 				FDC6619028D6F7A400234DA7 /* GetTeamsUseCase.swift in Sources */,
 				FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */,
+				FDC661B328D79D2E00234DA7 /* MatchListViewController.swift in Sources */,
 				FDC6617628D6E28C00234DA7 /* Date+Extensions.swift in Sources */,
 				FDC6617E28D6E57B00234DA7 /* MatchesResponseToMatchListAdapter.swift in Sources */,
 				FDC6615928D6CD6E00234DA7 /* TeamPlayersResponse.swift in Sources */,
-				FDC6617328D6E1D400234DA7 /* GetMatchPageUseCase.swift in Sources */,
+				FDC6617328D6E1D400234DA7 /* GetMatchesForPageUseCase.swift in Sources */,
 				FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */,
 				FDDED5C028D6692300EE12B2 /* MatchesResponse.swift in Sources */,
 				FDDED5C328D66BE000EE12B2 /* MatchListRepository.swift in Sources */,
@@ -749,7 +806,10 @@
 				FDC6617028D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift in Sources */,
 				FDC6614028D6BC0600234DA7 /* Date+Fixture.swift in Sources */,
 				FD5851DE28D655A800B9ACC9 /* KeychainProviderSpy.swift in Sources */,
+				FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */,
+				FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */,
 				FDC6616628D6DCD800234DA7 /* GetTeamPlayersRequestTests.swift in Sources */,
+				FDC661BA28D7A68600234DA7 /* MatchListViewModelTests.swift in Sources */,
 				FDC661A728D6FF2200234DA7 /* TeamPlayersRepositorySpy.swift in Sources */,
 				FDC6614528D6BE2100234DA7 /* MatchListRepositoryTests.swift in Sources */,
 				FDC6614A28D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift in Sources */,
@@ -771,14 +831,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FD634D9C28D63F1200D18453 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD634D9D28D63F1200D18453 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FD634DA128D63F1400D18453 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -916,7 +968,6 @@
 				INFOPLIST_FILE = CSTV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -944,7 +995,6 @@
 				INFOPLIST_FILE = CSTV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

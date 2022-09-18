@@ -3,10 +3,14 @@
 extension TeamResponse {
     static func fixture(
         id: Int = 0,
+        imageUrl: String = "",
+        name: String = "",
         players: [PlayerResponse] = []
     ) -> Self {
         .init(
             id: id,
+            imageUrl: imageUrl,
+            name: name,
             players: players
         )
     }
