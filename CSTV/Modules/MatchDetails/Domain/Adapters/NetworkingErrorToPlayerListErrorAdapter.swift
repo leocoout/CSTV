@@ -1,6 +1,6 @@
 import NetworkingInterface
 
-extension PlayerListError {
+extension TeamError {
     init(from error: NetworkRequestError) {
         self = .generic
     }

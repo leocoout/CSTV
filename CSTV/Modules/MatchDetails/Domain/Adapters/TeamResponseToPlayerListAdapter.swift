@@ -1,9 +1,11 @@
-extension PlayerList {
+extension Team {
     init(from response: TeamResponse) {
         let mappedPlayers = response.players.map { Player(from: $0) }
         
         self = .init(
-            teamId: response.id,
+            id: response.id,
+            name: response.name,
+            imageUrl: response.imageUrl,
             players: mappedPlayers
         )
     }

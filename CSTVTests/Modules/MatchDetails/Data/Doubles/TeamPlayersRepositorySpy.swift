@@ -2,7 +2,7 @@ import NetworkingInterface
 
 @testable import CSTV
 
-final class TeamPlayersRepositorySpy: TeamPlayersRepository {
+final class TeamPlayersRepositorySpy: TeamsRepository {
     
     private (set) var getPlayersCalled: Bool = false
     private (set) var firstTeamIdPassed: Int?

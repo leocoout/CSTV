@@ -3,7 +3,7 @@ import NetworkingInterface
 
 @testable import CSTV
 
-final class GetTeamPlayersServiceSpy: GetTeamPlayersService {
+final class GetTeamPlayersServiceSpy: GetTeamsService {
     
     private(set) var getCalled: Bool = false
     private(set) var tokenPassed: String?

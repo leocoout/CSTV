@@ -1,6 +1,6 @@
 @testable import CSTV
 
-extension PlayerList {
+extension Team {
     static func fixture(
         teamId: Int = 0,
         players: [Player] = []

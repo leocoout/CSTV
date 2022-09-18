@@ -6,7 +6,7 @@ import XCTest
 final class TeamPlayersServiceTests: XCTestCase {
     private let networkingSpy = NetworkingProtocolSpy()
     
-    private lazy var sut = GetTeamPlayersService(
+    private lazy var sut = GetTeamsService(
         networking: networkingSpy
     )
     
@@ -14,7 +14,7 @@ final class TeamPlayersServiceTests: XCTestCase {
         _ = await sut.get(with: "token", firstTeamId: 0, secondTeamId: 1)
         
         XCTAssertTrue(networkingSpy.requestCalled)
-        XCTAssertTrue(networkingSpy.requestPassed is GetTeamPlayersRequest)
+        XCTAssertTrue(networkingSpy.requestPassed is GetTeamsRequest)
         XCTAssertTrue(networkingSpy.responseModelPassed is [TeamResponse].Type)
     }
 }

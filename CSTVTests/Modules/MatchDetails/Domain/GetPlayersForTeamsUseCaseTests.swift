@@ -11,7 +11,7 @@ final class GetPlayersForTeamsUseCaseTests: XCTestCase {
         tokenRepository: TokenRepositorySpy()
     )
     
-    private lazy var sut = GetPlayersForTeamsUseCase(
+    private lazy var sut = GetTeamsUseCase(
         repository: repositorySpy
     )
     
