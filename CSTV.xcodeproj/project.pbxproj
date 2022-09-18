@@ -58,7 +58,6 @@
 		FDC661B128D79D1B00234DA7 /* MatchListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B028D79D1B00234DA7 /* MatchListModel.swift */; };
 		FDC661B328D79D2E00234DA7 /* MatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B228D79D2E00234DA7 /* MatchListViewController.swift */; };
 		FDC661B528D79F9600234DA7 /* ModuleFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */; };
-		FDC661B728D7A11300234DA7 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B628D7A11300234DA7 /* ViewModelProtocol.swift */; };
 		FDC661BA28D7A68600234DA7 /* MatchListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */; };
 		FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */; };
 		FDC661C028D7A79000234DA7 /* ViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661BF28D7A79000234DA7 /* ViewModelDelegateSpy.swift */; };
@@ -140,7 +139,6 @@
 		FDC661B028D79D1B00234DA7 /* MatchListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListModel.swift; sourceTree = "<group>"; };
 		FDC661B228D79D2E00234DA7 /* MatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewController.swift; sourceTree = "<group>"; };
 		FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryProtocol.swift; sourceTree = "<group>"; };
-		FDC661B628D7A11300234DA7 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelTests.swift; sourceTree = "<group>"; };
 		FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewControllerTests.swift; sourceTree = "<group>"; };
 		FDC661BF28D7A79000234DA7 /* ViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegateSpy.swift; sourceTree = "<group>"; };
@@ -449,7 +447,6 @@
 			children = (
 				FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */,
 				FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */,
-				FDC661B628D7A11300234DA7 /* ViewModelProtocol.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -791,7 +788,6 @@
 				FDC661B128D79D1B00234DA7 /* MatchListModel.swift in Sources */,
 				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
 				FDC6615E28D6D34100234DA7 /* GetTeamsService.swift in Sources */,
-				FDC661B728D7A11300234DA7 /* ViewModelProtocol.swift in Sources */,
 				FDC6618028D6E9E900234DA7 /* NetworkingErrorToMatchListErrorAdapter.swift in Sources */,
 				FDC6617B28D6E36100234DA7 /* MatchListError.swift in Sources */,
 				FDC6619528D6FA4300234DA7 /* Team.swift in Sources */,

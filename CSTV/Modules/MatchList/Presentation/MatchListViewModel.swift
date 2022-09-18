@@ -1,9 +1,14 @@
-protocol MatchListViewModelProtocol: ViewModel {}
+protocol MatchListViewModelProtocol {
+    func initialize()
+    
+    var didUpdateMatchList: ((MatchListModel) -> Void)? { get set }
+}
 
 final class MatchListViewModel: MatchListViewModelProtocol {
     
-    // MARK: - Properties
-    weak var delegate: ViewModelDelegate?
+    // MARK: - Public Properties
+    
+    var didUpdateMatchList: ((MatchListModel) -> Void)?
     
     // MARK: - Private Properties
     
@@ -14,7 +19,7 @@ final class MatchListViewModel: MatchListViewModelProtocol {
     }
     
     func initialize() {
-       getMatchesForPage()
+        getMatchesForPage()
     }
 }
 
@@ -24,7 +29,7 @@ private extension MatchListViewModel {
             let list = await getMatchesForPageUseCase.execute()
             switch list {
             case .success(let list):
-                print(list)
+                 didUpdateMatchList?(list)
             case .failure(let error):
                 print(error)
             }

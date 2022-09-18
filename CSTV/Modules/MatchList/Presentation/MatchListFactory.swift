@@ -5,8 +5,6 @@ final class MatchListFactory: ModuleFactoryProtocol {
         let viewModel = MatchListViewModel(getMatchesForPageUseCase: GetMatchesForPageUseCaseFactory.make())
         let viewController = MatchListViewController(viewModel: viewModel)
         
-        viewModel.delegate = viewController
-        
         return viewController
     }
 }

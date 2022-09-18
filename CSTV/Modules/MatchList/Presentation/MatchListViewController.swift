@@ -2,7 +2,7 @@ import UIKit
 
 final class MatchListViewController: UIViewController {
     
-    private let viewModel: MatchListViewModelProtocol
+    private var viewModel: MatchListViewModelProtocol
     
     init(viewModel: MatchListViewModelProtocol) {
         self.viewModel = viewModel
@@ -14,12 +14,17 @@ final class MatchListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel.initialize()
+        
+        didUpdateMatchList()
     }
 }
 
-extension MatchListViewController: ViewModelDelegate {
-    func willLoad() {}
-    
-    func didLoad() {}
+private extension MatchListViewController {
+    func didUpdateMatchList() {
+        viewModel.didUpdateMatchList =  { list in
+            print(list)
+        }
+    }
 }
