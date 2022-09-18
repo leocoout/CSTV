@@ -241,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				FDDED5B928D6670A00EE12B2 /* Modules */,
-				FD634DCA28D6456300D18453 /* Security */,
 				FD634D9628D63F1200D18453 /* AppDelegate.swift */,
 				FD634D9828D63F1200D18453 /* SceneDelegate.swift */,
 				FD634D9A28D63F1200D18453 /* ViewController.swift */,
@@ -544,6 +543,7 @@
 		FDDED5B928D6670A00EE12B2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FD634DCA28D6456300D18453 /* Security */,
 				FDC6617428D6E28700234DA7 /* Utils */,
 				FDC6615C28D6CF0B00234DA7 /* CSTVNetworking */,
 				FDC6614B28D6C49300234DA7 /* MatchDetails */,
