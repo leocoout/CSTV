@@ -1,0 +1,1 @@
+typealias MatchListModel = MatchList
