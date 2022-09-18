@@ -59,6 +59,10 @@
 		FDC661B328D79D2E00234DA7 /* MatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B228D79D2E00234DA7 /* MatchListViewController.swift */; };
 		FDC661B528D79F9600234DA7 /* ModuleFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */; };
 		FDC661B728D7A11300234DA7 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B628D7A11300234DA7 /* ViewModelProtocol.swift */; };
+		FDC661BA28D7A68600234DA7 /* MatchListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */; };
+		FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */; };
+		FDC661C028D7A79000234DA7 /* ViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661BF28D7A79000234DA7 /* ViewModelDelegateSpy.swift */; };
+		FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -136,6 +140,10 @@
 		FDC661B228D79D2E00234DA7 /* MatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewController.swift; sourceTree = "<group>"; };
 		FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryProtocol.swift; sourceTree = "<group>"; };
 		FDC661B628D7A11300234DA7 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelTests.swift; sourceTree = "<group>"; };
+		FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewControllerTests.swift; sourceTree = "<group>"; };
+		FDC661BF28D7A79000234DA7 /* ViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegateSpy.swift; sourceTree = "<group>"; };
+		FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelSpy.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -279,6 +287,7 @@
 		FDC6613828D6BAA900234DA7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661BD28D7A76B00234DA7 /* Utils */,
 				FDC6616328D6DCC000234DA7 /* MatchDetails */,
 				FDC6613928D6BAC400234DA7 /* MatchList */,
 			);
@@ -288,6 +297,7 @@
 		FDC6613928D6BAC400234DA7 /* MatchList */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661B828D7A67700234DA7 /* Presentation */,
 				FDC6618128D6EDC000234DA7 /* Domain */,
 				FDC6613B28D6BB1700234DA7 /* Data */,
 			);
@@ -552,6 +562,40 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		FDC661B828D7A67700234DA7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661C128D7A90500234DA7 /* Doubles */,
+				FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */,
+				FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		FDC661BD28D7A76B00234DA7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661BE28D7A78700234DA7 /* Doubles */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FDC661BE28D7A78700234DA7 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661BF28D7A79000234DA7 /* ViewModelDelegateSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		FDC661C128D7A90500234DA7 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */,
+			);
+			name = Doubles;
+			sourceTree = "<group>";
+		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -772,8 +816,12 @@
 				FD5851D128D650E200B9ACC9 /* TokenRepositoryTests.swift in Sources */,
 				FDC6617028D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift in Sources */,
 				FDC6614028D6BC0600234DA7 /* Date+Fixture.swift in Sources */,
+				FDC661C028D7A79000234DA7 /* ViewModelDelegateSpy.swift in Sources */,
 				FD5851DE28D655A800B9ACC9 /* KeychainProviderSpy.swift in Sources */,
+				FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */,
+				FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */,
 				FDC6616628D6DCD800234DA7 /* GetTeamPlayersRequestTests.swift in Sources */,
+				FDC661BA28D7A68600234DA7 /* MatchListViewModelTests.swift in Sources */,
 				FDC661A728D6FF2200234DA7 /* TeamPlayersRepositorySpy.swift in Sources */,
 				FDC6614528D6BE2100234DA7 /* MatchListRepositoryTests.swift in Sources */,
 				FDC6614A28D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift in Sources */,

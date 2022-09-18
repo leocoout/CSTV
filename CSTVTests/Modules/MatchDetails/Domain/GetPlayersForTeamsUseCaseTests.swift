@@ -26,7 +26,7 @@ final class GetPlayersForTeamsUseCaseTests: XCTestCase {
         }
         
         XCTAssertTrue(repositorySpy.getPlayersCalled)
-        XCTAssertEqual(list.first?.teamId, 1)
+        XCTAssertEqual(list.first?.id, 1)
     }
     
     func test_execute_givenError_shoulReturnCorrectError() async {
