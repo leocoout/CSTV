@@ -3,7 +3,7 @@ import XCTest
 @testable import CSTV
 
 final class GetTeamPlayersRequestTests: XCTestCase {
-    private let sut = GetTeamPlayersRequest(
+    private let sut = GetTeamsRequest(
         token: "token",
         firstTeamId: 0,
         secondTeamId: 1

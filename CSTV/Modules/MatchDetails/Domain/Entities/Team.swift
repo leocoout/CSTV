@@ -1,5 +1,6 @@
-struct PlayerList {
-    let teamId: Int
+struct Team {
+    let id: Int
+    let name, imageUrl: String
     let players: [Player]
 }
 

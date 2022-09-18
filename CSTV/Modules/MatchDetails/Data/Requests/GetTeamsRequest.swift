@@ -1,6 +1,6 @@
 import NetworkingInterface
 
-struct GetTeamPlayersRequest: CSTVNetworkRequest {
+struct GetTeamsRequest: CSTVNetworkRequest {
     private let token: String
     private let firstTeamId: Int
     private let secondTeamId: Int

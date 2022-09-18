@@ -1,7 +1,7 @@
 import NetworkingInterface
 import Foundation
 
-class GetTeamPlayersService {
+class GetTeamsService {
     
     private let networking: NetworkingProtocol
    
@@ -10,7 +10,7 @@ class GetTeamPlayersService {
     }
     
     func get(with token: String, firstTeamId: Int, secondTeamId: Int) async -> Result<[TeamResponse], NetworkRequestError> {
-        let request = GetTeamPlayersRequest(
+        let request = GetTeamsRequest(
             token: token,
             firstTeamId: firstTeamId,
             secondTeamId: secondTeamId

@@ -1,12 +1,12 @@
 import Foundation
 import NetworkingInterface
 
-class TeamPlayersRepository {
-    private let service: GetTeamPlayersService
+class TeamsRepository {
+    private let service: GetTeamsService
     private let tokenRepository: TokenRepositoryProtocol
     
     init(
-        service: GetTeamPlayersService,
+        service: GetTeamsService,
         tokenRepository: TokenRepositoryProtocol
     ) {
         self.service = service

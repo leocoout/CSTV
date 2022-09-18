@@ -7,7 +7,7 @@ final class TeamPlayersRepositoryTests: XCTestCase {
     private let serviceSpy = GetTeamPlayersServiceSpy(networking: NetworkingProtocolSpy())
     private let tokenRepositorySpy = TokenRepositorySpy()
     
-    private lazy var sut = TeamPlayersRepository(
+    private lazy var sut = TeamsRepository(
         service: serviceSpy,
         tokenRepository: tokenRepositorySpy
     )
