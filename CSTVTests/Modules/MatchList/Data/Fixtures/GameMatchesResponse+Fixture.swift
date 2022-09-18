@@ -1,12 +1,12 @@
 @testable import CSTV
 
-extension GameMatchesResponse {
+extension MatchesResponse {
     static func fixture(
         id: Int = 0,
-        games: [GameResponse] = [],
-        serie: GameSerieResponse = .fixture(),
-        league: GameLeagueResponse = .fixture(),
-        opponents: [GameOpponentResponse] = []
+        games: [MatchResponse] = [],
+        serie: MatchSerieResponse = .fixture(),
+        league: MatchLeagueResponse = .fixture(),
+        opponents: [MatchOpponentResponse] = []
     ) -> Self {
         .init(
             id: id,
@@ -19,7 +19,7 @@ extension GameMatchesResponse {
 }
 
 
-extension GameResponse {
+extension MatchResponse {
     static func fixture(
         id: Int = 0,
         status: String = "",
@@ -35,13 +35,13 @@ extension GameResponse {
     }
 }
 
-extension GameSerieResponse {
+extension MatchSerieResponse {
     static func fixture(name: String? = nil) -> Self {
         .init(name: name)
     }
 }
 
-extension GameLeagueResponse {
+extension MatchLeagueResponse {
     static func fixture(
         id: Int = 0,
         name: String? = nil
@@ -49,7 +49,7 @@ extension GameLeagueResponse {
         .init(id: id, name: name)
     }
 }
-extension GameOpponentResponse {
+extension MatchOpponentResponse {
     static func fixture(opponent: OpponentResponse = .fixture()) -> Self {
         .init(
             opponent: opponent

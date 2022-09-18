@@ -31,7 +31,7 @@
 		FDDED5B628D6609700EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B528D6609700EE12B2 /* NetworkingInterfaceTestUtils */; };
 		FDDED5B828D6609F00EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B728D6609F00EE12B2 /* NetworkingInterfaceTestUtils */; };
 		FDDED5BD28D6673400EE12B2 /* MatchListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5BC28D6673400EE12B2 /* MatchListService.swift */; };
-		FDDED5C028D6692300EE12B2 /* GameMatchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5BF28D6692300EE12B2 /* GameMatchesResponse.swift */; };
+		FDDED5C028D6692300EE12B2 /* MatchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */; };
 		FDDED5C328D66BE000EE12B2 /* MatchListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C228D66BE000EE12B2 /* MatchListRepository.swift */; };
 		FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */; };
 /* End PBXBuildFile section */
@@ -70,7 +70,7 @@
 		FDC6614928D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameMatchesResponse+Fixture.swift"; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
-		FDDED5BF28D6692300EE12B2 /* GameMatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMatchesResponse.swift; sourceTree = "<group>"; };
+		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
 		FDDED5C228D66BE000EE12B2 /* MatchListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListRepository.swift; sourceTree = "<group>"; };
 		FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -271,6 +271,37 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		FDC6614B28D6C49300234DA7 /* MatchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6614C28D6C4A000234DA7 /* Data */,
+			);
+			path = MatchDetails;
+			sourceTree = "<group>";
+		};
+		FDC6614C28D6C4A000234DA7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6615528D6C4D400234DA7 /* Entities */,
+				FDC6614D28D6C4A400234DA7 /* Requests */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FDC6614D28D6C4A400234DA7 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		FDC6615528D6C4D400234DA7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +312,7 @@
 		FDDED5B928D6670A00EE12B2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FDC6614B28D6C49300234DA7 /* MatchDetails */,
 				FDDED5BA28D6672500EE12B2 /* MatchList */,
 			);
 			path = Modules;
@@ -308,7 +340,7 @@
 		FDDED5BE28D6691900EE12B2 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				FDDED5BF28D6692300EE12B2 /* GameMatchesResponse.swift */,
+				FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -442,7 +474,7 @@
 				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
 				FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */,
 				FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */,
-				FDDED5C028D6692300EE12B2 /* GameMatchesResponse.swift in Sources */,
+				FDDED5C028D6692300EE12B2 /* MatchesResponse.swift in Sources */,
 				FDDED5C328D66BE000EE12B2 /* MatchListRepository.swift in Sources */,
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
 			);
