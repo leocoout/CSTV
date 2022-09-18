@@ -1,15 +1,34 @@
 import NetworkingInterface
+import Foundation
 
 struct GetMatchesRequest: HomeNetworkRequest {
+    private let token: String
+    private let requestPage: Int
+    private let beginAt: Date
+    
+    init(
+        token: String,
+        requestPage: Int,
+        beginAt: Date
+    ) {
+        self.token = token
+        self.requestPage = requestPage
+        self.beginAt = beginAt
+    }
+    
     var path: String {
-        "/matches"
+        "/csgo/matches"
     }
     
-    var method: NetworkingInterface.NetworkRequestMethod {
-        .get
+    var header: [String : String] {
+        ["authorization": token]
     }
     
-    var header: [String : String]?
-    
-    var body: [String : String]?
+    var parameters: [HomeNetworkRequestBodyKey: Any] {
+        [
+            .perPage: 10,
+            .page: requestPage,
+            .beginAt: beginAt
+        ]
+    }
 }

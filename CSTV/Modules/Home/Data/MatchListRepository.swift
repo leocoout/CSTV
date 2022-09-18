@@ -1,30 +1,23 @@
+import Foundation
 import NetworkingInterface
 
 final class MatchListRepository {
-    private let service: GameListService
+    private let service: MatchListService
     private let tokenRepository: TokenRepositoryProtocol
     
     init(
-        service: GameListService,
+        service: MatchListService,
         tokenRepository: TokenRepositoryProtocol
     ) {
         self.service = service
         self.tokenRepository = tokenRepository
     }
     
-    func getGameList() async -> Result<[GameMatchesResponse], NetworkRequestError> {
-        let request = GetMatchesRequest(tokenHeader: tokenHeader)
-        return await service.get(with: request)
-    }
-    
-    func refreshMachesList() async -> Result<[GameMatchesResponse], NetworkRequestError> {
-        let request = GetMatchesRequest(tokenHeader: tokenHeader)
-        return await service.get(with: request)
-    }
-}
-
-private extension MatchListRepository {
-    var tokenHeader: [String: String] {
-        ["authorization": tokenRepository.getToken()]
+    func getMatches(for page: Int, beginningAt date: Date) async -> Result<[GameMatchesResponse], NetworkRequestError> {
+        await service.get(
+            with: tokenRepository.getToken(),
+            page: page,
+            begginingAt: date
+        )
     }
 }

@@ -7,7 +7,7 @@ final class TokenRepository: TokenRepositoryProtocol {
     // MARK: - Private Properties
     
     private enum Constants {
-        static let token: String = "z77WD0DUaTynMDfNxqiUKGtC4k0w2IbUBPiOl35EQ9bhgABOxzw"
+        static let token: String = "Bearer z77WD0DUaTynMDfNxqiUKGtC4k0w2IbUBPiOl35EQ9bhgABOxzw"
         static let key: String = "access-token"
     }
     

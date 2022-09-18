@@ -1,4 +1,5 @@
 import NetworkingInterface
+import Foundation
 
 class MatchListService {
     
@@ -8,7 +9,12 @@ class MatchListService {
         self.networking = networking
     }
     
-    func get(with request: NetworkRequest) async -> Result<[GameMatchesResponse], NetworkRequestError> {
-        await networking.request(request, responseModel: [GameMatchesResponse].self)
+    func get(with token: String, page: Int, begginingAt: Date) async -> Result<[GameMatchesResponse], NetworkRequestError> {
+        let request = GetMatchesRequest(
+            token: token,
+            requestPage: page,
+            beginAt: begginingAt
+        )
+        return await networking.request(request, responseModel: [GameMatchesResponse].self)
     }
 }
