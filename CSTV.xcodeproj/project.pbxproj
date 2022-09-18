@@ -45,6 +45,12 @@
 		FDC6618928D6EFB800234DA7 /* GetMatchPageUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6618828D6EFB800234DA7 /* GetMatchPageUseCaseTests.swift */; };
 		FDC6618B28D6EFC100234DA7 /* MatchesResponseToMatchListAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6618A28D6EFC100234DA7 /* MatchesResponseToMatchListAdapterTests.swift */; };
 		FDC6618D28D6F00000234DA7 /* MatchListRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6618C28D6F00000234DA7 /* MatchListRepositorySpy.swift */; };
+		FDC6619028D6F7A400234DA7 /* GetPlayersForTeamsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6618F28D6F7A400234DA7 /* GetPlayersForTeamsUseCase.swift */; };
+		FDC6619328D6F80600234DA7 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6619228D6F80600234DA7 /* MatchDetails.swift */; };
+		FDC6619528D6FA4300234DA7 /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6619428D6FA4300234DA7 /* PlayerList.swift */; };
+		FDC6619728D6FA8E00234DA7 /* PlayerListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6619628D6FA8E00234DA7 /* PlayerListError.swift */; };
+		FDC6619A28D6FAD900234DA7 /* TeamResponseToPlayerListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6619928D6FAD900234DA7 /* TeamResponseToPlayerListAdapter.swift */; };
+		FDC6619C28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6619B28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -108,6 +114,12 @@
 		FDC6618828D6EFB800234DA7 /* GetMatchPageUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchPageUseCaseTests.swift; sourceTree = "<group>"; };
 		FDC6618A28D6EFC100234DA7 /* MatchesResponseToMatchListAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponseToMatchListAdapterTests.swift; sourceTree = "<group>"; };
 		FDC6618C28D6F00000234DA7 /* MatchListRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListRepositorySpy.swift; sourceTree = "<group>"; };
+		FDC6618F28D6F7A400234DA7 /* GetPlayersForTeamsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlayersForTeamsUseCase.swift; sourceTree = "<group>"; };
+		FDC6619228D6F80600234DA7 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
+		FDC6619428D6FA4300234DA7 /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
+		FDC6619628D6FA8E00234DA7 /* PlayerListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListError.swift; sourceTree = "<group>"; };
+		FDC6619928D6FAD900234DA7 /* TeamResponseToPlayerListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResponseToPlayerListAdapter.swift; sourceTree = "<group>"; };
+		FDC6619B28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingErrorToPlayerListErrorAdapter.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -317,6 +329,7 @@
 		FDC6614B28D6C49300234DA7 /* MatchDetails */ = {
 			isa = PBXGroup;
 			children = (
+				FDC6618E28D6F79600234DA7 /* Domain */,
 				FDC6614C28D6C4A000234DA7 /* Data */,
 			);
 			path = MatchDetails;
@@ -454,6 +467,35 @@
 				FDC6618428D6EEA200234DA7 /* GetMatchesForPageUseCaseSpy .swift */,
 			);
 			path = Doubles;
+			sourceTree = "<group>";
+		};
+		FDC6618E28D6F79600234DA7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6619828D6FAC300234DA7 /* Adapters */,
+				FDC6619128D6F7FC00234DA7 /* Entities */,
+				FDC6618F28D6F7A400234DA7 /* GetPlayersForTeamsUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FDC6619128D6F7FC00234DA7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6619228D6F80600234DA7 /* MatchDetails.swift */,
+				FDC6619428D6FA4300234DA7 /* PlayerList.swift */,
+				FDC6619628D6FA8E00234DA7 /* PlayerListError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FDC6619828D6FAC300234DA7 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6619928D6FAD900234DA7 /* TeamResponseToPlayerListAdapter.swift */,
+				FDC6619B28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift */,
+			);
+			path = Adapters;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -626,13 +668,19 @@
 				FDDED5BD28D6673400EE12B2 /* MatchListService.swift in Sources */,
 				FDC6616228D6D4C100234DA7 /* TeamPlayersRepository.swift in Sources */,
 				FD634D9B28D63F1200D18453 /* ViewController.swift in Sources */,
+				FDC6619728D6FA8E00234DA7 /* PlayerListError.swift in Sources */,
 				FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */,
+				FDC6619C28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift in Sources */,
 				FDC6615B28D6CE8F00234DA7 /* GetTeamPlayersRequest.swift in Sources */,
+				FDC6619A28D6FAD900234DA7 /* TeamResponseToPlayerListAdapter.swift in Sources */,
 				FD634D9728D63F1200D18453 /* AppDelegate.swift in Sources */,
 				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
 				FDC6615E28D6D34100234DA7 /* GetTeamPlayersService.swift in Sources */,
+				FDC6619328D6F80600234DA7 /* MatchDetails.swift in Sources */,
 				FDC6618028D6E9E900234DA7 /* NetworkingErrorToMatchListErrorAdapter.swift in Sources */,
 				FDC6617B28D6E36100234DA7 /* MatchListError.swift in Sources */,
+				FDC6619528D6FA4300234DA7 /* PlayerList.swift in Sources */,
+				FDC6619028D6F7A400234DA7 /* GetPlayersForTeamsUseCase.swift in Sources */,
 				FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */,
 				FDC6617628D6E28C00234DA7 /* Date+Extensions.swift in Sources */,
 				FDC6617E28D6E57B00234DA7 /* MatchesResponseToMatchListAdapter.swift in Sources */,
