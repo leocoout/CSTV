@@ -22,7 +22,7 @@ extension MatchesResponse {
 extension MatchResponse {
     static func fixture(
         id: Int = 0,
-        status: String = "",
+        status: MatchResponse.Status = .notPlayed,
         beginAt: String? = nil,
         endAt: String? = nil
     ) -> Self {
@@ -44,9 +44,10 @@ extension MatchSerieResponse {
 extension MatchLeagueResponse {
     static func fixture(
         id: Int = 0,
-        name: String? = nil
+        name: String? = nil,
+        imageUrl: String? = nil
     ) -> Self {
-        .init(id: id, name: name)
+        .init(id: id, name: name, imageUrl: imageUrl)
     }
 }
 extension MatchOpponentResponse {
