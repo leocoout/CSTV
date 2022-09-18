@@ -1,8 +1,9 @@
 @testable import CSTV
 
 final class MatchListViewModelSpy: MatchListViewModelProtocol {
-    var delegate: CSTV.ViewModelDelegate?
     
+    var didUpdateMatchList: ((CSTV.MatchListModel) -> Void)?
+
     private(set) var initializeCalled: Bool = false
     
     func initialize() {

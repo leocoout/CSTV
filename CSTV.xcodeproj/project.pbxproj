@@ -60,7 +60,6 @@
 		FDC661B528D79F9600234DA7 /* ModuleFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */; };
 		FDC661BA28D7A68600234DA7 /* MatchListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */; };
 		FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */; };
-		FDC661C028D7A79000234DA7 /* ViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661BF28D7A79000234DA7 /* ViewModelDelegateSpy.swift */; };
 		FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */; };
 		FDC661C628D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
@@ -141,7 +140,6 @@
 		FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryProtocol.swift; sourceTree = "<group>"; };
 		FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelTests.swift; sourceTree = "<group>"; };
 		FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewControllerTests.swift; sourceTree = "<group>"; };
-		FDC661BF28D7A79000234DA7 /* ViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegateSpy.swift; sourceTree = "<group>"; };
 		FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelSpy.swift; sourceTree = "<group>"; };
 		FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesForPageUseCaseFactory.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
@@ -287,7 +285,6 @@
 		FDC6613828D6BAA900234DA7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FDC661BD28D7A76B00234DA7 /* Utils */,
 				FDC6616328D6DCC000234DA7 /* MatchDetails */,
 				FDC6613928D6BAC400234DA7 /* MatchList */,
 			);
@@ -572,22 +569,6 @@
 			name = Presentation;
 			sourceTree = "<group>";
 		};
-		FDC661BD28D7A76B00234DA7 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				FDC661BE28D7A78700234DA7 /* Doubles */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		FDC661BE28D7A78700234DA7 /* Doubles */ = {
-			isa = PBXGroup;
-			children = (
-				FDC661BF28D7A79000234DA7 /* ViewModelDelegateSpy.swift */,
-			);
-			path = Doubles;
-			sourceTree = "<group>";
-		};
 		FDC661C128D7A90500234DA7 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
@@ -824,7 +805,6 @@
 				FD5851D128D650E200B9ACC9 /* TokenRepositoryTests.swift in Sources */,
 				FDC6617028D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift in Sources */,
 				FDC6614028D6BC0600234DA7 /* Date+Fixture.swift in Sources */,
-				FDC661C028D7A79000234DA7 /* ViewModelDelegateSpy.swift in Sources */,
 				FD5851DE28D655A800B9ACC9 /* KeychainProviderSpy.swift in Sources */,
 				FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */,
 				FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */,
