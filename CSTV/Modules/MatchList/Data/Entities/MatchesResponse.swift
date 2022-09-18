@@ -1,12 +1,12 @@
-struct GameMatchesResponse: Codable {
+struct MatchesResponse: Codable {
     let id: Int
-    let games: [GameResponse]
-    let serie: GameSerieResponse
-    let league: GameLeagueResponse
-    let opponents: [GameOpponentResponse]
+    let games: [MatchResponse]
+    let serie: MatchSerieResponse
+    let league: MatchLeagueResponse
+    let opponents: [MatchOpponentResponse]
 }
 
-struct GameResponse: Codable {
+struct MatchResponse: Codable {
     let id: Int
     let status: String
     let beginAt, endAt: String?
@@ -25,17 +25,23 @@ struct GameResponse: Codable {
     }
 }
 
-struct GameLeagueResponse: Codable {
+struct MatchLeagueResponse: Codable {
     let id: Int
     let name: String?
 }
 
-struct GameSerieResponse: Codable {
+struct MatchSerieResponse: Codable {
     let name: String?
 }
 
-struct GameOpponentResponse: Codable {
+struct MatchOpponentResponse: Codable {
     let opponent: OpponentResponse
+    let type: OpponentType
+    
+    enum OpponentType: String, Codable {
+        case player = "Player"
+        case team = "Team"
+    }
 }
 
 struct OpponentResponse: Codable {

@@ -1,23 +1,23 @@
 import Foundation
 import NetworkingInterface
 
-final class MatchListRepository {
-    private let service: MatchListService
+final class TeamPlayersRepository {
+    private let service: GetTeamPlayersService
     private let tokenRepository: TokenRepositoryProtocol
     
     init(
-        service: MatchListService,
+        service: GetTeamPlayersService,
         tokenRepository: TokenRepositoryProtocol
     ) {
         self.service = service
         self.tokenRepository = tokenRepository
     }
     
-    func getMatches(for page: Int, beginningAt date: Date) async -> Result<[MatchesResponse], NetworkRequestError> {
+    func getPlayers(firstTeamId: Int, secondTeamId: Int) async -> Result<[TeamResponse], NetworkRequestError> {
         await service.get(
             with: tokenRepository.getToken(),
-            page: page,
-            begginingAt: date
+            firstTeamId: firstTeamId,
+            secondTeamId: secondTeamId
         )
     }
 }

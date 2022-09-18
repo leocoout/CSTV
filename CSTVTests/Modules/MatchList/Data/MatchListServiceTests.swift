@@ -15,6 +15,6 @@ final class MatchListServiceTests: XCTestCase {
         
         XCTAssertTrue(networkingSpy.requestCalled)
         XCTAssertTrue(networkingSpy.requestPassed is GetMatchesRequest)
-        XCTAssertTrue(networkingSpy.responseModelPassed is [GameMatchesResponse].Type)
+        XCTAssertTrue(networkingSpy.responseModelPassed is [MatchesResponse].Type)
     }
 }
