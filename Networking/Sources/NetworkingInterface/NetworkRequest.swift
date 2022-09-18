@@ -4,7 +4,7 @@ public protocol NetworkRequest {
     var path: String { get }
     var method: NetworkRequestMethod { get }
     var header: [String: String] { get }
-    var body: [String: String]? { get }
+    var body: [String: Any]? { get }
 }
 
 public extension NetworkRequest {

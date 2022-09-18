@@ -17,8 +17,25 @@ private extension URLComponents {
         urlComponents.scheme = request.scheme
         urlComponents.host = request.baseUrl
         urlComponents.path = request.path
-        
+        urlComponents.queryItems = request.makeQueryItems()
+       
         return urlComponents
+    }
+}
+
+private extension NetworkRequest {
+    func makeQueryItems() -> [URLQueryItem] {
+        var itemsToReturn: [URLQueryItem] = []
+        
+        if let body = body {
+            for (key, value) in body {
+                itemsToReturn.append(
+                    .init(name: key, value: "\(value)")
+                )
+            }
+        }
+        
+        return itemsToReturn
     }
 }
 
