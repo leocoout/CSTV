@@ -2,14 +2,17 @@ import NetworkingInterface
 
 struct GetTeamPlayersRequest: CSTVNetworkRequest {
     private let token: String
-    private let desiredTeamIds: [Int]
+    private let firstTeamId: Int
+    private let secondTeamId: Int
     
     init(
         token: String,
-        desiredTeamIds: [Int]
+        firstTeamId: Int,
+        secondTeamId: Int
     ) {
         self.token = token
-        self.desiredTeamIds = desiredTeamIds
+        self.firstTeamId = firstTeamId
+        self.secondTeamId = secondTeamId
     }
     
     var path: String {
@@ -21,6 +24,6 @@ struct GetTeamPlayersRequest: CSTVNetworkRequest {
     }
     
     var parameters: [CSTVListNetworkRequestBodyKey : Any] {
-        [.filter(.id): desiredTeamIds]
+        [.filter(.id): "\(firstTeamId), \(secondTeamId)"]
     }
 }

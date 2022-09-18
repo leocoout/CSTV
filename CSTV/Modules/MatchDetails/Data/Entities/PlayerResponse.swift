@@ -4,10 +4,11 @@ struct TeamResponse: Codable {
 }
 
 struct PlayerResponse: Codable {
-    let firstName, lastName, name: String
-    let imageUrl: String
+    let firstName, lastName, name: String?
+    let imageUrl: String?
     
-    enum OpponentType: String, Codable {
+    enum CodingKeys: String, CodingKey {
+        case name
         case imageUrl = "image_url"
         case firstName = "first_name"
         case lastName = "last_name"

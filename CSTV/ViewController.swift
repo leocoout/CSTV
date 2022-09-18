@@ -18,16 +18,21 @@ class ViewController: UIViewController {
         try? SimpleKeychain().deleteAll()
         
         let networking = NetworkingFactory().make()
-        let service = MatchListService(networking: networking)
+        let service = GetTeamPlayersService(networking: networking)
         let tokenRepository = TokenRepository(keychainProvider: SimpleKeychain())
         
-        let repository = MatchListRepository(
+//        let repository = MatchListRepository(
+//            service: service,
+//            tokenRepository: tokenRepository
+//        )
+        
+        let repository = TeamPlayersRepository(
             service: service,
             tokenRepository: tokenRepository
         )
-        
+
         Task {
-            let response = await repository.getMatches(for: 1, beginningAt: .now)
+            let response = await repository.getPlayers(firstTeamId: 131507, secondTeamId: 130691)
             switch response {
             case .success(let list):
                 print(list)
