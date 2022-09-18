@@ -1,14 +1,12 @@
-import Foundation
-
 struct GetMatchesRequest: CSTVNetworkRequest {
     private let token: String
     private let requestPage: Int
-    private let beginAt: Date
+    private let beginAt: String
     
     init(
         token: String,
         requestPage: Int,
-        beginAt: Date
+        beginAt: String
     ) {
         self.token = token
         self.requestPage = requestPage

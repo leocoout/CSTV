@@ -8,7 +8,7 @@ struct MatchesResponse: Codable {
 
 struct MatchResponse: Codable {
     let id: Int
-    let status: String
+    let status: Status
     let beginAt, endAt: String?
     
     enum CodingKeys: String, CodingKey {
@@ -28,6 +28,12 @@ struct MatchResponse: Codable {
 struct MatchLeagueResponse: Codable {
     let id: Int
     let name: String?
+    let imageUrl: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case imageUrl = "image_url"
+    }
 }
 
 struct MatchSerieResponse: Codable {
