@@ -1,7 +1,7 @@
 import Foundation
 import NetworkingInterface
 
-final class TeamPlayersRepository {
+class TeamPlayersRepository {
     private let service: GetTeamPlayersService
     private let tokenRepository: TokenRepositoryProtocol
     
