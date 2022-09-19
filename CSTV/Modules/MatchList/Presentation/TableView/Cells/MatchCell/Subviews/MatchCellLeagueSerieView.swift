@@ -70,7 +70,10 @@ extension MatchCellLeagueSerieView: ViewCodable {
     
     func setupConstraints() {
         constrain(hStack, self) {
-            $0.edges == $1.edges.inseted(horizontally: 16, vertically: 8)
+            $0.leading == $1.leading + 16
+            $0.trailing == $1.trailing - 16
+            $0.bottom == $1.bottom - 8
+            $0.top == $1.top + 8
         }
     }
 }

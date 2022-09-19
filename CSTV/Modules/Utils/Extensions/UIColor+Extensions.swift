@@ -7,4 +7,5 @@ extension UIColor {
     static let gray900 = UIColor(red: 0.15, green: 0.15, blue: 0.22, alpha: 1.00)
     
     static let live = UIColor(red: 0.96, green: 0.16, blue: 0.21, alpha: 1.00)
+    static let background = UIColor(red: 0.09, green: 0.09, blue: 0.13, alpha: 1.00)
 }

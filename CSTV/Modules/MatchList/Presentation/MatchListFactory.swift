@@ -6,6 +6,8 @@ final class MatchListFactory: ModuleFactoryProtocol {
         let viewModel = MatchListViewModel(getMatchesForPageUseCase: GetMatchesForPageUseCaseFactory.make())
         let viewController = MatchListViewController(viewModel: viewModel, tableViewResponder: tableViewResponder)
         
+        viewController.title = "Partidas"
+        
         return viewController
     }
 }

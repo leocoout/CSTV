@@ -74,6 +74,7 @@
 		FDC661DF28D7F3AF00234DA7 /* TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661DE28D7F3AF00234DA7 /* TableView+Extensions.swift */; };
 		FDC661E228D7F6D800234DA7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */; };
 		FDC661E428D7FCD400234DA7 /* TeamStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E328D7FCD400234DA7 /* TeamStackView.swift */; };
+		FDC661E928D806C500234DA7 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E828D806C500234DA7 /* UIView+Extensions.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -165,6 +166,7 @@
 		FDC661DE28D7F3AF00234DA7 /* TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extensions.swift"; sourceTree = "<group>"; };
 		FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		FDC661E328D7FCD400234DA7 /* TeamStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStackView.swift; sourceTree = "<group>"; };
+		FDC661E828D806C500234DA7 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -645,6 +647,7 @@
 				FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */,
 				FDC661DE28D7F3AF00234DA7 /* TableView+Extensions.swift */,
 				FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */,
+				FDC661E828D806C500234DA7 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -852,6 +855,7 @@
 				FDC661CB28D7EC1000234DA7 /* ViewCodable.swift in Sources */,
 				FDC6617B28D6E36100234DA7 /* MatchListError.swift in Sources */,
 				FDC6619528D6FA4300234DA7 /* Team.swift in Sources */,
+				FDC661E928D806C500234DA7 /* UIView+Extensions.swift in Sources */,
 				FDC6619028D6F7A400234DA7 /* GetTeamsUseCase.swift in Sources */,
 				FDC661D228D7ED0900234DA7 /* DispatchQueueProtocol.swift in Sources */,
 				FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */,
@@ -1056,6 +1060,7 @@
 				INFOPLIST_FILE = CSTV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1083,6 +1088,7 @@
 				INFOPLIST_FILE = CSTV/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

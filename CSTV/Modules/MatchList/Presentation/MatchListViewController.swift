@@ -3,7 +3,6 @@ import UIKit
 final class MatchListViewController: UITableViewController {
     
     private var viewModel: MatchListViewModelProtocol
-    
     private let tableViewResponder: MatchListTableViewResponderProtocol
     
     init(
@@ -25,9 +24,10 @@ final class MatchListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.backgroundColor = .background
         
         viewModel.initialize()
-        
         didUpdateMatchList()
     }
 }

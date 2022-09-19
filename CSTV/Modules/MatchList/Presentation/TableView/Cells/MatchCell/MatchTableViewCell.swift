@@ -23,6 +23,11 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
     private let matchTimeView: MatchCellTimeViewDisplayable
     private let teamsView: MatchCellTeamsViewDisplayable
     private let leagueSerieView: MatchCellLeagueSerieViewDisplayable
+    
+    private lazy var cardView: UIView = {
+        let view = UIView()
+        return view
+    }()
 
     private lazy var separatorView: SeparatorView = {
         let view = SeparatorView()
@@ -75,17 +80,24 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
 
 extension MatchTableViewCell: ViewCodable {
     func setupSubviews() {
-        addSubview(vStack)
+        addSubview(cardView)
+        cardView.addSubview(vStack)
     }
     
     func setupConstraints() {
-        constrain(vStack, self) {
+        constrain(cardView, self) {
+            $0.edges == $1.edges.inseted(horizontally: 24, vertically: 12)
+        }
+        
+        constrain(vStack, cardView) {
             $0.edges == $1.edges
         }
     }
     
     func setupExtraConfigurations() {
-        backgroundColor = .gray900
+        backgroundColor = .clear
+        cardView.backgroundColor = .gray900
+        cardView.layer.cornerRadius = 16
         selectionStyle = .none
     }
 }

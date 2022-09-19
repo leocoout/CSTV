@@ -24,6 +24,7 @@ final class MatchCellTimeView: UIView, MatchCellTimeViewDisplayable {
     
     private lazy var matchTimeView: MatchTimeView = {
         let view = MatchTimeView()
+        view.addCornerRadius(of: 16, corners: [.layerMaxXMinYCorner, .layerMinXMaxYCorner])
         return view
     }()
     
