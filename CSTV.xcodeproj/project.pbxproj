@@ -62,6 +62,7 @@
 		FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */; };
 		FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */; };
 		FDC661C628D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */; };
+		FDC661C928D7EBE800234DA7 /* Cartography in Frameworks */ = {isa = PBXBuildFile; productRef = FDC661C828D7EBE800234DA7 /* Cartography */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -154,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC661C928D7EBE800234DA7 /* Cartography in Frameworks */,
 				FDDED5B228D6608200EE12B2 /* Networking in Frameworks */,
 				FD5851CD28D64CD700B9ACC9 /* SimpleKeychain in Frameworks */,
 				FDDED5B628D6609700EE12B2 /* NetworkingInterfaceTestUtils in Frameworks */,
@@ -662,6 +664,7 @@
 				FDDED5B128D6608200EE12B2 /* Networking */,
 				FDDED5B328D6608500EE12B2 /* NetworkingInterface */,
 				FDDED5B528D6609700EE12B2 /* NetworkingInterfaceTestUtils */,
+				FDC661C828D7EBE800234DA7 /* Cartography */,
 			);
 			productName = CSTV;
 			productReference = FD634D9328D63F1200D18453 /* CSTV.app */;
@@ -718,6 +721,7 @@
 			mainGroup = FD634D8A28D63F1100D18453;
 			packageReferences = (
 				FD5851CB28D64CD700B9ACC9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
+				FDC661C728D7EBE800234DA7 /* XCRemoteSwiftPackageReference "Cartography" */,
 			);
 			productRefGroup = FD634D9428D63F1200D18453 /* Products */;
 			projectDirPath = "";
@@ -1091,6 +1095,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		FDC661C728D7EBE800234DA7 /* XCRemoteSwiftPackageReference "Cartography" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/robb/Cartography.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1098,6 +1110,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FD5851CB28D64CD700B9ACC9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */;
 			productName = SimpleKeychain;
+		};
+		FDC661C828D7EBE800234DA7 /* Cartography */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDC661C728D7EBE800234DA7 /* XCRemoteSwiftPackageReference "Cartography" */;
+			productName = Cartography;
 		};
 		FDDED5B128D6608200EE12B2 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
