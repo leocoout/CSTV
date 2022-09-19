@@ -4,13 +4,10 @@ import XCTest
 
 final class MatchListViewControllerTests: XCTestCase {
     private let viewModelSpy = MatchListViewModelSpy()
-    private lazy var sut = MatchListViewController(
-        viewModel: viewModelSpy
-    )
+    private let tableViewResponderSpy = MatchListTableViewResponderSpy()
     
-    func test_viewDidLoad_shouldCallInitialize() {
-        sut.viewDidLoad()
-        
-        XCTAssertTrue(viewModelSpy.initializeCalled)
-    }
+    private lazy var sut = MatchListViewController(
+        viewModel: viewModelSpy,
+        tableViewResponder: tableViewResponderSpy
+    )
 }

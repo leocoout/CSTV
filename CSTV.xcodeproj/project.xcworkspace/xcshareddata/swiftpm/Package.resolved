@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "cartography",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/robb/Cartography.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "d0dc3f340dec22c96255ca385ff4b9e45fbe9b8e"
+      }
+    },
+    {
       "identity" : "simplekeychain",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/auth0/SimpleKeychain.git",
