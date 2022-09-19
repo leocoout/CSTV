@@ -23,7 +23,7 @@ struct GetMatchesRequest: CSTVNetworkRequest {
     
     var parameters: [CSTVListNetworkRequestBodyKey: Any] {
         [
-            .perPage: 10,
+            .perPage: 6,
             .page: requestPage,
             .beginAt: beginAt
         ]

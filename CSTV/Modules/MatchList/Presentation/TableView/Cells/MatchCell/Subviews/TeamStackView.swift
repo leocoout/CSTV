@@ -11,7 +11,7 @@ class TeamStackView: UIStackView {
     
     private lazy var teamImage: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = .gray
+        image.contentMode = .scaleAspectFit
         constrain(image) {
             $0.width == 60
             $0.height == 60
@@ -35,7 +35,7 @@ class TeamStackView: UIStackView {
         axis = .vertical
         spacing = 10
         alignment = .center
-        distribution = .fillProportionally
+        distribution = .fill
         
         addArrangedSubview(teamImage)
         addArrangedSubview(teamLabel)
@@ -46,6 +46,7 @@ class TeamStackView: UIStackView {
     }
     
     func configure(with viewModel: ViewModel) {
+        teamImage.loadImage(from: viewModel.imageUrl)
         teamLabel.text = viewModel.teamName
     }
 }

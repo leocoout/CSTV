@@ -33,15 +33,20 @@ final class MatchListViewController: UITableViewController {
 }
 
 extension MatchListViewController: MatchListTableViewResponderDelegate {
-    func hadleRecipeSelection(at index: Int) {
+    func hadleMatchSelection(at index: Int) {
+    }
     
+    func requestMoreData() {
+        viewModel.getMoreMatches()
     }
 }
 
 private extension MatchListViewController {
     func didUpdateMatchList() {
-        viewModel.didUpdateMatchList =  { list in
-            print(list)
+        viewModel.didUpdateMatchList =  { [weak self ] list in
+            self?.tableViewResponder.updateDataSource(
+                .init(matches: list.mappedToMatchListCellViewModel)
+            )
         }
     }
 }

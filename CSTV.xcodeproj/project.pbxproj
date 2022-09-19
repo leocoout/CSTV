@@ -76,6 +76,11 @@
 		FDC661E428D7FCD400234DA7 /* TeamStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E328D7FCD400234DA7 /* TeamStackView.swift */; };
 		FDC661E928D806C500234DA7 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E828D806C500234DA7 /* UIView+Extensions.swift */; };
 		FDC661EF28D8097300234DA7 /* MatchListTableViewResponderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661EE28D8097300234DA7 /* MatchListTableViewResponderSpy.swift */; };
+		FDC661F128D8112600234DA7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F028D8112600234DA7 /* String+Extensions.swift */; };
+		FDC661F428D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F328D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift */; };
+		FDC661F728D8208600234DA7 /* LoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */; };
+		FDC661FA28D8268500234DA7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FDC661F928D8268500234DA7 /* Kingfisher */; };
+		FDC661FC28D826C800234DA7 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661FB28D826C800234DA7 /* UIImageView+Extensions.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -169,6 +174,10 @@
 		FDC661E328D7FCD400234DA7 /* TeamStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStackView.swift; sourceTree = "<group>"; };
 		FDC661E828D806C500234DA7 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		FDC661EE28D8097300234DA7 /* MatchListTableViewResponderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListTableViewResponderSpy.swift; sourceTree = "<group>"; };
+		FDC661F028D8112600234DA7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		FDC661F328D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListToMatchCellModelAdapter.swift; sourceTree = "<group>"; };
+		FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderTableViewCell.swift; sourceTree = "<group>"; };
+		FDC661FB28D826C800234DA7 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -181,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC661FA28D8268500234DA7 /* Kingfisher in Frameworks */,
 				FDC661C928D7EBE800234DA7 /* Cartography in Frameworks */,
 				FDDED5B228D6608200EE12B2 /* Networking in Frameworks */,
 				FD5851CD28D64CD700B9ACC9 /* SimpleKeychain in Frameworks */,
@@ -581,6 +591,7 @@
 		FDC661AB28D79C8D00234DA7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661F228D8143400234DA7 /* Adapters */,
 				FDC661CC28D7EC8400234DA7 /* TableView */,
 				FDC661AC28D79D0C00234DA7 /* MatchListFactory.swift */,
 				FDC661AE28D79D1400234DA7 /* MatchListViewModel.swift */,
@@ -630,6 +641,7 @@
 		FDC661D328D7ED3200234DA7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661F528D8208000234DA7 /* LoaderCell */,
 				FDC661DC28D7F2E100234DA7 /* MatchCell */,
 			);
 			path = Cells;
@@ -648,9 +660,11 @@
 			isa = PBXGroup;
 			children = (
 				FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */,
+				FDC661F028D8112600234DA7 /* String+Extensions.swift */,
 				FDC661DE28D7F3AF00234DA7 /* TableView+Extensions.swift */,
 				FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */,
 				FDC661E828D806C500234DA7 /* UIView+Extensions.swift */,
+				FDC661FB28D826C800234DA7 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -680,6 +694,22 @@
 				FDC661EE28D8097300234DA7 /* MatchListTableViewResponderSpy.swift */,
 			);
 			name = Doubles;
+			sourceTree = "<group>";
+		};
+		FDC661F228D8143400234DA7 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661F328D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		FDC661F528D8208000234DA7 /* LoaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */,
+			);
+			path = LoaderCell;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -760,6 +790,7 @@
 				FDDED5B328D6608500EE12B2 /* NetworkingInterface */,
 				FDDED5B528D6609700EE12B2 /* NetworkingInterfaceTestUtils */,
 				FDC661C828D7EBE800234DA7 /* Cartography */,
+				FDC661F928D8268500234DA7 /* Kingfisher */,
 			);
 			productName = CSTV;
 			productReference = FD634D9328D63F1200D18453 /* CSTV.app */;
@@ -817,6 +848,7 @@
 			packageReferences = (
 				FD5851CB28D64CD700B9ACC9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
 				FDC661C728D7EBE800234DA7 /* XCRemoteSwiftPackageReference "Cartography" */,
+				FDC661F828D8268500234DA7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = FD634D9428D63F1200D18453 /* Products */;
 			projectDirPath = "";
@@ -870,21 +902,25 @@
 				FDC661B128D79D1B00234DA7 /* MatchListModel.swift in Sources */,
 				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
 				FDC6615E28D6D34100234DA7 /* GetTeamsService.swift in Sources */,
+				FDC661F428D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift in Sources */,
 				FDC6618028D6E9E900234DA7 /* NetworkingErrorToMatchListErrorAdapter.swift in Sources */,
 				FDC661CB28D7EC1000234DA7 /* ViewCodable.swift in Sources */,
 				FDC6617B28D6E36100234DA7 /* MatchListError.swift in Sources */,
 				FDC6619528D6FA4300234DA7 /* Team.swift in Sources */,
 				FDC661E928D806C500234DA7 /* UIView+Extensions.swift in Sources */,
 				FDC6619028D6F7A400234DA7 /* GetTeamsUseCase.swift in Sources */,
+				FDC661F128D8112600234DA7 /* String+Extensions.swift in Sources */,
 				FDC661D228D7ED0900234DA7 /* DispatchQueueProtocol.swift in Sources */,
 				FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */,
 				FDC661D728D7F0C700234DA7 /* MatchCellLeagueSerieView.swift in Sources */,
+				FDC661F728D8208600234DA7 /* LoaderTableViewCell.swift in Sources */,
 				FDC661B328D79D2E00234DA7 /* MatchListViewController.swift in Sources */,
 				FDC661DF28D7F3AF00234DA7 /* TableView+Extensions.swift in Sources */,
 				FDC6617628D6E28C00234DA7 /* Date+Extensions.swift in Sources */,
 				FDC6617E28D6E57B00234DA7 /* MatchesResponseToMatchListAdapter.swift in Sources */,
 				FDC6615928D6CD6E00234DA7 /* TeamPlayersResponse.swift in Sources */,
 				FDC6617328D6E1D400234DA7 /* GetMatchesForPageUseCase.swift in Sources */,
+				FDC661FC28D826C800234DA7 /* UIImageView+Extensions.swift in Sources */,
 				FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */,
 				FDC661D928D7F0CE00234DA7 /* MatchCellTeamsView.swift in Sources */,
 				FDDED5C028D6692300EE12B2 /* MatchesResponse.swift in Sources */,
@@ -1213,6 +1249,14 @@
 				kind = branch;
 			};
 		};
+		FDC661F828D8268500234DA7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1225,6 +1269,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FDC661C728D7EBE800234DA7 /* XCRemoteSwiftPackageReference "Cartography" */;
 			productName = Cartography;
+		};
+		FDC661F928D8268500234DA7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDC661F828D8268500234DA7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		FDDED5B128D6608200EE12B2 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
