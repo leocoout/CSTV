@@ -1,14 +1,14 @@
 import UIKit
 
 protocol MatchListTableViewResponderDelegate: AnyObject {
-//    func hadleRecipeSelection(at index: Int, with recipes: [RecipeListCell.ViewModel])
+    func hadleRecipeSelection(at index: Int)
 }
 
 protocol MatchListTableViewResponderProtocol: UITableViewDelegate, UITableViewDataSource {
     var tableView: UITableView? { get }
     var delegate: MatchListTableViewResponderDelegate? { get set }
     
-//    func updateDataSource(_ dataSource: RecipeListTableViewDataSource)
+    func updateDataSource(_ dataSource: MatchListTableViewDataSource)
     func setErrorView(_ view: UIView)
 }
 
@@ -18,7 +18,7 @@ final class MatchListTableViewResponder: NSObject, MatchListTableViewResponderPr
     
     // MARK: - Private Properties
     private let dispatchQueue: DispatchQueueProtocol
-//    private var tableDataSource: RecipeListTableViewDataSource?
+    private var tableDataSource: MatchListTableViewDataSource?
     
     lazy var tableView: UITableView? = {
         let tableView = UITableView()
@@ -38,8 +38,8 @@ final class MatchListTableViewResponder: NSObject, MatchListTableViewResponderPr
         self.dispatchQueue = dispatchQueue
     }
     
-    func updateDataSource() {
-//        tableDataSource = dataSource
+    func updateDataSource(_ dataSource: MatchListTableViewDataSource) {
+        tableDataSource = dataSource
         dispatchQueue.async(group: nil, qos: .unspecified, flags: []) {
             self.tableView?.reloadData()
         }
@@ -58,8 +58,7 @@ extension MatchListTableViewResponder {
     func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        tableDataSource?.recipeCells.count ?? 0
-        4
+        tableDataSource?.matches.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,5 +83,6 @@ extension MatchListTableViewResponder {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.hadleRecipeSelection(at: indexPath.row)
     }
 }

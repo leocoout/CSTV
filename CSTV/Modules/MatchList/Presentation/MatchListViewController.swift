@@ -32,7 +32,11 @@ final class MatchListViewController: UITableViewController {
     }
 }
 
-extension MatchListViewController: MatchListTableViewResponderDelegate {}
+extension MatchListViewController: MatchListTableViewResponderDelegate {
+    func hadleRecipeSelection(at index: Int) {
+    
+    }
+}
 
 private extension MatchListViewController {
     func didUpdateMatchList() {
