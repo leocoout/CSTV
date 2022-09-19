@@ -20,6 +20,7 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
     
     // MARK: - Private Properties
     
+    private let matchTimeView: MatchCellTimeViewDisplayable
     private let teamsView: MatchCellTeamsViewDisplayable
     private let leagueSerieView: MatchCellLeagueSerieViewDisplayable
 
@@ -33,7 +34,7 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
     }()
     
     private lazy var vStack: UIStackView = {
-        let hStack = UIStackView(arrangedSubviews: [teamsView, separatorView, leagueSerieView])
+        let hStack = UIStackView(arrangedSubviews: [matchTimeView, teamsView, separatorView, leagueSerieView])
         hStack.distribution = .fillProportionally
         hStack.axis = .vertical
         return hStack
@@ -43,9 +44,11 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
     // MARK: - Initializer
     
     init(
+        matchTimeView: MatchCellTimeViewDisplayable = MatchCellTimeView(),
         teamsView: MatchCellTeamsViewDisplayable = MatchCellTeamsView(),
         leagueSerieView: MatchCellLeagueSerieViewDisplayable = MatchCellLeagueSerieView()
     ) {
+        self.matchTimeView = matchTimeView
         self.teamsView = teamsView
         self.leagueSerieView = leagueSerieView
         super.init(style: .default, reuseIdentifier: nil)
@@ -54,6 +57,7 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        self.matchTimeView = MatchCellTimeView()
         self.teamsView = MatchCellTeamsView()
         self.leagueSerieView = MatchCellLeagueSerieView()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -63,6 +67,7 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
     required init?(coder: NSCoder) { nil }
 
     func configure(with viewModel: ViewModel) {
+        matchTimeView.configure(with: .init(matchTime: viewModel.matchStartTime, isLive: viewModel.isLive))
         leagueSerieView.configure(with: .init(leagueImageURL: "", leagueAndSerieName: viewModel.leagueSerieName))
         setupTeamsView(viewModel)
     }
@@ -80,7 +85,8 @@ extension MatchTableViewCell: ViewCodable {
     }
     
     func setupExtraConfigurations() {
-        backgroundColor = .cardColor
+        backgroundColor = .gray900
+        selectionStyle = .none
     }
 }
 
@@ -100,8 +106,7 @@ private extension MatchTableViewCell {
 private class SeparatorView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
-        layer.opacity = 0.2
+        backgroundColor = .gray200
     }
     
     required init?(coder: NSCoder) { nil }

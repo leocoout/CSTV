@@ -70,7 +70,7 @@
 		FDC661D528D7ED6100234DA7 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661D428D7ED6100234DA7 /* MatchTableViewCell.swift */; };
 		FDC661D728D7F0C700234DA7 /* MatchCellLeagueSerieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661D628D7F0C700234DA7 /* MatchCellLeagueSerieView.swift */; };
 		FDC661D928D7F0CE00234DA7 /* MatchCellTeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661D828D7F0CE00234DA7 /* MatchCellTeamsView.swift */; };
-		FDC661DB28D7F0D300234DA7 /* MatchCellDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661DA28D7F0D300234DA7 /* MatchCellDateView.swift */; };
+		FDC661DB28D7F0D300234DA7 /* MatchCellTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661DA28D7F0D300234DA7 /* MatchCellTimeView.swift */; };
 		FDC661DF28D7F3AF00234DA7 /* TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661DE28D7F3AF00234DA7 /* TableView+Extensions.swift */; };
 		FDC661E228D7F6D800234DA7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */; };
 		FDC661E428D7FCD400234DA7 /* TeamStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E328D7FCD400234DA7 /* TeamStackView.swift */; };
@@ -161,7 +161,7 @@
 		FDC661D428D7ED6100234DA7 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		FDC661D628D7F0C700234DA7 /* MatchCellLeagueSerieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellLeagueSerieView.swift; sourceTree = "<group>"; };
 		FDC661D828D7F0CE00234DA7 /* MatchCellTeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellTeamsView.swift; sourceTree = "<group>"; };
-		FDC661DA28D7F0D300234DA7 /* MatchCellDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellDateView.swift; sourceTree = "<group>"; };
+		FDC661DA28D7F0D300234DA7 /* MatchCellTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellTimeView.swift; sourceTree = "<group>"; };
 		FDC661DE28D7F3AF00234DA7 /* TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extensions.swift"; sourceTree = "<group>"; };
 		FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		FDC661E328D7FCD400234DA7 /* TeamStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStackView.swift; sourceTree = "<group>"; };
@@ -655,7 +655,7 @@
 				FDC661D628D7F0C700234DA7 /* MatchCellLeagueSerieView.swift */,
 				FDC661D828D7F0CE00234DA7 /* MatchCellTeamsView.swift */,
 				FDC661E328D7FCD400234DA7 /* TeamStackView.swift */,
-				FDC661DA28D7F0D300234DA7 /* MatchCellDateView.swift */,
+				FDC661DA28D7F0D300234DA7 /* MatchCellTimeView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -839,7 +839,7 @@
 				FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */,
 				FDC6619C28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift in Sources */,
 				FDC6615B28D6CE8F00234DA7 /* GetTeamsRequest.swift in Sources */,
-				FDC661DB28D7F0D300234DA7 /* MatchCellDateView.swift in Sources */,
+				FDC661DB28D7F0D300234DA7 /* MatchCellTimeView.swift in Sources */,
 				FDC661AF28D79D1400234DA7 /* MatchListViewModel.swift in Sources */,
 				FDC6619A28D6FAD900234DA7 /* TeamResponseToPlayerListAdapter.swift in Sources */,
 				FDC661C628D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift in Sources */,

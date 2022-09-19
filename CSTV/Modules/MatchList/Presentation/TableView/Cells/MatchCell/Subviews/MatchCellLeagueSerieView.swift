@@ -39,7 +39,7 @@ final class MatchCellLeagueSerieView: UIView, MatchCellLeagueSerieViewDisplayabl
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 8)
-        label.textColor = .white
+        label.textColor = .gray100
         
         constrain(label) {
             $0.height == 16

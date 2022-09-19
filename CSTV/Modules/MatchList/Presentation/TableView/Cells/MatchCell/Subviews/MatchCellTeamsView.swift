@@ -20,7 +20,13 @@ final class MatchCellTeamsView: UIView, MatchCellTeamsViewDisplayable {
     private let rightTeam: TeamStackView
     
     private lazy var hStack: UIStackView = {
-        let hStack = UIStackView(arrangedSubviews: [UIView(), leftTeam, versusLabel, rightTeam, UIView()])
+        let hStack = UIStackView(arrangedSubviews: [
+            UIView(),
+            leftTeam, versusLabel,
+            rightTeam,
+            UIView()
+        ])
+        
         hStack.distribution = .fillEqually
         hStack.alignment = .center
         hStack.axis = .horizontal
@@ -31,12 +37,11 @@ final class MatchCellTeamsView: UIView, MatchCellTeamsViewDisplayable {
         let label = UILabel()
         label.font = .systemFont(ofSize: 8)
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .gray500
         label.text = "vs"
         
         return label
     }()
-    
     
     // MARK: - Initializer
     

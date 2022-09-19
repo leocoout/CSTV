@@ -24,7 +24,7 @@ class TeamStackView: UIStackView {
         let label = UILabel()
         label.font = .systemFont(ofSize: 10)
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .gray100
         
         return label
     }()
