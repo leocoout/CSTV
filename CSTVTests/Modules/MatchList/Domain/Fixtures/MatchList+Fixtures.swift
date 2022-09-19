@@ -1,6 +1,6 @@
 @testable import CSTV
 
-extension MatchList {
+extension Match {
     static func fixture(
         id: Int = 0,
         status: Status = .notPlayed,

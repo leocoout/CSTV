@@ -34,7 +34,7 @@
 		FDC6617028D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616F28D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift */; };
 		FDC6617328D6E1D400234DA7 /* GetMatchesForPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617228D6E1D400234DA7 /* GetMatchesForPageUseCase.swift */; };
 		FDC6617628D6E28C00234DA7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */; };
-		FDC6617928D6E35C00234DA7 /* MatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617828D6E35C00234DA7 /* MatchList.swift */; };
+		FDC6617928D6E35C00234DA7 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617828D6E35C00234DA7 /* Match.swift */; };
 		FDC6617B28D6E36100234DA7 /* MatchListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617A28D6E36100234DA7 /* MatchListError.swift */; };
 		FDC6617E28D6E57B00234DA7 /* MatchesResponseToMatchListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617D28D6E57B00234DA7 /* MatchesResponseToMatchListAdapter.swift */; };
 		FDC6618028D6E9E900234DA7 /* NetworkingErrorToMatchListErrorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617F28D6E9E900234DA7 /* NetworkingErrorToMatchListErrorAdapter.swift */; };
@@ -90,6 +90,10 @@
 		FDC6620C28D831B100234DA7 /* MatchListRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620B28D831B100234DA7 /* MatchListRouterSpy.swift */; };
 		FDC6620F28D8324600234DA7 /* MatchDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620E28D8324600234DA7 /* MatchDetailsViewModelTests.swift */; };
 		FDC6621128D8327100234DA7 /* MatchDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6621028D8327100234DA7 /* MatchDetailsViewControllerTests.swift */; };
+		FDC6621428D833A200234DA7 /* MatchDetailsTableViewResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6621328D833A200234DA7 /* MatchDetailsTableViewResponder.swift */; };
+		FDC6621728D8341F00234DA7 /* MatchDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6621628D8341F00234DA7 /* MatchDetailHeaderCell.swift */; };
+		FDC6621928D8342D00234DA7 /* MatchDetailPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6621828D8342D00234DA7 /* MatchDetailPlayerCell.swift */; };
+		FDC6621B28D8385B00234DA7 /* MatchDetailsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6621A28D8385B00234DA7 /* MatchDetailsTableViewDataSource.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -142,7 +146,7 @@
 		FDC6616F28D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamPlayersResponse+Fixture.swift"; sourceTree = "<group>"; };
 		FDC6617228D6E1D400234DA7 /* GetMatchesForPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesForPageUseCase.swift; sourceTree = "<group>"; };
 		FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		FDC6617828D6E35C00234DA7 /* MatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchList.swift; sourceTree = "<group>"; };
+		FDC6617828D6E35C00234DA7 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		FDC6617A28D6E36100234DA7 /* MatchListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListError.swift; sourceTree = "<group>"; };
 		FDC6617D28D6E57B00234DA7 /* MatchesResponseToMatchListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponseToMatchListAdapter.swift; sourceTree = "<group>"; };
 		FDC6617F28D6E9E900234DA7 /* NetworkingErrorToMatchListErrorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingErrorToMatchListErrorAdapter.swift; sourceTree = "<group>"; };
@@ -196,6 +200,10 @@
 		FDC6620B28D831B100234DA7 /* MatchListRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListRouterSpy.swift; sourceTree = "<group>"; };
 		FDC6620E28D8324600234DA7 /* MatchDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		FDC6621028D8327100234DA7 /* MatchDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		FDC6621328D833A200234DA7 /* MatchDetailsTableViewResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsTableViewResponder.swift; sourceTree = "<group>"; };
+		FDC6621628D8341F00234DA7 /* MatchDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailHeaderCell.swift; sourceTree = "<group>"; };
+		FDC6621828D8342D00234DA7 /* MatchDetailPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailPlayerCell.swift; sourceTree = "<group>"; };
+		FDC6621A28D8385B00234DA7 /* MatchDetailsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsTableViewDataSource.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -511,7 +519,7 @@
 		FDC6617728D6E35500234DA7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				FDC6617828D6E35C00234DA7 /* MatchList.swift */,
+				FDC6617828D6E35C00234DA7 /* Match.swift */,
 				FDC6617A28D6E36100234DA7 /* MatchListError.swift */,
 			);
 			path = Entities;
@@ -737,6 +745,7 @@
 		FDC661FD28D82E6F00234DA7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FDC6621228D8338C00234DA7 /* TableView */,
 				FDC661FE28D82E8400234DA7 /* MatchDetailsViewModel.swift */,
 				FDC6620028D82E8A00234DA7 /* MatchDetailsViewController.swift */,
 				FDC6620228D82E8F00234DA7 /* MatchDetailsFactory.swift */,
@@ -761,6 +770,25 @@
 				FDC6620928D8313500234DA7 /* MatchDetailsViewModelSpy.swift */,
 			);
 			path = Doubles;
+			sourceTree = "<group>";
+		};
+		FDC6621228D8338C00234DA7 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6621528D8341500234DA7 /* Cells */,
+				FDC6621328D833A200234DA7 /* MatchDetailsTableViewResponder.swift */,
+				FDC6621A28D8385B00234DA7 /* MatchDetailsTableViewDataSource.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		FDC6621528D8341500234DA7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6621628D8341F00234DA7 /* MatchDetailHeaderCell.swift */,
+				FDC6621828D8342D00234DA7 /* MatchDetailPlayerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -942,7 +970,9 @@
 				FDC661B528D79F9600234DA7 /* ModuleFactoryProtocol.swift in Sources */,
 				FDC661FF28D82E8400234DA7 /* MatchDetailsViewModel.swift in Sources */,
 				FDC661AA28D701E200234DA7 /* GetMatchDetailsUseCase.swift in Sources */,
+				FDC6621428D833A200234DA7 /* MatchDetailsTableViewResponder.swift in Sources */,
 				FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */,
+				FDC6621B28D8385B00234DA7 /* MatchDetailsTableViewDataSource.swift in Sources */,
 				FDC6619C28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift in Sources */,
 				FDC6615B28D6CE8F00234DA7 /* GetTeamsRequest.swift in Sources */,
 				FDC6620728D82F9B00234DA7 /* MatchListRouter.swift in Sources */,
@@ -956,6 +986,7 @@
 				FDC661B128D79D1B00234DA7 /* MatchListModel.swift in Sources */,
 				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
 				FDC6615E28D6D34100234DA7 /* GetTeamsService.swift in Sources */,
+				FDC6621928D8342D00234DA7 /* MatchDetailPlayerCell.swift in Sources */,
 				FDC661F428D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift in Sources */,
 				FDC6618028D6E9E900234DA7 /* NetworkingErrorToMatchListErrorAdapter.swift in Sources */,
 				FDC661CB28D7EC1000234DA7 /* ViewCodable.swift in Sources */,
@@ -977,6 +1008,7 @@
 				FDC6615928D6CD6E00234DA7 /* TeamPlayersResponse.swift in Sources */,
 				FDC6617328D6E1D400234DA7 /* GetMatchesForPageUseCase.swift in Sources */,
 				FDC661FC28D826C800234DA7 /* UIImageView+Extensions.swift in Sources */,
+				FDC6621728D8341F00234DA7 /* MatchDetailHeaderCell.swift in Sources */,
 				FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */,
 				FDC661D928D7F0CE00234DA7 /* MatchCellTeamsView.swift in Sources */,
 				FDDED5C028D6692300EE12B2 /* MatchesResponse.swift in Sources */,
@@ -986,7 +1018,7 @@
 				FDC661E228D7F6D800234DA7 /* UIColor+Extensions.swift in Sources */,
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
 				FDC661D028D7EC9B00234DA7 /* MatchListTableViewDataSource.swift in Sources */,
-				FDC6617928D6E35C00234DA7 /* MatchList.swift in Sources */,
+				FDC6617928D6E35C00234DA7 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

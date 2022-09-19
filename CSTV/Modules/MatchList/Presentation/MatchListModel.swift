@@ -1,1 +1,1 @@
-typealias MatchListModel = [MatchList]
+typealias MatchListModel = [Match]

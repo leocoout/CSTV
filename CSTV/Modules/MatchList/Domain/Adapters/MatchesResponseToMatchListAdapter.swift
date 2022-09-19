@@ -1,4 +1,4 @@
-extension MatchList {
+extension Match {
     init(from response: MatchesResponse) {
         let mappedOpponents = response.opponents.map {
             MatchListOpponent(from: $0)

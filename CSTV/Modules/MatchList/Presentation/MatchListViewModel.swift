@@ -41,7 +41,7 @@ private extension MatchListViewModel {
     }
 }
 
-private extension Array where Element == MatchList {
+private extension Array where Element == Match {
     var formatted: Self {
         map {
             .init(

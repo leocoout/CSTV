@@ -30,14 +30,31 @@ final class MatchListViewController: UITableViewController {
 
         view.backgroundColor = .background
         
-        viewModel.fetchMatches()
         didUpdateMatchList()
+        viewModel.fetchMatches()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 }
 
 extension MatchListViewController: MatchListTableViewResponderDelegate {
-    func hadleMatchSelection(at index: Int) {
-        router.routeToMatchDetails()
+    func hadleMatchSelection(_ matchData: MatchTableViewCell.ViewModel) {
+        router.routeToMatchDetails(
+            with: .init(
+                leftTeam: .init(imageUrl: matchData.leftTeamImageURL, name:  matchData.leftTeamName),
+                rightTeam: .init(imageUrl: matchData.rightTeamImageURL, name:  matchData.rightTeamName),
+                matchTime: matchData.matchStartTime,
+                leagueSerie: matchData.leagueSerieName
+            )
+        )
     }
     
     func requestMoreData() {
