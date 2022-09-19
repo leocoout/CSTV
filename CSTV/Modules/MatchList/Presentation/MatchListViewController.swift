@@ -4,13 +4,16 @@ final class MatchListViewController: UITableViewController {
     
     private var viewModel: MatchListViewModelProtocol
     private let tableViewResponder: MatchListTableViewResponderProtocol
+    private let router: MatchListRoutingProtocol
     
     init(
         viewModel: MatchListViewModelProtocol,
-        tableViewResponder: MatchListTableViewResponderProtocol
+        tableViewResponder: MatchListTableViewResponderProtocol,
+        router: MatchListRoutingProtocol
     ) {
         self.viewModel = viewModel
         self.tableViewResponder = tableViewResponder
+        self.router = router
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -27,17 +30,18 @@ final class MatchListViewController: UITableViewController {
 
         view.backgroundColor = .background
         
-        viewModel.initialize()
+        viewModel.fetchMatches()
         didUpdateMatchList()
     }
 }
 
 extension MatchListViewController: MatchListTableViewResponderDelegate {
     func hadleMatchSelection(at index: Int) {
+        router.routeToMatchDetails()
     }
     
     func requestMoreData() {
-        viewModel.getMoreMatches()
+        viewModel.fetchMatches()
     }
 }
 

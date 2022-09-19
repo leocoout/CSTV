@@ -1,6 +1,5 @@
 protocol MatchListViewModelProtocol {
-    func initialize()
-    func getMoreMatches()
+    func fetchMatches()
     
     var didUpdateMatchList: ((MatchListModel) -> Void)? { get set }
 }
@@ -20,11 +19,7 @@ final class MatchListViewModel: MatchListViewModelProtocol {
         self.getMatchesForPageUseCase = getMatchesForPageUseCase
     }
     
-    func initialize() {
-        getMatchesForPage()
-    }
-    
-    func getMoreMatches() {
+    func fetchMatches() {
         getMatchesForPage()
     }
 }

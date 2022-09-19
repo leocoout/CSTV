@@ -1,5 +1,7 @@
 import UIKit
 
 protocol ModuleFactoryProtocol {
-    func make() -> UIViewController
+    associatedtype Dependencies
+    
+    func make(with dependencies: Dependencies) -> UIViewController
 }

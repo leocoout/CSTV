@@ -14,7 +14,7 @@ final class GetMatchesRequestTests: XCTestCase {
         XCTAssertEqual(sut.baseUrl, "api.pandascore.co")
         XCTAssertEqual(sut.header["authorization"], "token")
         XCTAssertEqual(sut.parameters[.page] as? Int, 2)
-        XCTAssertEqual(sut.parameters[.perPage] as? Int, 10)
+        XCTAssertEqual(sut.parameters[.perPage] as? Int, 6)
         XCTAssertEqual(sut.parameters[.beginAt] as? String, "date")
     }
 }

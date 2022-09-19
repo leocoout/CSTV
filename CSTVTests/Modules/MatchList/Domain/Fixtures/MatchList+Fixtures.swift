@@ -7,7 +7,8 @@ extension MatchList {
         opponents: [MatchListOpponent] = [],
         leagueName: String? = nil,
         leagueImageUrl: String? = nil,
-        serieName: String? = nil
+        serieName: String? = nil,
+        matchStartTime: String? = nil
     ) -> Self {
         .init(
             id: id,
@@ -15,7 +16,8 @@ extension MatchList {
             opponents: opponents,
             leagueName: leagueName,
             leagueImageUrl: leagueImageUrl,
-            serieName: serieName
+            serieName: serieName,
+            matchStartTime: matchStartTime
         )
     }
 }

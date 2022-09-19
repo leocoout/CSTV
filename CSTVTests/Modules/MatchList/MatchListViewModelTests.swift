@@ -13,7 +13,7 @@ final class MatchListViewModelTests: XCTestCase {
     func test_initialize_shouldCallGetMatchesForPageUseCase() {
         let expectation = expectation(description: "Waiting for mocked response")
         
-        sut.initialize()
+        sut.fetchMatches()
         expectation.fulfill()
         
         waitForExpectations(timeout: 0.1, handler: nil)
@@ -30,7 +30,7 @@ final class MatchListViewModelTests: XCTestCase {
             XCTAssertEqual(list.first?.id, 11)
         }
         
-        sut.initialize()
+        sut.fetchMatches()
         waitForExpectations(timeout: 0.1, handler: nil)
         
         XCTAssertTrue(getMatchesForPageSpy.executeCalled)

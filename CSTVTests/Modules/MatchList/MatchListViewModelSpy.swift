@@ -6,7 +6,7 @@ final class MatchListViewModelSpy: MatchListViewModelProtocol {
 
     private(set) var initializeCalled: Bool = false
     
-    func initialize() {
+    func fetchMatches() {
         initializeCalled = true
     }
 }
