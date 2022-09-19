@@ -63,6 +63,7 @@
 		FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */; };
 		FDC661C628D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */; };
 		FDC661C928D7EBE800234DA7 /* Cartography in Frameworks */ = {isa = PBXBuildFile; productRef = FDC661C828D7EBE800234DA7 /* Cartography */; };
+		FDC661CB28D7EC1000234DA7 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661CA28D7EC1000234DA7 /* ViewCodable.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -143,6 +144,7 @@
 		FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewControllerTests.swift; sourceTree = "<group>"; };
 		FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelSpy.swift; sourceTree = "<group>"; };
 		FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesForPageUseCaseFactory.swift; sourceTree = "<group>"; };
+		FDC661CA28D7EC1000234DA7 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 			children = (
 				FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */,
 				FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */,
+				FDC661CA28D7EC1000234DA7 /* ViewCodable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				FD5851DB28D654E500B9ACC9 /* KeychainProvider.swift in Sources */,
 				FDC6615E28D6D34100234DA7 /* GetTeamsService.swift in Sources */,
 				FDC6618028D6E9E900234DA7 /* NetworkingErrorToMatchListErrorAdapter.swift in Sources */,
+				FDC661CB28D7EC1000234DA7 /* ViewCodable.swift in Sources */,
 				FDC6617B28D6E36100234DA7 /* MatchListError.swift in Sources */,
 				FDC6619528D6FA4300234DA7 /* Team.swift in Sources */,
 				FDC6619028D6F7A400234DA7 /* GetTeamsUseCase.swift in Sources */,
