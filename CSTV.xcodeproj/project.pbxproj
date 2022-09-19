@@ -86,6 +86,10 @@
 		FDC6620328D82E8F00234DA7 /* MatchDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620228D82E8F00234DA7 /* MatchDetailsFactory.swift */; };
 		FDC6620528D82E9A00234DA7 /* MatchDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620428D82E9A00234DA7 /* MatchDetailsModel.swift */; };
 		FDC6620728D82F9B00234DA7 /* MatchListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620628D82F9B00234DA7 /* MatchListRouter.swift */; };
+		FDC6620A28D8313500234DA7 /* MatchDetailsViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620928D8313500234DA7 /* MatchDetailsViewModelSpy.swift */; };
+		FDC6620C28D831B100234DA7 /* MatchListRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620B28D831B100234DA7 /* MatchListRouterSpy.swift */; };
+		FDC6620F28D8324600234DA7 /* MatchDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620E28D8324600234DA7 /* MatchDetailsViewModelTests.swift */; };
+		FDC6621128D8327100234DA7 /* MatchDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6621028D8327100234DA7 /* MatchDetailsViewControllerTests.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -188,6 +192,10 @@
 		FDC6620228D82E8F00234DA7 /* MatchDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsFactory.swift; sourceTree = "<group>"; };
 		FDC6620428D82E9A00234DA7 /* MatchDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsModel.swift; sourceTree = "<group>"; };
 		FDC6620628D82F9B00234DA7 /* MatchListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListRouter.swift; sourceTree = "<group>"; };
+		FDC6620928D8313500234DA7 /* MatchDetailsViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModelSpy.swift; sourceTree = "<group>"; };
+		FDC6620B28D831B100234DA7 /* MatchListRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListRouterSpy.swift; sourceTree = "<group>"; };
+		FDC6620E28D8324600234DA7 /* MatchDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		FDC6621028D8327100234DA7 /* MatchDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -442,6 +450,7 @@
 		FDC6616328D6DCC000234DA7 /* MatchDetails */ = {
 			isa = PBXGroup;
 			children = (
+				FDC6620828D8312300234DA7 /* Presentation */,
 				FDC6619D28D6FD0E00234DA7 /* Domain */,
 				FDC6616428D6DCC600234DA7 /* Data */,
 			);
@@ -628,6 +637,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */,
+				FDC6620B28D831B100234DA7 /* MatchListRouterSpy.swift */,
 			);
 			name = Doubles;
 			sourceTree = "<group>";
@@ -733,6 +743,24 @@
 				FDC6620428D82E9A00234DA7 /* MatchDetailsModel.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FDC6620828D8312300234DA7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6620E28D8324600234DA7 /* MatchDetailsViewModelTests.swift */,
+				FDC6621028D8327100234DA7 /* MatchDetailsViewControllerTests.swift */,
+				FDC6620D28D8322C00234DA7 /* Doubles */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FDC6620D28D8322C00234DA7 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6620928D8313500234DA7 /* MatchDetailsViewModelSpy.swift */,
+			);
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -984,14 +1012,18 @@
 				FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */,
 				FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */,
 				FDC6616628D6DCD800234DA7 /* GetTeamPlayersRequestTests.swift in Sources */,
+				FDC6621128D8327100234DA7 /* MatchDetailsViewControllerTests.swift in Sources */,
 				FDC661BA28D7A68600234DA7 /* MatchListViewModelTests.swift in Sources */,
 				FDC661A728D6FF2200234DA7 /* TeamPlayersRepositorySpy.swift in Sources */,
 				FDC6614528D6BE2100234DA7 /* MatchListRepositoryTests.swift in Sources */,
 				FDC6614A28D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift in Sources */,
 				FDC6616D28D6DE2D00234DA7 /* GetTeamPlayersServiceSpy.swift in Sources */,
+				FDC6620C28D831B100234DA7 /* MatchListRouterSpy.swift in Sources */,
 				FDC661EF28D8097300234DA7 /* MatchListTableViewResponderSpy.swift in Sources */,
+				FDC6620A28D8313500234DA7 /* MatchDetailsViewModelSpy.swift in Sources */,
 				FDC6616A28D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift in Sources */,
 				FDC6616828D6DD9800234DA7 /* GetTeamPlayersServiceTests.swift in Sources */,
+				FDC6620F28D8324600234DA7 /* MatchDetailsViewModelTests.swift in Sources */,
 				FD5851D628D651B900B9ACC9 /* TokenRepositorySpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

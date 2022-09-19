@@ -30,7 +30,7 @@ final class MatchListViewController: UITableViewController {
 
         view.backgroundColor = .background
         
-        viewModel.initialize()
+        viewModel.fetchMatches()
         didUpdateMatchList()
     }
 }
@@ -41,7 +41,7 @@ extension MatchListViewController: MatchListTableViewResponderDelegate {
     }
     
     func requestMoreData() {
-        viewModel.getMoreMatches()
+        viewModel.fetchMatches()
     }
 }
 
