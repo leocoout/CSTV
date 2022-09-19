@@ -27,7 +27,8 @@ final class MatchCellLeagueSerieView: UIView, MatchCellLeagueSerieViewDisplayabl
     
     private lazy var image: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = .gray
+        image.backgroundColor = .gray300
+        image.layer.cornerRadius = 8
         constrain(image) {
             $0.width == 16
             $0.height == 16
@@ -59,6 +60,7 @@ final class MatchCellLeagueSerieView: UIView, MatchCellLeagueSerieViewDisplayabl
     required init?(coder: NSCoder) { nil }
     
     func configure(with viewModel: ViewModel) {
+        image.loadImage(from: viewModel.leagueImageURL)
         titleLabel.text = viewModel.leagueAndSerieName
     }
 }

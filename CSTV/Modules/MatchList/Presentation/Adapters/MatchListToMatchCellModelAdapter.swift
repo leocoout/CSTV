@@ -13,7 +13,7 @@ extension MatchTableViewCell.ViewModel {
         
         self = .init(
             leftTeamImageURL: leftTeam.imageUrl ?? "",
-            rightTeamImageURL: rightTeam.name ?? "",
+            rightTeamImageURL: rightTeam.imageUrl ?? "",
             leftTeamName: leftTeam.name ?? "",
             rightTeamName: rightTeam.name ?? "",
             leagueImageURL: list.leagueImageUrl ?? "",
