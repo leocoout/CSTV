@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let matchListController = MatchListFactory().make()
         let navigation = makeNavigation(with: matchListController)
-        navigation.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.gray100]
+     
         window.rootViewController = navigation
         self.window = window
         window.makeKeyAndVisible()
@@ -27,6 +27,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let root = root else { return UINavigationController() }
         let navigationController = UINavigationController(rootViewController: root)
         navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.gray100]
+        navigationController.navigationBar.barTintColor = UIColor.gray900
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.gray100]
         return navigationController
     }
 }

@@ -76,7 +76,7 @@ extension MatchListTableViewResponder {
                 leagueImageURL: "",
                 leagueSerieName: "League + Serie",
                 matchStartTime: "Hoje, 21:00",
-                isLive: true
+                isLive: false
             )
         )
         
