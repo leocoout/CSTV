@@ -3,7 +3,7 @@ import XCTest
 @testable import CSTV
 
 final class MatchesResponseToMmatchListAdapterTests: XCTestCase {
-    private let sut = MatchList(
+    private let sut = Match(
         from: .fixture(
             id: 0,
             games: [.fixture(status: .finished)],

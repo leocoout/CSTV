@@ -1,11 +1,11 @@
-extension Array where Element == MatchList {
+extension Array where Element == Match {
     var mappedToMatchListCellViewModel: [MatchTableViewCell.ViewModel] {
         map { .init(from: $0) }
     }
 }
 
 extension MatchTableViewCell.ViewModel {
-    init(from list: MatchList) {
+    init(from list: Match) {
         let leftTeam = list.opponents[0]
         let rightTeam = list.opponents[1]
         let leagueName = list.leagueName ?? ""

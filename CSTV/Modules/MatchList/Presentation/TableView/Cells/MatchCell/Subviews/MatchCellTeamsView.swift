@@ -35,7 +35,7 @@ final class MatchCellTeamsView: UIView, MatchCellTeamsViewDisplayable {
     
     private lazy var versusLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 8)
+        label.font = .systemFont(ofSize: 12)
         label.textAlignment = .center
         label.textColor = .gray500
         label.text = "vs"

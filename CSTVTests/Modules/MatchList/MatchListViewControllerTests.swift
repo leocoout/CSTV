@@ -14,7 +14,7 @@ final class MatchListViewControllerTests: XCTestCase {
     )
     
     func test_hadleMatchSelection_shouldCallRouter() {
-        sut.hadleMatchSelection(at: 0)
+        sut.handleMatchSelection(.fixture())
         
         XCTAssertTrue(routerSpy.routeToMatchDetailsCalled)
     }
