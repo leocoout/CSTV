@@ -34,7 +34,10 @@ final class MatchListViewController: UITableViewController {
 
 extension MatchListViewController: MatchListTableViewResponderDelegate {
     func hadleRecipeSelection(at index: Int) {
+    }
     
+    func requestMoreData() {
+        viewModel.getMoreMatches()
     }
 }
 

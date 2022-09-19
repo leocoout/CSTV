@@ -2,6 +2,7 @@ import UIKit
 
 protocol MatchListTableViewResponderDelegate: AnyObject {
     func hadleRecipeSelection(at index: Int)
+    func requestMoreData()
 }
 
 protocol MatchListTableViewResponderProtocol: UITableViewDelegate, UITableViewDataSource {
@@ -28,7 +29,8 @@ final class MatchListTableViewResponder: NSObject, MatchListTableViewResponderPr
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(MatchTableViewCell.self)
-    
+        tableView.register(LoaderTableViewCell.self)
+        
         return tableView
     }()
     
@@ -55,36 +57,53 @@ final class MatchListTableViewResponder: NSObject, MatchListTableViewResponderPr
 // MARK: - UITableViewDataSource
 
 extension MatchListTableViewResponder {
-    func numberOfSections(in tableView: UITableView) -> Int { 1 }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return tableDataSource == nil ? 1 : 2
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableDataSource?.matches.count ?? 0
+        if section == 0 {
+            return tableDataSource?.matches.count ?? 0
+        }
+        
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeue(type: MatchTableViewCell.self, for: indexPath),
-              let configuration = tableDataSource?.matches[indexPath.row]
-        else {
-            return UITableViewCell()
+        let cell: UITableViewCell?
+        
+        if indexPath.section == 0,
+           let matchCell = tableView.dequeue(type: MatchTableViewCell.self, for: indexPath),
+           let configuration = tableDataSource?.matches[indexPath.row] {
+           
+            matchCell.configure(
+                with: .init(
+                    leftTeamImageURL: configuration.leftTeamImageURL,
+                    rightTeamImageURL: configuration.rightTeamImageURL,
+                    leftTeamName: configuration.leftTeamName,
+                    rightTeamName: configuration.rightTeamName,
+                    leagueImageURL: configuration.leagueImageURL,
+                    leagueSerieName: configuration.leagueSerieName,
+                    matchStartTime: configuration.matchStartTime,
+                    isLive: configuration.isLive
+                )
+            )
+            cell = matchCell
+        } else {
+            let loaderCell = tableView.dequeue(type: LoaderTableViewCell.self, for: indexPath)
+            cell = loaderCell
         }
         
-        cell.configure(
-            with: .init(
-                leftTeamImageURL: configuration.leftTeamImageURL,
-                rightTeamImageURL: configuration.rightTeamImageURL,
-                leftTeamName: configuration.leftTeamName,
-                rightTeamName: configuration.rightTeamName,
-                leagueImageURL: configuration.leagueImageURL,
-                leagueSerieName: configuration.leagueSerieName,
-                matchStartTime: configuration.matchStartTime,
-                isLive: configuration.isLive
-            )
-        )
-        
-        return cell
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.hadleRecipeSelection(at: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            delegate?.requestMoreData()
+        }
     }
 }

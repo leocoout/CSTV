@@ -1,5 +1,6 @@
 protocol MatchListViewModelProtocol {
     func initialize()
+    func getMoreMatches()
     
     var didUpdateMatchList: ((MatchListModel) -> Void)? { get set }
 }
@@ -13,12 +14,17 @@ final class MatchListViewModel: MatchListViewModelProtocol {
     // MARK: - Private Properties
     
     private let getMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol
+    private var matches: MatchListModel = []
     
     init(getMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol) {
         self.getMatchesForPageUseCase = getMatchesForPageUseCase
     }
     
     func initialize() {
+        getMatchesForPage()
+    }
+    
+    func getMoreMatches() {
         getMatchesForPage()
     }
 }
@@ -29,7 +35,10 @@ private extension MatchListViewModel {
             let list = await getMatchesForPageUseCase.execute()
             switch list {
             case .success(let list):
-                didUpdateMatchList?(list.formatted)
+                let formattedList = list.formatted
+                matches.append(contentsOf: formattedList)
+                
+                didUpdateMatchList?(matches)
             case .failure(let error):
                 print(error)
             }
@@ -47,7 +56,7 @@ private extension Array where Element == MatchList {
                 leagueName: $0.leagueName,
                 leagueImageUrl: $0.leagueImageUrl,
                 serieName: $0.serieName,
-                matchStartTime: $0.matchStartTime?.formatToDate()
+                matchStartTime: $0.matchStartTime?.formatToDate() ?? "NÃO INICIADO"
             )
         }
     }

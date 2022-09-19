@@ -78,6 +78,7 @@
 		FDC661EF28D8097300234DA7 /* MatchListTableViewResponderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661EE28D8097300234DA7 /* MatchListTableViewResponderSpy.swift */; };
 		FDC661F128D8112600234DA7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F028D8112600234DA7 /* String+Extensions.swift */; };
 		FDC661F428D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F328D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift */; };
+		FDC661F728D8208600234DA7 /* LoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -173,6 +174,7 @@
 		FDC661EE28D8097300234DA7 /* MatchListTableViewResponderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListTableViewResponderSpy.swift; sourceTree = "<group>"; };
 		FDC661F028D8112600234DA7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FDC661F328D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListToMatchCellModelAdapter.swift; sourceTree = "<group>"; };
+		FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderTableViewCell.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -635,6 +637,7 @@
 		FDC661D328D7ED3200234DA7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661F528D8208000234DA7 /* LoaderCell */,
 				FDC661DC28D7F2E100234DA7 /* MatchCell */,
 			);
 			path = Cells;
@@ -694,6 +697,14 @@
 				FDC661F328D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift */,
 			);
 			path = Adapters;
+			sourceTree = "<group>";
+		};
+		FDC661F528D8208000234DA7 /* LoaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */,
+			);
+			path = LoaderCell;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -895,6 +906,7 @@
 				FDC661D228D7ED0900234DA7 /* DispatchQueueProtocol.swift in Sources */,
 				FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */,
 				FDC661D728D7F0C700234DA7 /* MatchCellLeagueSerieView.swift in Sources */,
+				FDC661F728D8208600234DA7 /* LoaderTableViewCell.swift in Sources */,
 				FDC661B328D79D2E00234DA7 /* MatchListViewController.swift in Sources */,
 				FDC661DF28D7F3AF00234DA7 /* TableView+Extensions.swift in Sources */,
 				FDC6617628D6E28C00234DA7 /* Date+Extensions.swift in Sources */,
