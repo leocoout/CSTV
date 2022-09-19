@@ -81,6 +81,11 @@
 		FDC661F728D8208600234DA7 /* LoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */; };
 		FDC661FA28D8268500234DA7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FDC661F928D8268500234DA7 /* Kingfisher */; };
 		FDC661FC28D826C800234DA7 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661FB28D826C800234DA7 /* UIImageView+Extensions.swift */; };
+		FDC661FF28D82E8400234DA7 /* MatchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661FE28D82E8400234DA7 /* MatchDetailsViewModel.swift */; };
+		FDC6620128D82E8A00234DA7 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620028D82E8A00234DA7 /* MatchDetailsViewController.swift */; };
+		FDC6620328D82E8F00234DA7 /* MatchDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620228D82E8F00234DA7 /* MatchDetailsFactory.swift */; };
+		FDC6620528D82E9A00234DA7 /* MatchDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620428D82E9A00234DA7 /* MatchDetailsModel.swift */; };
+		FDC6620728D82F9B00234DA7 /* MatchListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6620628D82F9B00234DA7 /* MatchListRouter.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -178,6 +183,11 @@
 		FDC661F328D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListToMatchCellModelAdapter.swift; sourceTree = "<group>"; };
 		FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderTableViewCell.swift; sourceTree = "<group>"; };
 		FDC661FB28D826C800234DA7 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		FDC661FE28D82E8400234DA7 /* MatchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModel.swift; sourceTree = "<group>"; };
+		FDC6620028D82E8A00234DA7 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
+		FDC6620228D82E8F00234DA7 /* MatchDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsFactory.swift; sourceTree = "<group>"; };
+		FDC6620428D82E9A00234DA7 /* MatchDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsModel.swift; sourceTree = "<group>"; };
+		FDC6620628D82F9B00234DA7 /* MatchListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListRouter.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -387,6 +397,7 @@
 		FDC6614B28D6C49300234DA7 /* MatchDetails */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661FD28D82E6F00234DA7 /* Presentation */,
 				FDC6618E28D6F79600234DA7 /* Domain */,
 				FDC6614C28D6C4A000234DA7 /* Data */,
 			);
@@ -594,6 +605,7 @@
 				FDC661F228D8143400234DA7 /* Adapters */,
 				FDC661CC28D7EC8400234DA7 /* TableView */,
 				FDC661AC28D79D0C00234DA7 /* MatchListFactory.swift */,
+				FDC6620628D82F9B00234DA7 /* MatchListRouter.swift */,
 				FDC661AE28D79D1400234DA7 /* MatchListViewModel.swift */,
 				FDC661B028D79D1B00234DA7 /* MatchListModel.swift */,
 				FDC661B228D79D2E00234DA7 /* MatchListViewController.swift */,
@@ -710,6 +722,17 @@
 				FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */,
 			);
 			path = LoaderCell;
+			sourceTree = "<group>";
+		};
+		FDC661FD28D82E6F00234DA7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661FE28D82E8400234DA7 /* MatchDetailsViewModel.swift */,
+				FDC6620028D82E8A00234DA7 /* MatchDetailsViewController.swift */,
+				FDC6620228D82E8F00234DA7 /* MatchDetailsFactory.swift */,
+				FDC6620428D82E9A00234DA7 /* MatchDetailsModel.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -889,14 +912,17 @@
 				FDC6619728D6FA8E00234DA7 /* TeamError.swift in Sources */,
 				FDC661CE28D7EC9200234DA7 /* MatchListTableViewResponder.swift in Sources */,
 				FDC661B528D79F9600234DA7 /* ModuleFactoryProtocol.swift in Sources */,
+				FDC661FF28D82E8400234DA7 /* MatchDetailsViewModel.swift in Sources */,
 				FDC661AA28D701E200234DA7 /* GetMatchDetailsUseCase.swift in Sources */,
 				FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */,
 				FDC6619C28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift in Sources */,
 				FDC6615B28D6CE8F00234DA7 /* GetTeamsRequest.swift in Sources */,
+				FDC6620728D82F9B00234DA7 /* MatchListRouter.swift in Sources */,
 				FDC661DB28D7F0D300234DA7 /* MatchCellTimeView.swift in Sources */,
 				FDC661AF28D79D1400234DA7 /* MatchListViewModel.swift in Sources */,
 				FDC6619A28D6FAD900234DA7 /* TeamResponseToPlayerListAdapter.swift in Sources */,
 				FDC661C628D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift in Sources */,
+				FDC6620528D82E9A00234DA7 /* MatchDetailsModel.swift in Sources */,
 				FDC661AD28D79D0C00234DA7 /* MatchListFactory.swift in Sources */,
 				FD634D9728D63F1200D18453 /* AppDelegate.swift in Sources */,
 				FDC661B128D79D1B00234DA7 /* MatchListModel.swift in Sources */,
@@ -916,6 +942,8 @@
 				FDC661F728D8208600234DA7 /* LoaderTableViewCell.swift in Sources */,
 				FDC661B328D79D2E00234DA7 /* MatchListViewController.swift in Sources */,
 				FDC661DF28D7F3AF00234DA7 /* TableView+Extensions.swift in Sources */,
+				FDC6620328D82E8F00234DA7 /* MatchDetailsFactory.swift in Sources */,
+				FDC6620128D82E8A00234DA7 /* MatchDetailsViewController.swift in Sources */,
 				FDC6617628D6E28C00234DA7 /* Date+Extensions.swift in Sources */,
 				FDC6617E28D6E57B00234DA7 /* MatchesResponseToMatchListAdapter.swift in Sources */,
 				FDC6615928D6CD6E00234DA7 /* TeamPlayersResponse.swift in Sources */,

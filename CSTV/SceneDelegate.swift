@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let matchListController = MatchListFactory().make()
+        let matchListController = MatchListFactory().make(with: .init())
         let navigation = makeNavigation(with: matchListController)
      
         window.rootViewController = navigation
