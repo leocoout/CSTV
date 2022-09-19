@@ -62,20 +62,22 @@ extension MatchListTableViewResponder {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeue(type: MatchTableViewCell.self, for: indexPath) else {
+        guard let cell = tableView.dequeue(type: MatchTableViewCell.self, for: indexPath),
+              let configuration = tableDataSource?.matches[indexPath.row]
+        else {
             return UITableViewCell()
         }
         
         cell.configure(
             with: .init(
-                leftTeamImageURL: "",
-                rightTeamImageURL: "",
-                leftTeamName: "Team A",
-                rightTeamName: "Team B",
-                leagueImageURL: "",
-                leagueSerieName: "League + Serie",
-                matchStartTime: "Hoje, 21:00",
-                isLive: false
+                leftTeamImageURL: configuration.leftTeamImageURL,
+                rightTeamImageURL: configuration.rightTeamImageURL,
+                leftTeamName: configuration.leftTeamName,
+                rightTeamName: configuration.rightTeamName,
+                leagueImageURL: configuration.leagueImageURL,
+                leagueSerieName: configuration.leagueSerieName,
+                matchStartTime: configuration.matchStartTime,
+                isLive: configuration.isLive
             )
         )
         

@@ -40,8 +40,10 @@ extension MatchListViewController: MatchListTableViewResponderDelegate {
 
 private extension MatchListViewController {
     func didUpdateMatchList() {
-        viewModel.didUpdateMatchList =  { list in
-            print(list)
+        viewModel.didUpdateMatchList =  { [weak self ] list in
+            self?.tableViewResponder.updateDataSource(
+                .init(matches: list.mappedToMatchListCellViewModel)
+            )
         }
     }
 }

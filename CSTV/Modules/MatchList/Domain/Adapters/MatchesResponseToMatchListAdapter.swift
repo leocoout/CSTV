@@ -5,6 +5,7 @@ extension MatchList {
         }
         
         let status = response.games.first?.status ?? .notPlayed
+        let startTime = response.games.first?.beginAt
         
         self = .init(
             id: response.id,
@@ -12,7 +13,8 @@ extension MatchList {
             opponents: mappedOpponents,
             leagueName: response.league.name,
             leagueImageUrl: response.league.imageUrl,
-            serieName: response.serie.name
+            serieName: response.serie.name,
+            matchStartTime: startTime
         )
     }
 }
