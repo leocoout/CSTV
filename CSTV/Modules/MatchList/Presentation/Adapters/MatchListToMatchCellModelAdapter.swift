@@ -6,16 +6,16 @@ extension Array where Element == MatchList {
 
 extension MatchTableViewCell.ViewModel {
     init(from list: MatchList) {
-        let leftTeam = list.opponents[0]
-        let rightTeam = list.opponents[1]
+        let leftTeam = list.opponents.first
+        let rightTeam = list.opponents.last
         let leagueName = list.leagueName ?? ""
         let serieName = list.serieName ?? ""
         
         self = .init(
-            leftTeamImageURL: leftTeam.imageUrl ?? "",
-            rightTeamImageURL: rightTeam.imageUrl ?? "",
-            leftTeamName: leftTeam.name ?? "",
-            rightTeamName: rightTeam.name ?? "",
+            leftTeamImageURL: leftTeam?.imageUrl ?? "",
+            rightTeamImageURL: rightTeam?.imageUrl ?? "",
+            leftTeamName: leftTeam?.name ?? "",
+            rightTeamName: rightTeam?.name ?? "",
             leagueImageURL: list.leagueImageUrl ?? "",
             leagueSerieName: "\(leagueName) + \(serieName)",
             matchStartTime: list.matchStartTime ?? "",
