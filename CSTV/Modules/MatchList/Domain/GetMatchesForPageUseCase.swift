@@ -1,7 +1,7 @@
 import Foundation
 
 protocol GetMatchesForPageUseCaseProtocol {
-    func execute() async -> Result <[MatchList], MatchListError>
+    func execute() async -> Result <[Match], MatchListError>
 }
 
 final class GetMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol {
@@ -18,7 +18,7 @@ final class GetMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol {
         self.currentDate = currentDate
     }
     
-    func execute() async -> Result <[MatchList], MatchListError> {
+    func execute() async -> Result <[Match], MatchListError> {
         let result = await repository.getMatches(
             for: currentPage,
             beginningAt: currentDate.getFormattedDate(format: .yyyyMMddTHHmmssZ)
@@ -28,7 +28,7 @@ final class GetMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol {
         
         switch result {
         case .success(let response):
-            let mappedResponse = response.map { MatchList(from: $0) }
+            let mappedResponse = response.map { Match(from: $0) }
             return .success(mappedResponse)
         case .failure(let error):
             return .failure(.init(from: error))
