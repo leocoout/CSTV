@@ -1,7 +1,7 @@
 import UIKit
 
 protocol MatchListTableViewResponderDelegate: AnyObject {
-    func hadleRecipeSelection(at index: Int)
+    func hadleMatchSelection(at index: Int)
     func requestMoreData()
 }
 
@@ -98,7 +98,7 @@ extension MatchListTableViewResponder {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.hadleRecipeSelection(at: indexPath.row)
+        delegate?.hadleMatchSelection(at: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
