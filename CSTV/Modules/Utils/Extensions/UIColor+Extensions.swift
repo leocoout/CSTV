@@ -1,8 +1,5 @@
-//
-//  Color+Extensions.swift
-//  CSTV
-//
-//  Created by Leonardo Coutinho Santos on 18/09/22.
-//
+import UIKit
 
-import Foundation
+extension UIColor {
+    static let cardColor = UIColor(red: 0.15, green: 0.15, blue: 0.22, alpha: 1.00)
+}

@@ -64,6 +64,16 @@
 		FDC661C628D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */; };
 		FDC661C928D7EBE800234DA7 /* Cartography in Frameworks */ = {isa = PBXBuildFile; productRef = FDC661C828D7EBE800234DA7 /* Cartography */; };
 		FDC661CB28D7EC1000234DA7 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661CA28D7EC1000234DA7 /* ViewCodable.swift */; };
+		FDC661CE28D7EC9200234DA7 /* MatchListTableViewResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661CD28D7EC9200234DA7 /* MatchListTableViewResponder.swift */; };
+		FDC661D028D7EC9B00234DA7 /* MatchListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661CF28D7EC9B00234DA7 /* MatchListTableViewDataSource.swift */; };
+		FDC661D228D7ED0900234DA7 /* DispatchQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661D128D7ED0900234DA7 /* DispatchQueueProtocol.swift */; };
+		FDC661D528D7ED6100234DA7 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661D428D7ED6100234DA7 /* MatchTableViewCell.swift */; };
+		FDC661D728D7F0C700234DA7 /* MatchCellLeagueSerieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661D628D7F0C700234DA7 /* MatchCellLeagueSerieView.swift */; };
+		FDC661D928D7F0CE00234DA7 /* MatchCellTeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661D828D7F0CE00234DA7 /* MatchCellTeamsView.swift */; };
+		FDC661DB28D7F0D300234DA7 /* MatchCellDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661DA28D7F0D300234DA7 /* MatchCellDateView.swift */; };
+		FDC661DF28D7F3AF00234DA7 /* TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661DE28D7F3AF00234DA7 /* TableView+Extensions.swift */; };
+		FDC661E228D7F6D800234DA7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */; };
+		FDC661E428D7FCD400234DA7 /* TeamStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E328D7FCD400234DA7 /* TeamStackView.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -145,6 +155,16 @@
 		FDC661C228D7A91000234DA7 /* MatchListViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelSpy.swift; sourceTree = "<group>"; };
 		FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesForPageUseCaseFactory.swift; sourceTree = "<group>"; };
 		FDC661CA28D7EC1000234DA7 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		FDC661CD28D7EC9200234DA7 /* MatchListTableViewResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListTableViewResponder.swift; sourceTree = "<group>"; };
+		FDC661CF28D7EC9B00234DA7 /* MatchListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListTableViewDataSource.swift; sourceTree = "<group>"; };
+		FDC661D128D7ED0900234DA7 /* DispatchQueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueProtocol.swift; sourceTree = "<group>"; };
+		FDC661D428D7ED6100234DA7 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		FDC661D628D7F0C700234DA7 /* MatchCellLeagueSerieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellLeagueSerieView.swift; sourceTree = "<group>"; };
+		FDC661D828D7F0CE00234DA7 /* MatchCellTeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellTeamsView.swift; sourceTree = "<group>"; };
+		FDC661DA28D7F0D300234DA7 /* MatchCellDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellDateView.swift; sourceTree = "<group>"; };
+		FDC661DE28D7F3AF00234DA7 /* TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extensions.swift"; sourceTree = "<group>"; };
+		FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		FDC661E328D7FCD400234DA7 /* TeamStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStackView.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -446,7 +466,8 @@
 		FDC6617428D6E28700234DA7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */,
+				FDC661DD28D7F3A200234DA7 /* Extensions */,
+				FDC661D128D7ED0900234DA7 /* DispatchQueueProtocol.swift */,
 				FDC661B428D79F9600234DA7 /* ModuleFactoryProtocol.swift */,
 				FDC661CA28D7EC1000234DA7 /* ViewCodable.swift */,
 			);
@@ -556,6 +577,7 @@
 		FDC661AB28D79C8D00234DA7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661CC28D7EC8400234DA7 /* TableView */,
 				FDC661AC28D79D0C00234DA7 /* MatchListFactory.swift */,
 				FDC661AE28D79D1400234DA7 /* MatchListViewModel.swift */,
 				FDC661B028D79D1B00234DA7 /* MatchListModel.swift */,
@@ -588,6 +610,54 @@
 				FDC661C528D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		FDC661CC28D7EC8400234DA7 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661D328D7ED3200234DA7 /* Cells */,
+				FDC661CD28D7EC9200234DA7 /* MatchListTableViewResponder.swift */,
+				FDC661CF28D7EC9B00234DA7 /* MatchListTableViewDataSource.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		FDC661D328D7ED3200234DA7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661DC28D7F2E100234DA7 /* MatchCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FDC661DC28D7F2E100234DA7 /* MatchCell */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661D428D7ED6100234DA7 /* MatchTableViewCell.swift */,
+				FDC661E528D7FD0600234DA7 /* Subviews */,
+			);
+			path = MatchCell;
+			sourceTree = "<group>";
+		};
+		FDC661DD28D7F3A200234DA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDC6617528D6E28C00234DA7 /* Date+Extensions.swift */,
+				FDC661DE28D7F3AF00234DA7 /* TableView+Extensions.swift */,
+				FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDC661E528D7FD0600234DA7 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661D628D7F0C700234DA7 /* MatchCellLeagueSerieView.swift */,
+				FDC661D828D7F0CE00234DA7 /* MatchCellTeamsView.swift */,
+				FDC661E328D7FCD400234DA7 /* TeamStackView.swift */,
+				FDC661DA28D7F0D300234DA7 /* MatchCellDateView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -763,11 +833,13 @@
 				FDDED5BD28D6673400EE12B2 /* MatchListService.swift in Sources */,
 				FDC6616228D6D4C100234DA7 /* TeamsRepository.swift in Sources */,
 				FDC6619728D6FA8E00234DA7 /* TeamError.swift in Sources */,
+				FDC661CE28D7EC9200234DA7 /* MatchListTableViewResponder.swift in Sources */,
 				FDC661B528D79F9600234DA7 /* ModuleFactoryProtocol.swift in Sources */,
 				FDC661AA28D701E200234DA7 /* GetMatchDetailsUseCase.swift in Sources */,
 				FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */,
 				FDC6619C28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift in Sources */,
 				FDC6615B28D6CE8F00234DA7 /* GetTeamsRequest.swift in Sources */,
+				FDC661DB28D7F0D300234DA7 /* MatchCellDateView.swift in Sources */,
 				FDC661AF28D79D1400234DA7 /* MatchListViewModel.swift in Sources */,
 				FDC6619A28D6FAD900234DA7 /* TeamResponseToPlayerListAdapter.swift in Sources */,
 				FDC661C628D7ABCF00234DA7 /* GetMatchesForPageUseCaseFactory.swift in Sources */,
@@ -781,16 +853,24 @@
 				FDC6617B28D6E36100234DA7 /* MatchListError.swift in Sources */,
 				FDC6619528D6FA4300234DA7 /* Team.swift in Sources */,
 				FDC6619028D6F7A400234DA7 /* GetTeamsUseCase.swift in Sources */,
+				FDC661D228D7ED0900234DA7 /* DispatchQueueProtocol.swift in Sources */,
 				FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */,
+				FDC661D728D7F0C700234DA7 /* MatchCellLeagueSerieView.swift in Sources */,
 				FDC661B328D79D2E00234DA7 /* MatchListViewController.swift in Sources */,
+				FDC661DF28D7F3AF00234DA7 /* TableView+Extensions.swift in Sources */,
 				FDC6617628D6E28C00234DA7 /* Date+Extensions.swift in Sources */,
 				FDC6617E28D6E57B00234DA7 /* MatchesResponseToMatchListAdapter.swift in Sources */,
 				FDC6615928D6CD6E00234DA7 /* TeamPlayersResponse.swift in Sources */,
 				FDC6617328D6E1D400234DA7 /* GetMatchesForPageUseCase.swift in Sources */,
 				FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */,
+				FDC661D928D7F0CE00234DA7 /* MatchCellTeamsView.swift in Sources */,
 				FDDED5C028D6692300EE12B2 /* MatchesResponse.swift in Sources */,
+				FDC661D528D7ED6100234DA7 /* MatchTableViewCell.swift in Sources */,
+				FDC661E428D7FCD400234DA7 /* TeamStackView.swift in Sources */,
 				FDDED5C328D66BE000EE12B2 /* MatchListRepository.swift in Sources */,
+				FDC661E228D7F6D800234DA7 /* UIColor+Extensions.swift in Sources */,
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
+				FDC661D028D7EC9B00234DA7 /* MatchListTableViewDataSource.swift in Sources */,
 				FDC6617928D6E35C00234DA7 /* MatchList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

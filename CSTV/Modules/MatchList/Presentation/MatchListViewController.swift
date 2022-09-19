@@ -1,16 +1,27 @@
 import UIKit
 
-final class MatchListViewController: UIViewController {
+final class MatchListViewController: UITableViewController {
     
     private var viewModel: MatchListViewModelProtocol
     
-    init(viewModel: MatchListViewModelProtocol) {
+    private let tableViewResponder: MatchListTableViewResponderProtocol
+    
+    init(
+        viewModel: MatchListViewModelProtocol,
+        tableViewResponder: MatchListTableViewResponderProtocol
+    ) {
         self.viewModel = viewModel
+        self.tableViewResponder = tableViewResponder
         
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) { nil }
+    
+    override func loadView() {
+        tableViewResponder.delegate = self
+        self.tableView = tableViewResponder.tableView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +31,8 @@ final class MatchListViewController: UIViewController {
         didUpdateMatchList()
     }
 }
+
+extension MatchListViewController: MatchListTableViewResponderDelegate {}
 
 private extension MatchListViewController {
     func didUpdateMatchList() {

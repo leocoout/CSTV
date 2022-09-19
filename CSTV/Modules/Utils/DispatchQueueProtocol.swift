@@ -1,8 +1,7 @@
-//
-//  DispatchQueueProtocol.swift
-//  CSTV
-//
-//  Created by Leonardo Coutinho Santos on 18/09/22.
-//
-
 import Foundation
+
+protocol DispatchQueueProtocol {
+    func async(group: DispatchGroup?, qos: DispatchQoS, flags: DispatchWorkItemFlags, execute work: @escaping @convention(block) () -> Void)
+}
+
+extension DispatchQueue: DispatchQueueProtocol {}
