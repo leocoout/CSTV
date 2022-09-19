@@ -79,6 +79,7 @@
 		FDC661F128D8112600234DA7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F028D8112600234DA7 /* String+Extensions.swift */; };
 		FDC661F428D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F328D8144F00234DA7 /* MatchListToMatchCellModelAdapter.swift */; };
 		FDC661F728D8208600234DA7 /* LoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661F628D8208600234DA7 /* LoaderTableViewCell.swift */; };
+		FDC661FA28D8268500234DA7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FDC661F928D8268500234DA7 /* Kingfisher */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -187,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC661FA28D8268500234DA7 /* Kingfisher in Frameworks */,
 				FDC661C928D7EBE800234DA7 /* Cartography in Frameworks */,
 				FDDED5B228D6608200EE12B2 /* Networking in Frameworks */,
 				FD5851CD28D64CD700B9ACC9 /* SimpleKeychain in Frameworks */,
@@ -785,6 +787,7 @@
 				FDDED5B328D6608500EE12B2 /* NetworkingInterface */,
 				FDDED5B528D6609700EE12B2 /* NetworkingInterfaceTestUtils */,
 				FDC661C828D7EBE800234DA7 /* Cartography */,
+				FDC661F928D8268500234DA7 /* Kingfisher */,
 			);
 			productName = CSTV;
 			productReference = FD634D9328D63F1200D18453 /* CSTV.app */;
@@ -842,6 +845,7 @@
 			packageReferences = (
 				FD5851CB28D64CD700B9ACC9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
 				FDC661C728D7EBE800234DA7 /* XCRemoteSwiftPackageReference "Cartography" */,
+				FDC661F828D8268500234DA7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = FD634D9428D63F1200D18453 /* Products */;
 			projectDirPath = "";
@@ -1241,6 +1245,14 @@
 				kind = branch;
 			};
 		};
+		FDC661F828D8268500234DA7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1253,6 +1265,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FDC661C728D7EBE800234DA7 /* XCRemoteSwiftPackageReference "Cartography" */;
 			productName = Cartography;
+		};
+		FDC661F928D8268500234DA7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDC661F828D8268500234DA7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		FDDED5B128D6608200EE12B2 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
