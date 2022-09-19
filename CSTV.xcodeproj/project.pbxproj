@@ -75,6 +75,7 @@
 		FDC661E228D7F6D800234DA7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */; };
 		FDC661E428D7FCD400234DA7 /* TeamStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E328D7FCD400234DA7 /* TeamStackView.swift */; };
 		FDC661E928D806C500234DA7 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661E828D806C500234DA7 /* UIView+Extensions.swift */; };
+		FDC661EF28D8097300234DA7 /* MatchListTableViewResponderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC661EE28D8097300234DA7 /* MatchListTableViewResponderSpy.swift */; };
 		FDCAA7C628D67AE800DDEBB1 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */; };
 		FDDED5B228D6608200EE12B2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B128D6608200EE12B2 /* Networking */; };
 		FDDED5B428D6608500EE12B2 /* NetworkingInterface in Frameworks */ = {isa = PBXBuildFile; productRef = FDDED5B328D6608500EE12B2 /* NetworkingInterface */; };
@@ -167,6 +168,7 @@
 		FDC661E128D7F6D800234DA7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		FDC661E328D7FCD400234DA7 /* TeamStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStackView.swift; sourceTree = "<group>"; };
 		FDC661E828D806C500234DA7 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		FDC661EE28D8097300234DA7 /* MatchListTableViewResponderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListTableViewResponderSpy.swift; sourceTree = "<group>"; };
 		FDCAA7C528D67AE800DDEBB1 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		FDDED5BC28D6673400EE12B2 /* MatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListService.swift; sourceTree = "<group>"; };
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
@@ -591,6 +593,7 @@
 		FDC661B828D7A67700234DA7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FDC661EC28D8096200234DA7 /* TableView */,
 				FDC661C128D7A90500234DA7 /* Doubles */,
 				FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */,
 				FDC661BB28D7A68F00234DA7 /* MatchListViewControllerTests.swift */,
@@ -661,6 +664,22 @@
 				FDC661DA28D7F0D300234DA7 /* MatchCellTimeView.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		FDC661EC28D8096200234DA7 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661ED28D8096700234DA7 /* Doubles */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		FDC661ED28D8096700234DA7 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				FDC661EE28D8097300234DA7 /* MatchListTableViewResponderSpy.swift */,
+			);
+			name = Doubles;
 			sourceTree = "<group>";
 		};
 		FDDED5B028D6608200EE12B2 /* Frameworks */ = {
@@ -906,6 +925,7 @@
 				FDC6614528D6BE2100234DA7 /* MatchListRepositoryTests.swift in Sources */,
 				FDC6614A28D6C08B00234DA7 /* GameMatchesResponse+Fixture.swift in Sources */,
 				FDC6616D28D6DE2D00234DA7 /* GetTeamPlayersServiceSpy.swift in Sources */,
+				FDC661EF28D8097300234DA7 /* MatchListTableViewResponderSpy.swift in Sources */,
 				FDC6616A28D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift in Sources */,
 				FDC6616828D6DD9800234DA7 /* GetTeamPlayersServiceTests.swift in Sources */,
 				FD5851D628D651B900B9ACC9 /* TokenRepositorySpy.swift in Sources */,
