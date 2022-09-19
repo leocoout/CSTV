@@ -1,7 +1,7 @@
 import UIKit
 
 protocol MatchListTableViewResponderDelegate: AnyObject {
-    func hadleMatchSelection(_ matchData: MatchTableViewCell.ViewModel)
+    func handleMatchSelection(_ matchData: MatchTableViewCell.ViewModel)
     func requestMoreData()
 }
 
@@ -99,7 +99,7 @@ extension MatchListTableViewResponder {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let match = tableDataSource?.matches[indexPath.row] {
-            delegate?.hadleMatchSelection(match)
+            delegate?.handleMatchSelection(match)
         }
     }
     

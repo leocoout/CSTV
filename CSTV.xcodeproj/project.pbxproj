@@ -17,6 +17,9 @@
 		FD634DA028D63F1400D18453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD634D9F28D63F1400D18453 /* Assets.xcassets */; };
 		FD634DA328D63F1400D18453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD634DA128D63F1400D18453 /* LaunchScreen.storyboard */; };
 		FD634DCD28D6457F00D18453 /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD634DCC28D6457F00D18453 /* TokenRepository.swift */; };
+		FDA022B828D8409D00534803 /* MatchDetailsFactoryDependencies+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA022B728D8409D00534803 /* MatchDetailsFactoryDependencies+Fixtures.swift */; };
+		FDA022BA28D841D600534803 /* MatchDetailsTableViewResponderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA022B928D841D600534803 /* MatchDetailsTableViewResponderSpy.swift */; };
+		FDA022BD28D842AD00534803 /* MatchCellViewModel+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA022BC28D842AD00534803 /* MatchCellViewModel+Fixtures.swift */; };
 		FDC6613D28D6BB2A00234DA7 /* GetMatchesRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6613C28D6BB2A00234DA7 /* GetMatchesRequestTests.swift */; };
 		FDC6614028D6BC0600234DA7 /* Date+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6613F28D6BC0600234DA7 /* Date+Fixture.swift */; };
 		FDC6614228D6BE0F00234DA7 /* MatchListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6614128D6BE0F00234DA7 /* MatchListServiceTests.swift */; };
@@ -129,6 +132,9 @@
 		FD634DA428D63F1400D18453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD634DA928D63F1500D18453 /* CSTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD634DCC28D6457F00D18453 /* TokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
+		FDA022B728D8409D00534803 /* MatchDetailsFactoryDependencies+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchDetailsFactoryDependencies+Fixtures.swift"; sourceTree = "<group>"; };
+		FDA022B928D841D600534803 /* MatchDetailsTableViewResponderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsTableViewResponderSpy.swift; sourceTree = "<group>"; };
+		FDA022BC28D842AD00534803 /* MatchCellViewModel+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchCellViewModel+Fixtures.swift"; sourceTree = "<group>"; };
 		FDC6613C28D6BB2A00234DA7 /* GetMatchesRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesRequestTests.swift; sourceTree = "<group>"; };
 		FDC6613F28D6BC0600234DA7 /* Date+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Fixture.swift"; sourceTree = "<group>"; };
 		FDC6614128D6BE0F00234DA7 /* MatchListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListServiceTests.swift; sourceTree = "<group>"; };
@@ -344,6 +350,22 @@
 				FD5851D928D654DE00B9ACC9 /* Data */,
 			);
 			path = Security;
+			sourceTree = "<group>";
+		};
+		FDA022B628D8408C00534803 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				FDA022B728D8409D00534803 /* MatchDetailsFactoryDependencies+Fixtures.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		FDA022BB28D8429A00534803 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				FDA022BC28D842AD00534803 /* MatchCellViewModel+Fixtures.swift */,
+			);
+			name = Fixtures;
 			sourceTree = "<group>";
 		};
 		FDC6613828D6BAA900234DA7 /* Modules */ = {
@@ -633,6 +655,7 @@
 		FDC661B828D7A67700234DA7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FDA022BB28D8429A00534803 /* Fixtures */,
 				FDC661EC28D8096200234DA7 /* TableView */,
 				FDC661C128D7A90500234DA7 /* Doubles */,
 				FDC661B928D7A68600234DA7 /* MatchListViewModelTests.swift */,
@@ -757,6 +780,7 @@
 		FDC6620828D8312300234DA7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FDA022B628D8408C00534803 /* Fixtures */,
 				FDC6620E28D8324600234DA7 /* MatchDetailsViewModelTests.swift */,
 				FDC6621028D8327100234DA7 /* MatchDetailsViewControllerTests.swift */,
 				FDC6620D28D8322C00234DA7 /* Doubles */,
@@ -768,6 +792,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC6620928D8313500234DA7 /* MatchDetailsViewModelSpy.swift */,
+				FDA022B928D841D600534803 /* MatchDetailsTableViewResponderSpy.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -1026,6 +1051,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA022B828D8409D00534803 /* MatchDetailsFactoryDependencies+Fixtures.swift in Sources */,
 				FDC6618528D6EEA300234DA7 /* GetMatchesForPageUseCaseSpy .swift in Sources */,
 				FDC6618728D6EF0A00234DA7 /* MatchList+Fixtures.swift in Sources */,
 				FDC6618D28D6F00000234DA7 /* MatchListRepositorySpy.swift in Sources */,
@@ -1033,6 +1059,7 @@
 				FDC6613D28D6BB2A00234DA7 /* GetMatchesRequestTests.swift in Sources */,
 				FDC6619F28D6FD5400234DA7 /* GetPlayersForTeamsUseCaseTests.swift in Sources */,
 				FDC661A528D6FD8100234DA7 /* PlayerList+Fixture.swift in Sources */,
+				FDA022BA28D841D600534803 /* MatchDetailsTableViewResponderSpy.swift in Sources */,
 				FDC6614228D6BE0F00234DA7 /* MatchListServiceTests.swift in Sources */,
 				FDC6618928D6EFB800234DA7 /* GetMatchPageUseCaseTests.swift in Sources */,
 				FDC6618B28D6EFC100234DA7 /* MatchesResponseToMatchListAdapterTests.swift in Sources */,
@@ -1052,6 +1079,7 @@
 				FDC6616D28D6DE2D00234DA7 /* GetTeamPlayersServiceSpy.swift in Sources */,
 				FDC6620C28D831B100234DA7 /* MatchListRouterSpy.swift in Sources */,
 				FDC661EF28D8097300234DA7 /* MatchListTableViewResponderSpy.swift in Sources */,
+				FDA022BD28D842AD00534803 /* MatchCellViewModel+Fixtures.swift in Sources */,
 				FDC6620A28D8313500234DA7 /* MatchDetailsViewModelSpy.swift in Sources */,
 				FDC6616A28D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift in Sources */,
 				FDC6616828D6DD9800234DA7 /* GetTeamPlayersServiceTests.swift in Sources */,

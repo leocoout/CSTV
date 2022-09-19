@@ -46,7 +46,7 @@ final class MatchListViewController: UITableViewController {
 }
 
 extension MatchListViewController: MatchListTableViewResponderDelegate {
-    func hadleMatchSelection(_ matchData: MatchTableViewCell.ViewModel) {
+    func handleMatchSelection(_ matchData: MatchTableViewCell.ViewModel) {
         router.routeToMatchDetails(
             with: .init(
                 leftTeam: .init(imageUrl: matchData.leftTeamImageURL, name:  matchData.leftTeamName),
