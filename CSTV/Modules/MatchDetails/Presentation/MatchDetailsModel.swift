@@ -1,6 +1,6 @@
 struct MatchDetails {
     let header: MatchDetailsHeaderModel
-//    let players: MatchDetailsPlayers
+    let players: MatchDetailsPlayers
 }
 
 struct MatchDetailsHeaderModel {
@@ -16,6 +16,7 @@ struct MatchDetailsPlayers {
     let leftTeamPlayers, rightTeamPlayers: [TeamPlayer]
     
     struct TeamPlayer {
-        let nickname, name, imageUrl: String
+        let nickname: String
+        let name, imageUrl: String?
     }
 }

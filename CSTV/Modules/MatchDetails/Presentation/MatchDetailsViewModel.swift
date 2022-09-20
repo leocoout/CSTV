@@ -46,16 +46,6 @@ private extension MatchDetailsViewModel {
     }
     
     func handleGetTeamsSuccessResponse(_ teams: [Team]) {
-        let matchDetails = MatchDetails(
-            header: teamsToMatchDetailsHeader(teams)
-        )
-        
-        didUpdateMatchDetails?(matchDetails)
-    }
-}
-
-extension MatchDetailsViewModel {
-    func teamsToMatchDetailsHeader(_ teams: [Team]) -> MatchDetailsHeaderModel {
         let leftTeam = teams.first {
             $0.id == dependencies.leftTeam.id
         }
@@ -64,10 +54,45 @@ extension MatchDetailsViewModel {
             $0.id == dependencies.rightTeam.id
         }
         
+        let matchDetails = MatchDetails(
+            header: teamsToMatchDetailsHeader(leftTeam, rightTeam),
+            players: teamsToMatchDetailsPlayers(leftTeam, rightTeam)
+        )
+        
+        didUpdateMatchDetails?(matchDetails)
+    }
+}
+
+extension MatchDetailsViewModel {
+    func teamsToMatchDetailsHeader(_ leftTeam: Team?, _ rightTeam: Team?) -> MatchDetailsHeaderModel {
         return .init(
             leftTeam: .init(imageUrl: leftTeam?.imageUrl, name: leftTeam?.name),
             rightTeam: .init(imageUrl: rightTeam?.imageUrl, name: rightTeam?.name),
             matchTime: dependencies.matchTime
         )
+    }
+    
+    func teamsToMatchDetailsPlayers(_ leftTeam: Team?, _ rightTeam: Team?) -> MatchDetailsPlayers {
+        let leftTeamPlayers = leftTeam?.players.mapToTeamPlayer ?? []
+        let rightTeamPlayers = rightTeam?.players.mapToTeamPlayer ?? []
+        
+        return .init(
+            leftTeamPlayers: leftTeamPlayers,
+            rightTeamPlayers: rightTeamPlayers
+        )
+    }
+}
+
+extension Array where Element == Player {
+    var mapToTeamPlayer: [MatchDetailsPlayers.TeamPlayer] {
+        map { player in
+            let fullName = (player.firstName ?? "") + (player.lastName ?? "")
+            
+            return MatchDetailsPlayers.TeamPlayer(
+                nickname: player.name ?? "",
+                name: fullName.isEmpty ? nil : fullName,
+                imageUrl: player.imageUrl
+            )
+        }
     }
 }
