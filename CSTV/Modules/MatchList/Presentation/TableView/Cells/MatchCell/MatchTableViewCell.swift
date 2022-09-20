@@ -78,7 +78,7 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
 
     func configure(with viewModel: ViewModel) {
         matchTimeView.configure(with: .init(matchTime: viewModel.matchStartTime, isLive: viewModel.isLive))
-        leagueSerieView.configure(with: .init(leagueImageURL: "", leagueAndSerieName: viewModel.leagueSerieName))
+        leagueSerieView.configure(with: .init(leagueImageURL: viewModel.leagueImageURL, leagueAndSerieName: viewModel.leagueSerieName))
         setupTeamsView(viewModel)
     }
 }

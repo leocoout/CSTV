@@ -45,7 +45,6 @@ private extension Array where Element == Match {
     var formatted: Self {
         map {
             .init(
-                id: $0.id,
                 status: $0.status,
                 opponents: $0.opponents,
                 leagueName: $0.leagueName,

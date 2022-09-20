@@ -27,8 +27,6 @@ final class MatchCellLeagueSerieView: UIView, MatchCellLeagueSerieViewDisplayabl
     
     private lazy var image: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = .gray300
-        image.layer.cornerRadius = 8
         constrain(image) {
             $0.width == 16
             $0.height == 16
