@@ -25,7 +25,6 @@ struct GetMatchesRequest: CSTVNetworkRequest {
         [
             .perPage: 6,
             .page: requestPage,
-            .beginAt: beginAt
         ]
     }
 }

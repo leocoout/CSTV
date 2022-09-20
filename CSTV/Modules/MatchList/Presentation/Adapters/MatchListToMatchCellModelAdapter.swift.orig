@@ -5,9 +5,15 @@ extension Array where Element == Match {
 }
 
 extension MatchTableViewCell.ViewModel {
-    init(from list: Match) {
+<<<<<<< HEAD
+    init(from list: MatchList) {
         let leftTeam = list.opponents.first
         let rightTeam = list.opponents.last
+=======
+    init(from list: Match) {
+        let leftTeam = list.opponents[0]
+        let rightTeam = list.opponents[1]
+>>>>>>> f424a9bd9d96992512595ff17b3bb5502cde1945
         let leagueName = list.leagueName ?? ""
         let serieName = list.serieName ?? ""
         

@@ -21,6 +21,7 @@ final class MatchDetailsTableViewResponder: NSObject, MatchDetailsTableViewRespo
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(MatchDetailHeaderCell.self)
+        tableView.register(MatchDetailPlayerCell.self)
         
         return tableView
     }()
@@ -51,8 +52,7 @@ extension MatchDetailsTableViewResponder {
     func numberOfSections(in tableView: UITableView) -> Int { 2 }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        section == 0 ? 1 : 5
-        1
+        section == 0 ? 1 : 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,6 +62,15 @@ extension MatchDetailsTableViewResponder {
         {
             detailCell.configure(with: configuration)
             return detailCell
+        } else if let playerCell = tableView.dequeue(type: MatchDetailPlayerCell.self, for: indexPath) {
+            
+            playerCell.configure(
+                with: .init(
+                    leftPlayer: .init(nickname: "Teste", name: "Name", imageUrl: ""),
+                    rightPlayer: .init(nickname: "Teste 2", name: "Name 2", imageUrl: "")
+                )
+            )
+            return playerCell
         }
     
         return UITableViewCell()
