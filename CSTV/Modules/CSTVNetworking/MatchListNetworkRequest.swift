@@ -28,6 +28,7 @@ enum CSTVListNetworkRequestBodyKey: Hashable {
     case page
     case perPage
     case beginAt
+    case sort
     case filter(CSTVFilterType)
     
     var description: String {
@@ -38,10 +39,16 @@ enum CSTVListNetworkRequestBodyKey: Hashable {
             return "per_page"
         case .beginAt:
             return "begin_at"
+        case .sort:
+            return "sort"
         case .filter(let type):
             return "filter[\(type)]"
         }
     }
+}
+
+enum CSTVSortType: String {
+    case minusStatus = "-status"
 }
 
 enum CSTVFilterType: String {
