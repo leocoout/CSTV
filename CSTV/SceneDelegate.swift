@@ -16,6 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         let matchListController = MatchListFactory().make(with: .init())
+//        let matchListController = MatchDetailsFactory().make(with: .init(
+//            leftTeam: .init(imageUrl: "", name: "Teste"),
+//            rightTeam: .init(imageUrl: "", name: "Teste"),
+//            matchTime: "Teste",
+//            leagueSerie: "Serie")
+//        )
         let navigation = makeNavigation(with: matchListController)
      
         window.rootViewController = navigation

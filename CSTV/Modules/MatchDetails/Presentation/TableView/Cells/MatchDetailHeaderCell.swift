@@ -19,11 +19,11 @@ final class MatchDetailHeaderCell: UITableViewCell, MatchDetailHeaderCellDisplay
     private let teamsView: MatchCellTeamsViewDisplayable
     
     private lazy var vStack: UIStackView = {
-        let hStack = UIStackView(arrangedSubviews: [teamsView, matchTimeLabel])
-        hStack.distribution = .fillProportionally
-        hStack.axis = .vertical
-        hStack.spacing = 20
-        return hStack
+        let vStack = UIStackView(arrangedSubviews: [teamsView, matchTimeLabel])
+        vStack.distribution = .fillProportionally
+        vStack.axis = .vertical
+        vStack.spacing = 14
+        return vStack
     }()
     
     private lazy var matchTimeLabel: UILabel = {
@@ -64,7 +64,7 @@ extension MatchDetailHeaderCell: ViewCodable {
     
     func setupConstraints() {
         constrain(vStack, self) {
-            $0.edges == $1.edges
+            $0.edges == $1.edges.inseted(by: 22)
         }
     }
     
