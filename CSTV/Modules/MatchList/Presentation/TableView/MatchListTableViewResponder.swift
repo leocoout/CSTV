@@ -78,10 +78,8 @@ extension MatchListTableViewResponder {
            
             matchCell.configure(
                 with: .init(
-                    leftTeamImageURL: configuration.leftTeamImageURL,
-                    rightTeamImageURL: configuration.rightTeamImageURL,
-                    leftTeamName: configuration.leftTeamName,
-                    rightTeamName: configuration.rightTeamName,
+                    leftTeam: configuration.leftTeam,
+                    rightTeam: configuration.rightTeam,
                     leagueImageURL: configuration.leagueImageURL,
                     leagueSerieName: configuration.leagueSerieName,
                     matchStartTime: configuration.matchStartTime,

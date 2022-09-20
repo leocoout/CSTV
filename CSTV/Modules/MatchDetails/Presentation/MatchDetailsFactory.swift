@@ -7,6 +7,7 @@ final class MatchDetailsFactory: ModuleFactoryProtocol {
         let leagueSerie: String
         
         struct Team {
+            let id: Int
             let imageUrl, name: String
         }
     }
@@ -14,7 +15,7 @@ final class MatchDetailsFactory: ModuleFactoryProtocol {
     func make(with dependencies: Dependencies) -> UIViewController {
         
         let tableViewResponder = MatchDetailsTableViewResponder()
-        let viewModel = MatchDetailsViewModel(depedencies: dependencies)
+        let viewModel = MatchDetailsViewModel(depedencies: dependencies, getTeamsUseCase: GetTeamsUseCaseFactory.make())
         let viewController = MatchDetailsViewController(viewModel: viewModel, tableViewResponder: tableViewResponder)
         
         viewController.title = dependencies.leagueSerie
