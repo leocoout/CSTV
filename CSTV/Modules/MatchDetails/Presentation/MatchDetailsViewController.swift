@@ -23,8 +23,14 @@ final class MatchDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.backgroundColor = .background
         view.backgroundColor = .background
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+      
         
         updateDataSource()
         viewModel.initialize()
@@ -38,7 +44,7 @@ extension MatchDetailsViewController {
                 leftTeamImage: details.header.leftTeam.imageUrl,
                 rightTeamImage: details.header.rightTeam.imageUrl,
                 leftTeamName: details.header.leftTeam.name,
-                rightTeamName: details.header.leftTeam.name
+                rightTeamName: details.header.rightTeam.name
             )
             
             let header = MatchDetailHeaderCell.ViewModel(
@@ -46,8 +52,28 @@ extension MatchDetailsViewController {
                 teamsCellModel: teamsCellModel
             )
             
+            let leftPlayers = details.players.leftTeamPlayers.map {
+                MatchDetailPlayerCell.ViewModel.Player(
+                    nickname: $0.nickname,
+                    name: $0.name,
+                    imageUrl: $0.imageUrl
+                )
+            }
+            
+            let rightPlayers = details.players.rightTeamPlayers.map {
+                MatchDetailPlayerCell.ViewModel.Player(
+                    nickname: $0.nickname,
+                    name: $0.name,
+                    imageUrl: $0.imageUrl
+                )
+            }
+            
             self?.tableViewResponder.updateDataSource(
-                .init(header: header)
+                .init(
+                    header: header,
+                    leftPlayers: leftPlayers,
+                    rightPlayers: rightPlayers
+                )
             )
         }
     }
