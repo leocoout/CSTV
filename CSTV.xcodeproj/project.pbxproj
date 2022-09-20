@@ -106,6 +106,8 @@
 		FDDED5C028D6692300EE12B2 /* MatchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */; };
 		FDDED5C328D66BE000EE12B2 /* MatchListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C228D66BE000EE12B2 /* MatchListRepository.swift */; };
 		FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */; };
+		FDEA36D628D94929008BB89F /* LeftTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36D528D94929008BB89F /* LeftTeamView.swift */; };
+		FDEA36D828D96116008BB89F /* RIghtTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36D728D96116008BB89F /* RIghtTeamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,6 +217,8 @@
 		FDDED5BF28D6692300EE12B2 /* MatchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesResponse.swift; sourceTree = "<group>"; };
 		FDDED5C228D66BE000EE12B2 /* MatchListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListRepository.swift; sourceTree = "<group>"; };
 		FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesRequest.swift; sourceTree = "<group>"; };
+		FDEA36D528D94929008BB89F /* LeftTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTeamView.swift; sourceTree = "<group>"; };
+		FDEA36D728D96116008BB89F /* RIghtTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIghtTeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -810,6 +814,7 @@
 		FDC6621528D8341500234DA7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FDEA36D428D93F9B008BB89F /* MatchDetailPlayer */,
 				FDC6621628D8341F00234DA7 /* MatchDetailHeaderCell.swift */,
 				FDC6621828D8342D00234DA7 /* MatchDetailPlayerCell.swift */,
 			);
@@ -870,6 +875,15 @@
 				FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		FDEA36D428D93F9B008BB89F /* MatchDetailPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				FDEA36D528D94929008BB89F /* LeftTeamView.swift */,
+				FDEA36D728D96116008BB89F /* RIghtTeamView.swift */,
+			);
+			path = MatchDetailPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -996,6 +1010,7 @@
 				FDC661FF28D82E8400234DA7 /* MatchDetailsViewModel.swift in Sources */,
 				FDC661AA28D701E200234DA7 /* GetMatchDetailsUseCase.swift in Sources */,
 				FDC6621428D833A200234DA7 /* MatchDetailsTableViewResponder.swift in Sources */,
+				FDEA36D828D96116008BB89F /* RIghtTeamView.swift in Sources */,
 				FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */,
 				FDC6621B28D8385B00234DA7 /* MatchDetailsTableViewDataSource.swift in Sources */,
 				FDC6619C28D6FBEC00234DA7 /* NetworkingErrorToPlayerListErrorAdapter.swift in Sources */,
@@ -1044,6 +1059,7 @@
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
 				FDC661D028D7EC9B00234DA7 /* MatchListTableViewDataSource.swift in Sources */,
 				FDC6617928D6E35C00234DA7 /* Match.swift in Sources */,
+				FDEA36D628D94929008BB89F /* LeftTeamView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
