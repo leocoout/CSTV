@@ -49,8 +49,8 @@ extension MatchListViewController: MatchListTableViewResponderDelegate {
     func handleMatchSelection(_ matchData: MatchTableViewCell.ViewModel) {
         router.routeToMatchDetails(
             with: .init(
-                leftTeam: .init(id: matchData.leftTeam.id, imageUrl: matchData.leftTeam.imageUrl, name:  matchData.leftTeam.name),
-                rightTeam: .init(id: matchData.rightTeam.id, imageUrl: matchData.rightTeam.imageUrl, name:  matchData.rightTeam.name),
+                leftTeam: .init(id: matchData.leftTeam.id),
+                rightTeam: .init(id: matchData.rightTeam.id),
                 matchTime: matchData.matchStartTime,
                 leagueSerie: matchData.leagueSerieName
             )

@@ -8,7 +8,6 @@ final class MatchDetailsFactory: ModuleFactoryProtocol {
         
         struct Team {
             let id: Int
-            let imageUrl, name: String
         }
     }
     

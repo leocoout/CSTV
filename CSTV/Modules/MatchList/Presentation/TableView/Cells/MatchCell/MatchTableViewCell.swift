@@ -18,7 +18,8 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
         
         struct Team {
             let id: Int
-            let imageUrl, name: String
+            let imageUrl: String?
+            let name: String
         }
     }
     

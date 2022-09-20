@@ -26,23 +26,23 @@ final class MatchDetailsViewController: UITableViewController {
 
         view.backgroundColor = .background
         
-        updateDataSourceHeader()
+        updateDataSource()
         viewModel.initialize()
     }
 }
 
 extension MatchDetailsViewController {
-    func updateDataSourceHeader() {
-        viewModel.didUpdateHeader = { [weak self] details in
+    func updateDataSource() {
+        viewModel.didUpdateMatchDetails = { [weak self] details in
             let teamsCellModel = MatchCellTeamsView.ViewModel(
-                leftTeamImage: details.leftTeam.imageUrl,
-                rightTeamImage: details.rightTeam.imageUrl,
-                leftTeamName: details.leftTeam.name,
-                rightTeamName: details.leftTeam.name
+                leftTeamImage: details.header.leftTeam.imageUrl,
+                rightTeamImage: details.header.rightTeam.imageUrl,
+                leftTeamName: details.header.leftTeam.name,
+                rightTeamName: details.header.leftTeam.name
             )
             
             let header = MatchDetailHeaderCell.ViewModel(
-                matchTime: details.matchTime,
+                matchTime: details.header.matchTime,
                 teamsCellModel: teamsCellModel
             )
             

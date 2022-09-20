@@ -3,8 +3,8 @@ import UIKit
 import Foundation
 
 extension UIImageView {
-    func loadImage(from url: String) {
-        guard let url = URL(string: url) else {
+    func loadImage(from url: String?) {
+        guard let strUrl = url, let url = URL(string: strUrl) else {
             image = nil
             return
         }

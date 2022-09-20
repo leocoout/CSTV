@@ -1,6 +1,7 @@
 struct Team {
     let id: Int
-    let name, imageUrl: String
+    let name: String
+    let imageUrl: String?
     let players: [Player]
 }
 

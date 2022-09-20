@@ -1,14 +1,14 @@
 protocol MatchDetailsViewModelProtocol {
     func initialize()
     
-    var didUpdateHeader: ((MatchDetailsHeaderModel) -> Void)? { get set }
+    var didUpdateMatchDetails: ((MatchDetails) -> Void)? { get set }
 }
 
 final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
     
     // MARK: - Public Properties
     
-    var didUpdateHeader: ((MatchDetailsHeaderModel) -> Void)?
+    var didUpdateMatchDetails: ((MatchDetails) -> Void)?
     
     // MARK: - Private Properties
     
@@ -24,22 +24,11 @@ final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
     }
     
     func initialize() {
-        updateHeader()
         getTeams()
     }
 }
 
-private extension MatchDetailsViewModel {
-    func updateHeader() {
-        didUpdateHeader?(
-            .init(
-                leftTeam: .init(imageUrl: dependencies.leftTeam.imageUrl, name:  dependencies.leftTeam.name),
-                rightTeam: .init(imageUrl: dependencies.rightTeam.imageUrl, name:  dependencies.rightTeam.name),
-                matchTime: dependencies.matchTime
-            )
-        )
-    }
-    
+private extension MatchDetailsViewModel {    
     func getTeams() {
         Task {
             let response = await getTeamsUseCase.execute(
@@ -49,10 +38,36 @@ private extension MatchDetailsViewModel {
             
             switch response {
             case .success(let teams):
-                print(teams)
+                handleGetTeamsSuccessResponse(teams)
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    func handleGetTeamsSuccessResponse(_ teams: [Team]) {
+        let matchDetails = MatchDetails(
+            header: teamsToMatchDetailsHeader(teams)
+        )
+        
+        didUpdateMatchDetails?(matchDetails)
+    }
+}
+
+extension MatchDetailsViewModel {
+    func teamsToMatchDetailsHeader(_ teams: [Team]) -> MatchDetailsHeaderModel {
+        let leftTeam = teams.first {
+            $0.id == dependencies.leftTeam.id
+        }
+        
+        let rightTeam = teams.first {
+            $0.id == dependencies.rightTeam.id
+        }
+        
+        return .init(
+            leftTeam: .init(imageUrl: leftTeam?.imageUrl, name: leftTeam?.name),
+            rightTeam: .init(imageUrl: rightTeam?.imageUrl, name: rightTeam?.name),
+            matchTime: dependencies.matchTime
+        )
     }
 }
