@@ -2,6 +2,7 @@ protocol MatchDetailsViewModelProtocol {
     func initialize()
     
     var didUpdateMatchDetails: ((MatchDetails) -> Void)? { get set }
+    var didUpdateListState: ((MatchDetailsListState) -> Void)? { get set }
 }
 
 final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
@@ -9,6 +10,7 @@ final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
     // MARK: - Public Properties
     
     var didUpdateMatchDetails: ((MatchDetails) -> Void)?
+    var didUpdateListState: ((MatchDetailsListState) -> Void)?
     
     // MARK: - Private Properties
     
@@ -24,6 +26,7 @@ final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
     }
     
     func initialize() {
+        didUpdateListState?(.loading)
         getTeams()
     }
 }
@@ -39,8 +42,9 @@ private extension MatchDetailsViewModel {
             switch response {
             case .success(let teams):
                 handleGetTeamsSuccessResponse(teams)
-            case .failure(let error):
-                print(error)
+                didUpdateListState?(.content)
+            case .failure:
+                didUpdateListState?( .error(message: "Erro ao carregar lista de partidas."))
             }
         }
     }

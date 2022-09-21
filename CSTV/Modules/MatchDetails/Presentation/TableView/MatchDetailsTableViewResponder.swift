@@ -4,7 +4,7 @@ protocol MatchDetailsTableViewResponderProtocol: UITableViewDelegate, UITableVie
     var tableView: UITableView? { get }
     
     func updateDataSource(_ dataSource: MatchDetailsTableViewDataSource)
-    func setBackgroundView(_ view: UIView)
+    func setBackgroundView(_ view: UIView?)
 }
 
 final class MatchDetailsTableViewResponder: NSObject, MatchDetailsTableViewResponderProtocol {
@@ -39,9 +39,9 @@ final class MatchDetailsTableViewResponder: NSObject, MatchDetailsTableViewRespo
         }
     }
     
-    func setBackgroundView(_ view: UIView) {
+    func setBackgroundView(_ view: UIView?) {
         dispatchQueue.async(group: nil, qos: .unspecified, flags: []) {
-            self.tableView?.backgroundView?.addSubview(view)
+            self.tableView?.backgroundView = view
         }
     }
 }

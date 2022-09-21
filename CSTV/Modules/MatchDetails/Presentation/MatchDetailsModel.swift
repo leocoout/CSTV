@@ -21,3 +21,7 @@ struct MatchDetailsPlayers {
         let name, imageUrl: String?
     }
 }
+
+enum MatchDetailsListState: Equatable {
+    case loading, error(message: String), content
+}
