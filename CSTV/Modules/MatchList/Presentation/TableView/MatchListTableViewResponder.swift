@@ -10,7 +10,7 @@ protocol MatchListTableViewResponderProtocol: UITableViewDelegate, UITableViewDa
     var delegate: MatchListTableViewResponderDelegate? { get set }
     
     func updateDataSource(_ dataSource: MatchListTableViewDataSource)
-    func setErrorView(_ view: UIView)
+    func setBackgroundView(_ view: UIView?)
 }
 
 final class MatchListTableViewResponder: NSObject, MatchListTableViewResponderProtocol {
@@ -47,7 +47,7 @@ final class MatchListTableViewResponder: NSObject, MatchListTableViewResponderPr
         }
     }
     
-    func setErrorView(_ view: UIView) {
+    func setBackgroundView(_ view: UIView?) {
         dispatchQueue.async(group: nil, qos: .unspecified, flags: []) {
             self.tableView?.backgroundView = view
         }

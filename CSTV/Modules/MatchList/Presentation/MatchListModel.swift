@@ -1,5 +1,5 @@
 typealias MatchListModel = [Match]
 
-enum MatchListState {
-    case loading, content, error
+enum MatchListState: Equatable {
+    case loading, content, error(message: String)
 }

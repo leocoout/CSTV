@@ -1,4 +1,5 @@
 protocol MatchListViewModelProtocol {
+    func initialize()
     func fetchMatches()
     
     var didUpdateMatchList: ((MatchListModel) -> Void)? { get set }
@@ -40,10 +41,10 @@ private extension MatchListViewModel {
                 let formattedList = list.formatted
                 matches.append(contentsOf: formattedList)
                 
-                didUpdateMatchList?(matches)
                 didUpdateListState?(.content)
+                didUpdateMatchList?(matches)
             case .failure:
-                didUpdateListState?(.error)
+                didUpdateListState?(.error(message: "Erro ao carregar lista de partidas."))
             }
         }
     }
