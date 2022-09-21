@@ -5,6 +5,7 @@ struct Match {
     let leagueImageUrl: String?
     let serieName: String?
     let matchStartTime: String?
+    let priority: Int
     
     enum Status: String {
         case finished

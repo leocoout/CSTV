@@ -4,7 +4,7 @@ protocol MatchDetailsTableViewResponderProtocol: UITableViewDelegate, UITableVie
     var tableView: UITableView? { get }
     
     func updateDataSource(_ dataSource: MatchDetailsTableViewDataSource)
-    func setErrorView(_ view: UIView)
+    func setBackgroundView(_ view: UIView?)
 }
 
 final class MatchDetailsTableViewResponder: NSObject, MatchDetailsTableViewResponderProtocol {
@@ -39,7 +39,7 @@ final class MatchDetailsTableViewResponder: NSObject, MatchDetailsTableViewRespo
         }
     }
     
-    func setErrorView(_ view: UIView) {
+    func setBackgroundView(_ view: UIView?) {
         dispatchQueue.async(group: nil, qos: .unspecified, flags: []) {
             self.tableView?.backgroundView = view
         }
@@ -65,8 +65,7 @@ extension MatchDetailsTableViewResponder {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0,
            let detailCell = tableView.dequeue(type: MatchDetailHeaderCell.self, for: indexPath),
-           let configuration = tableDataSource?.header
-        {
+           let configuration = tableDataSource?.header {
             detailCell.configure(with: configuration)
             return detailCell
         } else if let playerCell = tableView.dequeue(type: MatchDetailPlayerCell.self, for: indexPath),

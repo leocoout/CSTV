@@ -11,19 +11,19 @@ extension Date {
         return dateformat.string(from: self)
     }
     
-    var calendar: Calendar { Calendar.current }
-    
     func string(withFormat format: String = "dd/MM/yyyy HH:mm") -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
     
+    var calendar: Calendar { Calendar.current }
+
     var isInToday: Bool {
-        return calendar.isDateInToday(self)
+        calendar.isDateInToday(self)
     }
 
     var isInTomorrow: Bool {
-        return calendar.isDateInTomorrow(self)
+        calendar.isDateInTomorrow(self)
     }
 }

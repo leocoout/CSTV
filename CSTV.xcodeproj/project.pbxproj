@@ -109,6 +109,7 @@
 		FDEA36D628D94929008BB89F /* LeftTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36D528D94929008BB89F /* LeftTeamView.swift */; };
 		FDEA36D828D96116008BB89F /* RIghtTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36D728D96116008BB89F /* RIghtTeamView.swift */; };
 		FDEA36DB28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */; };
+		FDEA36E728DAC152008BB89F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36E628DAC152008BB89F /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,7 @@
 		FDEA36D528D94929008BB89F /* LeftTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTeamView.swift; sourceTree = "<group>"; };
 		FDEA36D728D96116008BB89F /* RIghtTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIghtTeamView.swift; sourceTree = "<group>"; };
 		FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamsUseCaseFactory.swift; sourceTree = "<group>"; };
+		FDEA36E628DAC152008BB89F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -834,6 +836,7 @@
 		FDDED5B928D6670A00EE12B2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FDEA36E528DAC13D008BB89F /* CommonUI */,
 				FD634DCA28D6456300D18453 /* Security */,
 				FDC6617428D6E28700234DA7 /* Utils */,
 				FDC6615C28D6CF0B00234DA7 /* CSTVNetworking */,
@@ -895,6 +898,14 @@
 				FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		FDEA36E528DAC13D008BB89F /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				FDEA36E628DAC152008BB89F /* ErrorView.swift */,
+			);
+			path = CommonUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1068,6 +1079,7 @@
 				FDDED5C328D66BE000EE12B2 /* MatchListRepository.swift in Sources */,
 				FDEA36DB28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift in Sources */,
 				FDC661E228D7F6D800234DA7 /* UIColor+Extensions.swift in Sources */,
+				FDEA36E728DAC152008BB89F /* ErrorView.swift in Sources */,
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
 				FDC661D028D7EC9B00234DA7 /* MatchListTableViewDataSource.swift in Sources */,
 				FDC6617928D6E35C00234DA7 /* Match.swift in Sources */,

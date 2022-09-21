@@ -40,7 +40,8 @@ final class GetMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol {
                         leagueName: match.league.name,
                         leagueImageUrl: match.league.imageUrl,
                         serieName: match.serie.name,
-                        matchStartTime: match.beginAt
+                        matchStartTime: match.beginAt,
+                        priority: 0
                     )
                 }
                 
