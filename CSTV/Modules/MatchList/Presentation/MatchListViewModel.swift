@@ -59,8 +59,9 @@ private extension Array where Element == Match {
                 leagueName: $0.leagueName,
                 leagueImageUrl: $0.leagueImageUrl,
                 serieName: $0.serieName,
-                matchStartTime: $0.matchStartTime?.formattedToDate ?? "NÃO INICIADO"
+                matchStartTime: $0.matchStartTime?.formattedToDate ?? "NÃO INICIADO",
+                priority: $0.status == .running ? 1 : 0
             )
-        }
+        }.sorted { $0.priority > $1.priority }
     }
 }
