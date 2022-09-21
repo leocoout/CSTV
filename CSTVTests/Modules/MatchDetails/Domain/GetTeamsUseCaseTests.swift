@@ -3,7 +3,7 @@ import XCTest
 
 @testable import CSTV
 
-final class GetPlayersForTeamsUseCaseTests: XCTestCase {
+final class GetTeamsUseCaseTests: XCTestCase {
     private let serviceSpy = GetTeamPlayersServiceSpy(networking: NetworkingProtocolSpy())
     
     private lazy var repositorySpy = TeamPlayersRepositorySpy(

@@ -1,6 +1,6 @@
 @testable import CSTV
 
-final class GetPlayersForTeamsUseCaseSpy: GetTeamsUseCaseProtocol {
+final class GetTeamsUseCaseSpy: GetTeamsUseCaseProtocol {
     
     private(set) var executeCalled: Bool = false
     private(set) var teamAPassed: Int?

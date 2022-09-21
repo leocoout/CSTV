@@ -12,11 +12,10 @@ class MatchListRepository {
         self.tokenRepository = tokenRepository
     }
     
-    func getMatches(for page: Int, beginningAt date: String) async -> Result<[MatchesResponse], NetworkRequestError> {
+    func getMatches(for page: Int) async -> Result<[MatchesResponse], NetworkRequestError> {
         await service.get(
             with: tokenRepository.getToken(),
-            page: page,
-            begginingAt: date
+            page: page
         )
     }
 }

@@ -1,16 +1,13 @@
 struct GetMatchesRequest: CSTVNetworkRequest {
     private let token: String
     private let requestPage: Int
-    private let beginAt: String
     
     init(
         token: String,
-        requestPage: Int,
-        beginAt: String
+        requestPage: Int
     ) {
         self.token = token
         self.requestPage = requestPage
-        self.beginAt = beginAt
     }
     
     var path: String {

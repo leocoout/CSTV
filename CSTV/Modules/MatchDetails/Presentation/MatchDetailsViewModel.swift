@@ -1,3 +1,5 @@
+import Foundation
+
 protocol MatchDetailsViewModelProtocol {
     func initialize()
     
@@ -16,17 +18,23 @@ final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
     
     private var dependencies: MatchDetailsFactory.Dependencies
     private let getTeamsUseCase: GetTeamsUseCaseProtocol
+    private let dispatchQueueProtocol: DispatchQueueProtocol
     
     init(
         depedencies: MatchDetailsFactory.Dependencies,
-        getTeamsUseCase: GetTeamsUseCaseProtocol
+        getTeamsUseCase: GetTeamsUseCaseProtocol,
+        dispatchQueueProtocol: DispatchQueueProtocol = DispatchQueue.main
     ) {
         self.dependencies = depedencies
         self.getTeamsUseCase = getTeamsUseCase
+        self.dispatchQueueProtocol = dispatchQueueProtocol
     }
     
     func initialize() {
-        didUpdateListState?(.loading)
+        dispatchQueueProtocol.async(group: nil, qos: .unspecified, flags: .noQoS) { [weak self] in
+            self?.didUpdateListState?(.loading)
+        }
+        
         getTeams()
     }
 }
@@ -91,7 +99,7 @@ extension MatchDetailsViewModel {
 extension Array where Element == Player {
     var mapToTeamPlayer: [MatchDetailsPlayers.TeamPlayer] {
         map { player in
-            let fullName = (player.firstName ?? "") + (player.lastName ?? "")
+            let fullName = (player.firstName ?? "") + " " + (player.lastName ?? "")
             
             return MatchDetailsPlayers.TeamPlayer(
                 nickname: player.name ?? "",

@@ -9,7 +9,7 @@ final class MatchListTableViewResponderSpy: NSObject, MatchListTableViewResponde
     
     func updateDataSource(_ dataSource: CSTV.MatchListTableViewDataSource) {}
     
-    func setErrorView(_ view: UIView) {}
+    func setBackgroundView(_ view: UIView?) {}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 0 }
     

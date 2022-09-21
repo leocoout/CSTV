@@ -5,19 +5,21 @@ extension MatchDetailsFactory.Dependencies {
         leftTeam: Team = .fixture(),
         rightTeam: Team = .fixture(),
         matchTime: String = "",
+        isLive: Bool = false,
         leagueSerie: String = ""
     ) -> Self {
         .init(
             leftTeam: leftTeam,
             rightTeam: rightTeam,
             matchTime: matchTime,
+            isLive: isLive,
             leagueSerie: leagueSerie
         )
     }
 }
 
 extension MatchDetailsFactory.Dependencies.Team {
-    static func fixture(imageUrl: String = "", name: String = "") -> Self {
-        .init(imageUrl: imageUrl, name: name)
+    static func fixture(id: Int = 0) -> Self {
+        .init(id: id)
     }
 }

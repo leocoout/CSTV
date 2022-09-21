@@ -19,10 +19,7 @@ final class GetMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol {
     }
     
     func execute() async -> Result <[Match], MatchListError> {
-        let result = await repository.getMatches(
-            for: currentPage,
-            beginningAt: currentDate.getFormattedDate(format: .yyyyMMddTHHmmssZ)
-        )
+        let result = await repository.getMatches(for: currentPage)
         
         incrementPage()
         

@@ -8,11 +8,10 @@ class MatchListService {
         self.networking = networking
     }
     
-    func get(with token: String, page: Int, begginingAt: String) async -> Result<[MatchesResponse], NetworkRequestError> {
+    func get(with token: String, page: Int) async -> Result<[MatchesResponse], NetworkRequestError> {
         let request = GetMatchesRequest(
             token: token,
-            requestPage: page,
-            beginAt: begginingAt
+            requestPage: page
         )
         return await networking.request(request, responseModel: [MatchesResponse].self)
     }

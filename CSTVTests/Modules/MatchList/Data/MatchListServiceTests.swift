@@ -11,7 +11,7 @@ final class MatchListServiceTests: XCTestCase {
     )
     
     func test_get_shouldSendCorrectRequest() async {
-        _ = await sut.get(with: "token", page: 2, begginingAt: "")
+        _ = await sut.get(with: "token", page: 2)
         
         XCTAssertTrue(networkingSpy.requestCalled)
         XCTAssertTrue(networkingSpy.requestPassed is GetMatchesRequest)
