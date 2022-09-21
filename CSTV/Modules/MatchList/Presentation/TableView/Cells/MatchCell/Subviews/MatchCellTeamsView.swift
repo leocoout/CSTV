@@ -22,7 +22,8 @@ final class MatchCellTeamsView: UIView, MatchCellTeamsViewDisplayable {
     private lazy var hStack: UIStackView = {
         let hStack = UIStackView(arrangedSubviews: [
             UIView(),
-            leftTeam, versusLabel,
+            leftTeam,
+            versusLabel,
             rightTeam,
             UIView()
         ])

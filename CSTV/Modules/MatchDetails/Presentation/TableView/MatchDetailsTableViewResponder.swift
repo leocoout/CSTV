@@ -65,8 +65,7 @@ extension MatchDetailsTableViewResponder {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0,
            let detailCell = tableView.dequeue(type: MatchDetailHeaderCell.self, for: indexPath),
-           let configuration = tableDataSource?.header
-        {
+           let configuration = tableDataSource?.header {
             detailCell.configure(with: configuration)
             return detailCell
         } else if let playerCell = tableView.dequeue(type: MatchDetailPlayerCell.self, for: indexPath),

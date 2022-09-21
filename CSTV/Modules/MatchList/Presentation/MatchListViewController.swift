@@ -33,11 +33,15 @@ final class MatchListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.color = .gray100
-        view.backgroundColor = .background
+        setupLayout()
         didUpdateMatchList()
         didUpdateListState()
         viewModel.initialize()
+    }
+    
+    private func setupLayout() {
+        activityIndicator.color = .gray100
+        view.backgroundColor = .background
     }
 }
 

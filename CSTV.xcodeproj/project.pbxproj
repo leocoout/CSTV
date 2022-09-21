@@ -110,7 +110,6 @@
 		FDEA36D828D96116008BB89F /* RIghtTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36D728D96116008BB89F /* RIghtTeamView.swift */; };
 		FDEA36DB28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */; };
 		FDEA36E728DAC152008BB89F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36E628DAC152008BB89F /* ErrorView.swift */; };
-		FDEA36EA28DAC486008BB89F /* DefaultActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36E928DAC486008BB89F /* DefaultActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,7 +223,6 @@
 		FDEA36D728D96116008BB89F /* RIghtTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIghtTeamView.swift; sourceTree = "<group>"; };
 		FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamsUseCaseFactory.swift; sourceTree = "<group>"; };
 		FDEA36E628DAC152008BB89F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		FDEA36E928DAC486008BB89F /* DefaultActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -906,7 +904,6 @@
 			isa = PBXGroup;
 			children = (
 				FDEA36E628DAC152008BB89F /* ErrorView.swift */,
-				FDEA36E928DAC486008BB89F /* DefaultActivityView.swift */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -1084,7 +1081,6 @@
 				FDC661E228D7F6D800234DA7 /* UIColor+Extensions.swift in Sources */,
 				FDEA36E728DAC152008BB89F /* ErrorView.swift in Sources */,
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
-				FDEA36EA28DAC486008BB89F /* DefaultActivityView.swift in Sources */,
 				FDC661D028D7EC9B00234DA7 /* MatchListTableViewDataSource.swift in Sources */,
 				FDC6617928D6E35C00234DA7 /* Match.swift in Sources */,
 				FDEA36D628D94929008BB89F /* LeftTeamView.swift in Sources */,
