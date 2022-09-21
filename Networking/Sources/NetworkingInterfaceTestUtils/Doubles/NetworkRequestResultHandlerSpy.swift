@@ -10,14 +10,14 @@ public final class NetworkRequestResultHandlerSpy: NetworkRequestResultHandling 
     public func handle<T: Codable>(
         _ input: NetworkRequestResultHandlerInput,
         response: T.Type
-    ) -> Result<T, NetworkRequestError> {
+    ) throws -> T {
         handleCalled = true
         handleInputPassed = input
         
-        if let handleResultToBeReturned = handleResultToBeReturned as? Result<T, NetworkRequestError> {
+        if let handleResultToBeReturned = handleResultToBeReturned as? T {
              return handleResultToBeReturned
         }
         
-        return .failure(.unknown)
+        throw NetworkRequestError.unknown
     }
 }

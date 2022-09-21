@@ -42,16 +42,15 @@ final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
 private extension MatchDetailsViewModel {    
     func getTeams() {
         Task {
-            let response = await getTeamsUseCase.execute(
-                teamA: dependencies.leftTeam.id,
-                teamB: dependencies.rightTeam.id
-            )
-            
-            switch response {
-            case .success(let teams):
-                handleGetTeamsSuccessResponse(teams)
+            do {
+                let response = try await getTeamsUseCase.execute(
+                    teamA: dependencies.leftTeam.id,
+                    teamB: dependencies.rightTeam.id
+                )
+                
+                handleGetTeamsSuccessResponse(response)
                 didUpdateListState?(.content)
-            case .failure:
+            } catch {
                 didUpdateListState?( .error(message: "Erro ao carregar lista de partidas."))
             }
         }

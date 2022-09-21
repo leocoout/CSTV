@@ -35,15 +35,14 @@ final class MatchListViewModel: MatchListViewModelProtocol {
 private extension MatchListViewModel {
     func getMatchesForPage() {
         Task {
-            let list = await getMatchesForPageUseCase.execute()
-            switch list {
-            case .success(let list):
+            do {
+                let list = try await getMatchesForPageUseCase.execute()
                 let formattedList = list.formatted
                 matches.append(contentsOf: formattedList)
                 
                 didUpdateListState?(.content)
                 didUpdateMatchList?(matches)
-            case .failure:
+            } catch {
                 didUpdateListState?(.error(message: "Erro ao carregar lista de partidas."))
             }
         }

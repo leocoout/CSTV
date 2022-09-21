@@ -12,8 +12,8 @@ class MatchListRepository {
         self.tokenRepository = tokenRepository
     }
     
-    func getMatches(for page: Int) async -> Result<[MatchesResponse], NetworkRequestError> {
-        await service.get(
+    func getMatches(for page: Int) async throws -> [MatchesResponse] {
+        await try service.get(
             with: tokenRepository.getToken(),
             page: page
         )

@@ -37,10 +37,6 @@ final class MatchDetailsViewModelTests: XCTestCase {
         waitForExpectations(timeout: 0.1, handler: nil)
         
         XCTAssertTrue(getTeamsUseCaseSpy.executeCalled)
-        XCTAssertEqual(getTeamsUseCaseSpy
-            .teamAPassed, 000)
-        XCTAssertEqual(getTeamsUseCaseSpy
-            .teamBPassed, 111)
     }
     
     func test_initialize_getTeams_givenError_shouldReturnErrorState() {
