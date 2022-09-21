@@ -65,7 +65,7 @@ private extension MatchDetailsViewModel {
 
 extension MatchDetailsViewModel {
     func teamsToMatchDetailsHeader(_ leftTeam: Team?, _ rightTeam: Team?) -> MatchDetailsHeaderModel {
-        return .init(
+        .init(
             leftTeam: .init(imageUrl: leftTeam?.imageUrl, name: leftTeam?.name),
             rightTeam: .init(imageUrl: rightTeam?.imageUrl, name: rightTeam?.name),
             matchTime: dependencies.matchTime,

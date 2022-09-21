@@ -2,6 +2,7 @@ protocol MatchListViewModelProtocol {
     func fetchMatches()
     
     var didUpdateMatchList: ((MatchListModel) -> Void)? { get set }
+    var didUpdateListState: ((MatchListState) -> Void)? { get set }
 }
 
 final class MatchListViewModel: MatchListViewModelProtocol {
@@ -9,6 +10,7 @@ final class MatchListViewModel: MatchListViewModelProtocol {
     // MARK: - Public Properties
     
     var didUpdateMatchList: ((MatchListModel) -> Void)?
+    var didUpdateListState: ((MatchListState) -> Void)?
     
     // MARK: - Private Properties
     
@@ -17,6 +19,11 @@ final class MatchListViewModel: MatchListViewModelProtocol {
     
     init(getMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol) {
         self.getMatchesForPageUseCase = getMatchesForPageUseCase
+    }
+    
+    func initialize() {
+        didUpdateListState?(.loading)
+        getMatchesForPage()
     }
     
     func fetchMatches() {
@@ -34,8 +41,9 @@ private extension MatchListViewModel {
                 matches.append(contentsOf: formattedList)
                 
                 didUpdateMatchList?(matches)
-            case .failure(let error):
-                print(error)
+                didUpdateListState?(.content)
+            case .failure:
+                didUpdateListState?(.error)
             }
         }
     }

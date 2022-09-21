@@ -29,6 +29,7 @@ final class MatchListViewController: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = .background
         didUpdateMatchList()
+        didUpdateListState()
         viewModel.fetchMatches()
     }
 }
@@ -53,10 +54,16 @@ extension MatchListViewController: MatchListTableViewResponderDelegate {
 
 private extension MatchListViewController {
     func didUpdateMatchList() {
-        viewModel.didUpdateMatchList =  { [weak self ] list in
+        viewModel.didUpdateMatchList =  { [weak self] list in
             self?.tableViewResponder.updateDataSource(
                 .init(matches: list.mappedToMatchListCellViewModel)
             )
+        }
+    }
+    
+    func didUpdateListState() {
+        viewModel.didUpdateListState = { [weak self] state in
+            
         }
     }
 }

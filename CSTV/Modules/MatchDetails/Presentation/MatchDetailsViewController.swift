@@ -18,7 +18,7 @@ final class MatchDetailsViewController: UITableViewController {
     required init?(coder: NSCoder) { nil }
     
     override func loadView() {
-        self.tableView = tableViewResponder.tableView
+        tableView = tableViewResponder.tableView
     }
     
     override func viewDidLoad() {
