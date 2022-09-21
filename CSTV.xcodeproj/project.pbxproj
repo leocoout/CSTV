@@ -32,7 +32,7 @@
 		FDC6616228D6D4C100234DA7 /* TeamsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616128D6D4C100234DA7 /* TeamsRepository.swift */; };
 		FDC6616628D6DCD800234DA7 /* GetTeamPlayersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616528D6DCD800234DA7 /* GetTeamPlayersRequestTests.swift */; };
 		FDC6616828D6DD9800234DA7 /* GetTeamPlayersServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616728D6DD9800234DA7 /* GetTeamPlayersServiceTests.swift */; };
-		FDC6616A28D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616928D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift */; };
+		FDC6616A28D6DDA100234DA7 /* TeamsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616928D6DDA100234DA7 /* TeamsRepositoryTests.swift */; };
 		FDC6616D28D6DE2D00234DA7 /* GetTeamPlayersServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616C28D6DE2D00234DA7 /* GetTeamPlayersServiceSpy.swift */; };
 		FDC6617028D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6616F28D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift */; };
 		FDC6617328D6E1D400234DA7 /* GetMatchesForPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC6617228D6E1D400234DA7 /* GetMatchesForPageUseCase.swift */; };
@@ -158,7 +158,7 @@
 		FDC6616128D6D4C100234DA7 /* TeamsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsRepository.swift; sourceTree = "<group>"; };
 		FDC6616528D6DCD800234DA7 /* GetTeamPlayersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamPlayersRequestTests.swift; sourceTree = "<group>"; };
 		FDC6616728D6DD9800234DA7 /* GetTeamPlayersServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamPlayersServiceTests.swift; sourceTree = "<group>"; };
-		FDC6616928D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlayersRepositoryTests.swift; sourceTree = "<group>"; };
+		FDC6616928D6DDA100234DA7 /* TeamsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsRepositoryTests.swift; sourceTree = "<group>"; };
 		FDC6616C28D6DE2D00234DA7 /* GetTeamPlayersServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamPlayersServiceSpy.swift; sourceTree = "<group>"; };
 		FDC6616F28D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamPlayersResponse+Fixture.swift"; sourceTree = "<group>"; };
 		FDC6617228D6E1D400234DA7 /* GetMatchesForPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesForPageUseCase.swift; sourceTree = "<group>"; };
@@ -522,7 +522,7 @@
 				FDC6616B28D6DE1900234DA7 /* Doubles */,
 				FDC6616528D6DCD800234DA7 /* GetTeamPlayersRequestTests.swift */,
 				FDC6616728D6DD9800234DA7 /* GetTeamPlayersServiceTests.swift */,
-				FDC6616928D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift */,
+				FDC6616928D6DDA100234DA7 /* TeamsRepositoryTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1180,7 +1180,7 @@
 				FDEA36F828DADF60008BB89F /* CSTVNetworkRequestTests.swift in Sources */,
 				FDA022BD28D842AD00534803 /* MatchCellViewModel+Fixtures.swift in Sources */,
 				FDC6620A28D8313500234DA7 /* MatchDetailsViewModelSpy.swift in Sources */,
-				FDC6616A28D6DDA100234DA7 /* TeamPlayersRepositoryTests.swift in Sources */,
+				FDC6616A28D6DDA100234DA7 /* TeamsRepositoryTests.swift in Sources */,
 				FDC6616828D6DD9800234DA7 /* GetTeamPlayersServiceTests.swift in Sources */,
 				FDC6620F28D8324600234DA7 /* MatchDetailsViewModelTests.swift in Sources */,
 				FDEA36EE28DAD9C6008BB89F /* ErrorViewDisplaySpy.swift in Sources */,

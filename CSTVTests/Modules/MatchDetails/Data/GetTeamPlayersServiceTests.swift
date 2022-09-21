@@ -10,11 +10,13 @@ final class TeamPlayersServiceTests: XCTestCase {
         networking: networkingSpy
     )
     
-    func test_get_shouldSendCorrectRequest() async {
-        _ = await sut.get(with: "token", firstTeamId: 0, secondTeamId: 1)
-        
-        XCTAssertTrue(networkingSpy.requestCalled)
-        XCTAssertTrue(networkingSpy.requestPassed is GetTeamsRequest)
-        XCTAssertTrue(networkingSpy.responseModelPassed is [TeamResponse].Type)
+    func test_get_shouldSendCorrectRequest() async throws {
+        do {
+            _ = try await sut.get(with: "token", firstTeamId: 0, secondTeamId: 1)
+        } catch {
+            XCTAssertTrue(networkingSpy.requestCalled)
+            XCTAssertTrue(networkingSpy.requestPassed is GetTeamsRequest)
+            XCTAssertTrue(networkingSpy.responseModelPassed is [TeamResponse].Type)
+        }
     }
 }

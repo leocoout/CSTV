@@ -10,11 +10,13 @@ final class MatchListServiceTests: XCTestCase {
         networking: networkingSpy
     )
     
-    func test_get_shouldSendCorrectRequest() async {
-        _ = await sut.get(with: "token", page: 2)
-        
-        XCTAssertTrue(networkingSpy.requestCalled)
-        XCTAssertTrue(networkingSpy.requestPassed is GetMatchesRequest)
-        XCTAssertTrue(networkingSpy.responseModelPassed is [MatchesResponse].Type)
+    func test_get_shouldSendCorrectRequest() async throws {
+        do {
+            _ = try await sut.get(with: "token", page: 2)
+        } catch {
+            XCTAssertTrue(networkingSpy.requestCalled)
+            XCTAssertTrue(networkingSpy.requestPassed is GetMatchesRequest)
+            XCTAssertTrue(networkingSpy.responseModelPassed is [MatchesResponse].Type)
+        }
     }
 }

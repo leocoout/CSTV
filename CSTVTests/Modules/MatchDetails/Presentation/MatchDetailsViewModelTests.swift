@@ -48,7 +48,7 @@ final class MatchDetailsViewModelTests: XCTestCase {
     }
     
     func test_initialize_getTeams_givenSuccess_shouldReturnContentState() {
-        getTeamsUseCaseSpy.executeToBeReturned = .success([.fixture()])
+        getTeamsUseCaseSpy.executeToBeReturned = [.fixture()]
         
         sut.initialize()
         
@@ -58,7 +58,7 @@ final class MatchDetailsViewModelTests: XCTestCase {
     }
     
     func test_initialize_getTeams_givenSuccess_shouldUpdateMatchDetails() {
-        getTeamsUseCaseSpy.executeToBeReturned = .success([makeMockedLeftTeam, makeMockedRightTeam])
+        getTeamsUseCaseSpy.executeToBeReturned = [makeMockedLeftTeam, makeMockedRightTeam]
         
         sut.initialize()
         

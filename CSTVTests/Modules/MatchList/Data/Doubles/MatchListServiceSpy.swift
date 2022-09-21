@@ -7,16 +7,20 @@ final class MatchListServiceSpy: MatchListService {
     private(set) var getCalled: Bool = false
     private(set) var tokenPassed: String?
     private(set) var pagePassed: Int?
-    var getToBeReturned: Result<[MatchesResponse], NetworkRequestError>?
+    var getToBeReturned: [MatchesResponse]?
     
     override func get(
         with token: String,
         page: Int
-    ) async -> Result<[MatchesResponse], NetworkRequestError> {
+    ) async throws -> [MatchesResponse] {
         getCalled = true
         tokenPassed = token
         pagePassed = page
         
-        return getToBeReturned ?? .failure(.decode)
+        if let getToBeReturned {
+            return getToBeReturned
+        }
+        
+        throw MatchListError.generic
     }
 }

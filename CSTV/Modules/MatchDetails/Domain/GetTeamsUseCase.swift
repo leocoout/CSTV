@@ -15,7 +15,7 @@ final class GetTeamsUseCase: GetTeamsUseCaseProtocol {
             let mappedResponse = result.map { Team(from: $0) }
             return mappedResponse
         } catch {
-            throw MatchListError.generic
+            throw TeamError.generic
         }
     }
 }

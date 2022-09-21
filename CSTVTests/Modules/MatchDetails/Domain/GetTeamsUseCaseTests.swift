@@ -4,7 +4,7 @@ import XCTest
 @testable import CSTV
 
 final class GetTeamsUseCaseTests: XCTestCase {
-    private let serviceSpy = GetTeamPlayersServiceSpy(networking: NetworkingProtocolSpy())
+    private let serviceSpy = GetTeamsServiceSpy(networking: NetworkingProtocolSpy())
     
     private lazy var repositorySpy = TeamPlayersRepositorySpy(
         service: serviceSpy,
@@ -15,28 +15,20 @@ final class GetTeamsUseCaseTests: XCTestCase {
         repository: repositorySpy
     )
     
-    func test_execute_givenSuccess_shouldReturnCorrectProperties() async {
-        repositorySpy.getMatchesToBeReturned = .success([.fixture(id: 1)])
+    func test_execute_givenSuccess_shouldReturnCorrectProperties() async throws {
+        repositorySpy.getMatchesToBeReturned = [.fixture(id: 1)]
         
-        let expectedResult = await sut.execute(teamA: 0, teamB: 1)
-        
-        guard case .success(let list) = expectedResult else {
-            XCTFail("expected generic error failure")
-            return
-        }
+        let expectedResult = try await sut.execute(teamA: 0, teamB: 1)
         
         XCTAssertTrue(repositorySpy.getPlayersCalled)
-        XCTAssertEqual(list.first?.id, 1)
+        XCTAssertEqual(expectedResult.first?.id, 1)
     }
     
-    func test_execute_givenError_shoulReturnCorrectError() async {
-        repositorySpy.getMatchesToBeReturned = .failure(.unauthorized)
-        
-        let expectedResult = await sut.execute(teamA: 0, teamB: 1)
-        
-        guard case .failure(.generic) = expectedResult else {
-            XCTFail("expected generic error failure")
-            return
+    func test_execute_givenError_shoulReturnCorrectError() async throws {
+        do {
+            let _ = try await sut.execute(teamA: 0, teamB: 1)
+        } catch let error as TeamError {
+            XCTAssertEqual(error, .generic)
         }
     }
 }

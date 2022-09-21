@@ -7,15 +7,20 @@ final class TeamPlayersRepositorySpy: TeamsRepository {
     private (set) var getPlayersCalled: Bool = false
     private (set) var firstTeamIdPassed: Int?
     private (set) var secondTeamIdPassed: Int?
-    var getMatchesToBeReturned: Result<[TeamResponse], NetworkRequestError> = .failure(.unauthorized)
+    var getMatchesToBeReturned: [TeamResponse]?
     
     override func getPlayers(
         firstTeamId: Int,
         secondTeamId: Int
-    ) async -> Result<[TeamResponse], NetworkRequestError> {
+    ) async throws -> [TeamResponse] {
         getPlayersCalled = true
         firstTeamIdPassed = firstTeamId
         secondTeamIdPassed = secondTeamId
-        return getMatchesToBeReturned
+        
+        if let getMatchesToBeReturned {
+            return getMatchesToBeReturned
+        }
+        
+        throw MatchListError.generic
     }
 }
