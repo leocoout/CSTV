@@ -1,4 +1,5 @@
 protocol MatchListViewModelProtocol {
+    func initialize()
     func fetchMatches()
     
     var didUpdateMatchList: ((MatchListModel) -> Void)? { get set }
@@ -40,10 +41,10 @@ private extension MatchListViewModel {
                 let formattedList = list.formatted
                 matches.append(contentsOf: formattedList)
                 
-                didUpdateMatchList?(matches)
                 didUpdateListState?(.content)
+                didUpdateMatchList?(matches)
             case .failure:
-                didUpdateListState?(.error)
+                didUpdateListState?(.error(message: "Erro ao carregar lista de partidas."))
             }
         }
     }
@@ -58,8 +59,9 @@ private extension Array where Element == Match {
                 leagueName: $0.leagueName,
                 leagueImageUrl: $0.leagueImageUrl,
                 serieName: $0.serieName,
-                matchStartTime: $0.matchStartTime?.formattedToDate ?? "NÃO INICIADO"
+                matchStartTime: $0.matchStartTime?.formattedToDate ?? "NÃO INICIADO",
+                priority: $0.status == .running ? 1 : 0
             )
-        }
+        }.sorted { $0.priority > $1.priority }
     }
 }
