@@ -16,12 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         let matchListController = MatchListFactory().make(with: .init())
-//        let matchListController = MatchDetailsFactory().make(with: .init(
-//            leftTeam: .init(imageUrl: "", name: "Teste"),
-//            rightTeam: .init(imageUrl: "", name: "Teste"),
-//            matchTime: "Teste",
-//            leagueSerie: "Serie")
-//        )
         let navigation = makeNavigation(with: matchListController)
      
         window.rootViewController = navigation
@@ -32,9 +26,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func makeNavigation(with root: UIViewController?) -> UINavigationController {
         guard let root = root else { return UINavigationController() }
         let navigationController = UINavigationController(rootViewController: root)
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.gray100]
         navigationController.navigationBar.barTintColor = UIColor.gray900
         navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.gray100]
+        
+        let backImage = UIImage(named: "ic-arrow-left")
+        navigationController.navigationBar.backIndicatorImage = backImage
+        navigationController.navigationBar.backIndicatorTransitionMaskImage = backImage
+        navigationController.navigationBar.tintColor = .gray100
+        
         return navigationController
     }
 }

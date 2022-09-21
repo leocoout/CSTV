@@ -3,9 +3,9 @@
 extension MatchesResponse {
     static func fixture(
         id: Int = 0,
-        games: [MatchResponse] = [],
-        serie: MatchSerieResponse = .fixture(),
-        league: MatchLeagueResponse = .fixture(),
+        games: [GameResponse] = [],
+        serie: SerieResponse = .fixture(),
+        league: LeagueResponse = .fixture(),
         opponents: [MatchOpponentResponse] = []
     ) -> Self {
         .init(
@@ -19,10 +19,10 @@ extension MatchesResponse {
 }
 
 
-extension MatchResponse {
+extension GameResponse {
     static func fixture(
         id: Int = 0,
-        status: MatchResponse.Status = .notPlayed,
+        status: GameResponse.Status = .notPlayed,
         beginAt: String? = nil,
         endAt: String? = nil
     ) -> Self {
@@ -35,13 +35,13 @@ extension MatchResponse {
     }
 }
 
-extension MatchSerieResponse {
+extension SerieResponse {
     static func fixture(name: String? = nil) -> Self {
         .init(name: name)
     }
 }
 
-extension MatchLeagueResponse {
+extension LeagueResponse {
     static func fixture(
         id: Int = 0,
         name: String? = nil,

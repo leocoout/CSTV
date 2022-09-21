@@ -11,6 +11,7 @@ final class MatchDetailHeaderCell: UITableViewCell, MatchDetailHeaderCellDisplay
     
     struct ViewModel {
         let matchTime: String
+        let isLive: Bool
         let teamsCellModel: MatchCellTeamsView.ViewModel
     }
     
@@ -19,16 +20,23 @@ final class MatchDetailHeaderCell: UITableViewCell, MatchDetailHeaderCellDisplay
     private let teamsView: MatchCellTeamsViewDisplayable
     
     private lazy var vStack: UIStackView = {
-        let vStack = UIStackView(arrangedSubviews: [teamsView, matchTimeLabel])
+        let vStack = UIStackView(arrangedSubviews: [teamsView, matchTimeView])
         vStack.distribution = .fillProportionally
+        vStack.alignment = .center
         vStack.axis = .vertical
-        vStack.spacing = 14
+        vStack.spacing = 12
         return vStack
+    }()
+    
+    private let matchTimeView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 8
+        return view
     }()
     
     private lazy var matchTimeLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12, weight: .medium)
+        label.font = .systemFont(ofSize: 12, weight: .bold)
         label.textColor = .gray100
         label.textAlignment = .center
         return label
@@ -52,7 +60,8 @@ final class MatchDetailHeaderCell: UITableViewCell, MatchDetailHeaderCellDisplay
     required init?(coder: NSCoder) { nil }
 
     func configure(with viewModel: ViewModel) {
-        matchTimeLabel.text = viewModel.matchTime
+        matchTimeLabel.text = viewModel.isLive ? "AGORA" : viewModel.matchTime
+        matchTimeView.backgroundColor = viewModel.isLive ? .live : .clear
         setupTeamsView(viewModel)
     }
 }
@@ -60,11 +69,16 @@ final class MatchDetailHeaderCell: UITableViewCell, MatchDetailHeaderCellDisplay
 extension MatchDetailHeaderCell: ViewCodable {
     func setupSubviews() {
         addSubview(vStack)
+        matchTimeView.addSubview(matchTimeLabel)
     }
     
     func setupConstraints() {
         constrain(vStack, self) {
             $0.edges == $1.edges.inseted(by: 22)
+        }
+        
+        constrain(matchTimeLabel, matchTimeView) {
+            $0.edges == $1.edges.inseted(by: 12)
         }
     }
     

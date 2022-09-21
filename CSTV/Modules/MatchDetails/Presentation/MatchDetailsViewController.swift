@@ -18,36 +18,57 @@ final class MatchDetailsViewController: UITableViewController {
     required init?(coder: NSCoder) { nil }
     
     override func loadView() {
-        self.tableView = tableViewResponder.tableView
+        tableView = tableViewResponder.tableView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .background
-        
-        updateDataSourceHeader()
+        navigationItem.largeTitleDisplayMode = .never
+        updateDataSource()
         viewModel.initialize()
     }
 }
 
 extension MatchDetailsViewController {
-    func updateDataSourceHeader() {
-        viewModel.didUpdateHeader = { [weak self] details in
+    func updateDataSource() {
+        viewModel.didUpdateMatchDetails = { [weak self] details in
             let teamsCellModel = MatchCellTeamsView.ViewModel(
-                leftTeamImage: details.leftTeam.imageUrl,
-                rightTeamImage: details.rightTeam.imageUrl,
-                leftTeamName: details.leftTeam.name,
-                rightTeamName: details.leftTeam.name
+                leftTeamImage: details.header.leftTeam.imageUrl,
+                rightTeamImage: details.header.rightTeam.imageUrl,
+                leftTeamName: details.header.leftTeam.name,
+                rightTeamName: details.header.rightTeam.name
             )
             
             let header = MatchDetailHeaderCell.ViewModel(
-                matchTime: details.matchTime,
+                matchTime: details.header.matchTime,
+                isLive: details.header.isLive,
                 teamsCellModel: teamsCellModel
             )
             
+            let leftPlayers = details.players.leftTeamPlayers.map {
+                MatchDetailPlayerCell.ViewModel.Player(
+                    nickname: $0.nickname,
+                    name: $0.name,
+                    imageUrl: $0.imageUrl
+                )
+            }
+            
+            let rightPlayers = details.players.rightTeamPlayers.map {
+                MatchDetailPlayerCell.ViewModel.Player(
+                    nickname: $0.nickname,
+                    name: $0.name,
+                    imageUrl: $0.imageUrl
+                )
+            }
+            
             self?.tableViewResponder.updateDataSource(
-                .init(header: header)
+                .init(
+                    header: header,
+                    leftPlayers: leftPlayers,
+                    rightPlayers: rightPlayers
+                )
             )
         }
     }

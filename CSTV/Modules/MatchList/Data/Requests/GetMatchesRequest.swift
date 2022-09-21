@@ -25,6 +25,7 @@ struct GetMatchesRequest: CSTVNetworkRequest {
         [
             .perPage: 6,
             .page: requestPage,
+            .sort: CSTVSortType.minusStatus.rawValue
         ]
     }
 }
