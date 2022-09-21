@@ -10,8 +10,8 @@ final class MatchCellTeamsView: UIView, MatchCellTeamsViewDisplayable {
     // MARK: - ViewModel
     
     struct ViewModel {
-        let leftTeamImage, rightTeamImage: String
-        let leftTeamName, rightTeamName: String
+        let leftTeamImage, rightTeamImage: String?
+        let leftTeamName, rightTeamName: String?
     }
     
     // MARK: - Private Properties

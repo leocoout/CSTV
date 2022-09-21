@@ -1,21 +1,19 @@
 struct MatchesResponse: Codable {
-    let id: Int
-    let games: [MatchResponse]
-    let serie: MatchSerieResponse
-    let league: MatchLeagueResponse
+    let beginAt: String?
+    let games: [GameResponse]
+    let serie: SerieResponse
+    let league: LeagueResponse
     let opponents: [MatchOpponentResponse]
-}
-
-struct MatchResponse: Codable {
-    let id: Int
-    let status: Status
-    let beginAt, endAt: String?
     
     enum CodingKeys: String, CodingKey {
-        case id, status
+        case games, serie, league, opponents
         case beginAt = "begin_at"
-        case endAt = "end_at"
     }
+}
+
+struct GameResponse: Codable {
+    let id: Int
+    let status: Status
     
     enum Status: String, Codable {
         case finished
@@ -25,7 +23,7 @@ struct MatchResponse: Codable {
     }
 }
 
-struct MatchLeagueResponse: Codable {
+struct LeagueResponse: Codable {
     let id: Int
     let name: String?
     let imageUrl: String?
@@ -36,8 +34,12 @@ struct MatchLeagueResponse: Codable {
     }
 }
 
-struct MatchSerieResponse: Codable {
+struct SerieResponse: Codable {
     let name: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "full_name"
+    }
 }
 
 struct MatchOpponentResponse: Codable {

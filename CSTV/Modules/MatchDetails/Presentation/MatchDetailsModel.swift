@@ -1,8 +1,23 @@
+struct MatchDetails {
+    let header: MatchDetailsHeaderModel
+    let players: MatchDetailsPlayers
+}
+
 struct MatchDetailsHeaderModel {
-    let leftTeam, rightTeam: Team
+    let leftTeam, rightTeam: TeamBanner
     let matchTime: String
+    let isLive: Bool
     
-    struct Team {
-        let imageUrl, name: String
+    struct TeamBanner {
+        let imageUrl, name: String?
+    }
+}
+
+struct MatchDetailsPlayers {
+    let leftTeamPlayers, rightTeamPlayers: [TeamPlayer]
+    
+    struct TeamPlayer {
+        let nickname: String
+        let name, imageUrl: String?
     }
 }

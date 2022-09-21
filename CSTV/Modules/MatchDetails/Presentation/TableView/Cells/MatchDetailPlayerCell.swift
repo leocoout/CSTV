@@ -13,7 +13,8 @@ final class MatchDetailPlayerCell: UITableViewCell, MatchDetailPlayerCellDisplay
         let leftPlayer, rightPlayer: Player
         
         struct Player {
-            let nickname, name, imageUrl: String
+            let nickname: String
+            let name, imageUrl: String?
         }
     }
     

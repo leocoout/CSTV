@@ -1,21 +1,21 @@
 extension Array where Element == Match {
     var mappedToMatchListCellViewModel: [MatchTableViewCell.ViewModel] {
-        map { .init(from: $0) }
+        compactMap { .init(from: $0) }
     }
 }
 
 extension MatchTableViewCell.ViewModel {
-    init(from list: Match) {
-        let leftTeam = list.opponents.first
-        let rightTeam = list.opponents.last
+    init?(from list: Match) {
+        guard let leftTeam = list.opponents.first,
+              let rightTeam = list.opponents.last
+        else { return nil }
+        
         let leagueName = list.leagueName ?? ""
         let serieName = list.serieName ?? ""
         
         self = .init(
-            leftTeamImageURL: leftTeam?.imageUrl ?? "",
-            rightTeamImageURL: rightTeam?.imageUrl ?? "",
-            leftTeamName: leftTeam?.name ?? "",
-            rightTeamName: rightTeam?.name ?? "",
+            leftTeam: .init(id: leftTeam.id, imageUrl: leftTeam.imageUrl ?? "", name: leftTeam.name ?? ""),
+            rightTeam: .init(id: rightTeam.id, imageUrl: rightTeam.imageUrl ?? "", name: rightTeam.name ?? ""),
             leagueImageURL: list.leagueImageUrl ?? "",
             leagueSerieName: "\(leagueName) + \(serieName)",
             matchStartTime: list.matchStartTime ?? "",

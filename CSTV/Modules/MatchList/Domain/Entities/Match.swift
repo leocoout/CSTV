@@ -1,5 +1,4 @@
 struct Match {
-    let id: Int
     let status: Status
     let opponents: [MatchListOpponent]
     let leagueName: String?

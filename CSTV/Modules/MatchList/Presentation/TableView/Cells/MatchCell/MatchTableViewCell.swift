@@ -10,12 +10,17 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
     // MARK: - ViewModel
     
     struct ViewModel {
-        let leftTeamImageURL, rightTeamImageURL: String
-        let leftTeamName, rightTeamName: String
+        let leftTeam, rightTeam: Team
         let leagueImageURL: String
         let leagueSerieName: String
         let matchStartTime: String
         let isLive: Bool
+        
+        struct Team {
+            let id: Int
+            let imageUrl: String?
+            let name: String
+        }
     }
     
     // MARK: - Private Properties
@@ -73,7 +78,7 @@ final class MatchTableViewCell: UITableViewCell, MatchTableViewCellDisplayable {
 
     func configure(with viewModel: ViewModel) {
         matchTimeView.configure(with: .init(matchTime: viewModel.matchStartTime, isLive: viewModel.isLive))
-        leagueSerieView.configure(with: .init(leagueImageURL: "", leagueAndSerieName: viewModel.leagueSerieName))
+        leagueSerieView.configure(with: .init(leagueImageURL: viewModel.leagueImageURL, leagueAndSerieName: viewModel.leagueSerieName))
         setupTeamsView(viewModel)
     }
 }
@@ -106,10 +111,10 @@ private extension MatchTableViewCell {
     func setupTeamsView(_ viewModel: MatchTableViewCell.ViewModel) {
         teamsView.configure(
             with: .init(
-                leftTeamImage: viewModel.leftTeamImageURL,
-                rightTeamImage: viewModel.rightTeamImageURL,
-                leftTeamName: viewModel.leftTeamName,
-                rightTeamName: viewModel.rightTeamName
+                leftTeamImage: viewModel.leftTeam.imageUrl,
+                rightTeamImage: viewModel.rightTeam.imageUrl,
+                leftTeamName: viewModel.leftTeam.name,
+                rightTeamName: viewModel.rightTeam.name
             )
         )
     }

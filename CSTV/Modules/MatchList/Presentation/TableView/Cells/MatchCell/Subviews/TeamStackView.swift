@@ -4,7 +4,7 @@ import UIKit
 class TeamStackView: UIStackView {
     
     struct ViewModel {
-        let imageUrl, teamName: String
+        let imageUrl, teamName: String?
     }
     
     // MARK: - Private Properties

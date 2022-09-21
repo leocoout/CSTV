@@ -27,21 +27,10 @@ final class MatchListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .background
-        
         didUpdateMatchList()
+        didUpdateListState()
         viewModel.fetchMatches()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = false
     }
 }
 
@@ -49,9 +38,10 @@ extension MatchListViewController: MatchListTableViewResponderDelegate {
     func handleMatchSelection(_ matchData: MatchTableViewCell.ViewModel) {
         router.routeToMatchDetails(
             with: .init(
-                leftTeam: .init(imageUrl: matchData.leftTeamImageURL, name:  matchData.leftTeamName),
-                rightTeam: .init(imageUrl: matchData.rightTeamImageURL, name:  matchData.rightTeamName),
+                leftTeam: .init(id: matchData.leftTeam.id),
+                rightTeam: .init(id: matchData.rightTeam.id),
                 matchTime: matchData.matchStartTime,
+                isLive: matchData.isLive,
                 leagueSerie: matchData.leagueSerieName
             )
         )
@@ -64,10 +54,16 @@ extension MatchListViewController: MatchListTableViewResponderDelegate {
 
 private extension MatchListViewController {
     func didUpdateMatchList() {
-        viewModel.didUpdateMatchList =  { [weak self ] list in
+        viewModel.didUpdateMatchList =  { [weak self] list in
             self?.tableViewResponder.updateDataSource(
                 .init(matches: list.mappedToMatchListCellViewModel)
             )
+        }
+    }
+    
+    func didUpdateListState() {
+        viewModel.didUpdateListState = { [weak self] state in
+            
         }
     }
 }

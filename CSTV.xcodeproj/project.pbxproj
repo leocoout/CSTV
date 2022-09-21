@@ -108,6 +108,7 @@
 		FDDED5C628D66C9F00EE12B2 /* GetMatchesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */; };
 		FDEA36D628D94929008BB89F /* LeftTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36D528D94929008BB89F /* LeftTeamView.swift */; };
 		FDEA36D828D96116008BB89F /* RIghtTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36D728D96116008BB89F /* RIghtTeamView.swift */; };
+		FDEA36DB28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +220,7 @@
 		FDDED5C528D66C9F00EE12B2 /* GetMatchesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMatchesRequest.swift; sourceTree = "<group>"; };
 		FDEA36D528D94929008BB89F /* LeftTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTeamView.swift; sourceTree = "<group>"; };
 		FDEA36D728D96116008BB89F /* RIghtTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIghtTeamView.swift; sourceTree = "<group>"; };
+		FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamsUseCaseFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +592,7 @@
 		FDC6618E28D6F79600234DA7 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FDEA36D928D96AB5008BB89F /* Factories */,
 				FDC6619828D6FAC300234DA7 /* Adapters */,
 				FDC6619128D6F7FC00234DA7 /* Entities */,
 				FDC6618F28D6F7A400234DA7 /* GetTeamsUseCase.swift */,
@@ -886,6 +889,14 @@
 			path = MatchDetailPlayer;
 			sourceTree = "<group>";
 		};
+		FDEA36D928D96AB5008BB89F /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1055,6 +1066,7 @@
 				FDC661D528D7ED6100234DA7 /* MatchTableViewCell.swift in Sources */,
 				FDC661E428D7FCD400234DA7 /* TeamStackView.swift in Sources */,
 				FDDED5C328D66BE000EE12B2 /* MatchListRepository.swift in Sources */,
+				FDEA36DB28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift in Sources */,
 				FDC661E228D7F6D800234DA7 /* UIColor+Extensions.swift in Sources */,
 				FD634D9928D63F1200D18453 /* SceneDelegate.swift in Sources */,
 				FDC661D028D7EC9B00234DA7 /* MatchListTableViewDataSource.swift in Sources */,
