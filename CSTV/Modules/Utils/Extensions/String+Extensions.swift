@@ -1,17 +1,26 @@
 import Foundation
 
 extension String {
-    func formatToDate() -> Self {
-        let getFormatter = DateFormatter()
-        getFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    var formattedToDate: Self? {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         
-        let outputFormatter = DateFormatter()
-        outputFormatter.timeZone = TimeZone(abbreviation: "GMT")
-        outputFormatter.dateFormat = "EE, HH:mm"
+        guard let date = inputFormatter.date(from: self) else { return nil }
         
-        let date = getFormatter.date(from: self) ?? Date()
-        let stringFromDate = outputFormatter.string(from: date)
+        var strDate: String
         
-        return stringFromDate.replacingOccurrences(of: ".", with: "").capitalized
+        if date.isInToday == true {
+            strDate = "Hoje, " + date.string(withFormat: "HH:MM")
+        } else if date.isInTomorrow == true {
+            strDate = date.string(withFormat: "EE, HH:mm").removeDotFromString
+        } else {
+            strDate = date.string(withFormat: "dd.MM HH:mm")
+        }
+    
+        return strDate.capitalized
+    }
+    
+    var removeDotFromString: Self {
+        replacingOccurrences(of: ".", with: "")
     }
 }

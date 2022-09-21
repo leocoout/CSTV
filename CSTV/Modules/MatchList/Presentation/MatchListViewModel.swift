@@ -50,7 +50,7 @@ private extension Array where Element == Match {
                 leagueName: $0.leagueName,
                 leagueImageUrl: $0.leagueImageUrl,
                 serieName: $0.serieName,
-                matchStartTime: $0.matchStartTime?.formatToDate() ?? "NÃO INICIADO"
+                matchStartTime: $0.matchStartTime?.formattedToDate ?? "NÃO INICIADO"
             )
         }
     }

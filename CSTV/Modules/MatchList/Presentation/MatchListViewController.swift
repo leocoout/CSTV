@@ -27,21 +27,9 @@ final class MatchListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .background
-        
         didUpdateMatchList()
         viewModel.fetchMatches()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = false
     }
 }
 
@@ -52,6 +40,7 @@ extension MatchListViewController: MatchListTableViewResponderDelegate {
                 leftTeam: .init(id: matchData.leftTeam.id),
                 rightTeam: .init(id: matchData.rightTeam.id),
                 matchTime: matchData.matchStartTime,
+                isLive: matchData.isLive,
                 leagueSerie: matchData.leagueSerieName
             )
         )

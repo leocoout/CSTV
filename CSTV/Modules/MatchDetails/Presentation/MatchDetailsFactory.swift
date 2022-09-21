@@ -4,6 +4,7 @@ final class MatchDetailsFactory: ModuleFactoryProtocol {
     struct Dependencies {
         let leftTeam, rightTeam: Team
         let matchTime: String
+        let isLive: Bool
         let leagueSerie: String
         
         struct Team {

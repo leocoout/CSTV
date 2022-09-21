@@ -47,7 +47,6 @@ final class MatchCellLeagueSerieView: UIView, MatchCellLeagueSerieViewDisplayabl
         return label
     }()
     
-    
     // MARK: - Initializer
     
     override init(frame: CGRect) {
@@ -57,8 +56,13 @@ final class MatchCellLeagueSerieView: UIView, MatchCellLeagueSerieViewDisplayabl
     
     required init?(coder: NSCoder) { nil }
     
-    func configure(with viewModel: ViewModel) {
+    private func setupImage(_ viewModel: MatchCellLeagueSerieView.ViewModel) {
+        image.isHidden = viewModel.leagueImageURL.isEmpty
         image.loadImage(from: viewModel.leagueImageURL)
+    }
+    
+    func configure(with viewModel: ViewModel) {
+        setupImage(viewModel)
         titleLabel.text = viewModel.leagueAndSerieName
     }
 }

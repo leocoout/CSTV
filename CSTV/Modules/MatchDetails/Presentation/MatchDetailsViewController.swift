@@ -23,15 +23,9 @@ final class MatchDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = .background
+
         view.backgroundColor = .background
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-      
-        
+        navigationItem.largeTitleDisplayMode = .never
         updateDataSource()
         viewModel.initialize()
     }
@@ -49,6 +43,7 @@ extension MatchDetailsViewController {
             
             let header = MatchDetailHeaderCell.ViewModel(
                 matchTime: details.header.matchTime,
+                isLive: details.header.isLive,
                 teamsCellModel: teamsCellModel
             )
             

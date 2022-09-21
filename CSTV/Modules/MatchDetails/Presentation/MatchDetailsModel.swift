@@ -6,6 +6,7 @@ struct MatchDetails {
 struct MatchDetailsHeaderModel {
     let leftTeam, rightTeam: TeamBanner
     let matchTime: String
+    let isLive: Bool
     
     struct TeamBanner {
         let imageUrl, name: String?

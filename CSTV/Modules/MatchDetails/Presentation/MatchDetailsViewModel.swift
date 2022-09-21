@@ -68,7 +68,8 @@ extension MatchDetailsViewModel {
         return .init(
             leftTeam: .init(imageUrl: leftTeam?.imageUrl, name: leftTeam?.name),
             rightTeam: .init(imageUrl: rightTeam?.imageUrl, name: rightTeam?.name),
-            matchTime: dependencies.matchTime
+            matchTime: dependencies.matchTime,
+            isLive: dependencies.isLive
         )
     }
     
