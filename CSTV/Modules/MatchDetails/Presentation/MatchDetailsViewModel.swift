@@ -31,10 +31,7 @@ final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
     }
     
     func initialize() {
-        dispatchQueueProtocol.async(group: nil, qos: .unspecified, flags: .noQoS) { [weak self] in
-            self?.didUpdateListState?(.loading)
-        }
-        
+        updateListState(.loading)
         getTeams()
     }
 }
@@ -49,9 +46,9 @@ private extension MatchDetailsViewModel {
                 )
                 
                 handleGetTeamsSuccessResponse(response)
-                didUpdateListState?(.content)
+                updateListState(.content)
             } catch {
-                didUpdateListState?( .error(message: "Erro ao carregar lista de partidas."))
+                updateListState(.error(message: "Erro ao carregar lista de partidas."))
             }
         }
     }
@@ -71,6 +68,12 @@ private extension MatchDetailsViewModel {
         )
         
         didUpdateMatchDetails?(matchDetails)
+    }
+    
+    func updateListState(_ state: MatchDetailsListState) {
+        dispatchQueueProtocol.async(group: nil, qos: .unspecified, flags: .noQoS) { [weak self] in
+            self?.didUpdateListState?(state)
+        }
     }
 }
 

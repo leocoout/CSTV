@@ -19,30 +19,11 @@ final class GetMatchesForPageUseCase: GetMatchesForPageUseCaseProtocol {
     }
     
     func execute() async throws -> [Match] {
-       
         do {
             let result = try await repository.getMatches(for: currentPage)
             incrementPage()
-            let mappedResponse = result.map { match in
-                let mappedOpponents = match.opponents.map {
-                    MatchListOpponent(from: $0)
-                }
-                
-                let mappedGames = match.games.map { game in
-                    Match(
-                        status: .init(rawValue: game.status.rawValue) ?? .notPlayed,
-                        opponents: mappedOpponents,
-                        leagueName: match.league.name,
-                        leagueImageUrl: match.league.imageUrl,
-                        serieName: match.serie.name,
-                        matchStartTime: match.beginAt,
-                        priority: 0
-                    )
-                }
-                return mappedGames
-            }.flatMap { $0 }
             
-            return mappedResponse
+            return Match.make(from: result)
         } catch {
             throw MatchListError.generic
         }
