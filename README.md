@@ -23,8 +23,7 @@ The diagram below I've made before starting developing the app and used as a "gu
 - `Domain` (in yellow) is the main layer, which contains the business logic and domain models. This layer should be decoupled from everything else 
 - `Presentation` is the layer that contains all UI logic and the MVVM pattern that we'll talk more soon.
 
-![cstv_diagram](https://user-images.githubusercontent.com/42387881/191658010-f2633744-be17-4ed4-aa72-b6de01436ea1.png)
-
+![cstv_diagram](https://user-images.githubusercontent.com/42387881/191666135-72bc864c-3857-417c-99b8-10e00de6d07d.png)
 
 ### Data Layer
 The Data layer consists in decoupling all data and external things from the domain. It contains a repository that calls the `TokenRepository` to get tokens and the `Service` classes that creates the request objects and send to `Networking` Package. 
