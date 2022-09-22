@@ -1,3 +1,4 @@
+import NetworkingInterface
 import NetworkingInterfaceTestUtils
 import XCTest
 
@@ -6,71 +7,62 @@ import XCTest
 final class NetworkResultHandlerTests: XCTestCase {
     private let sut = NetworkRequestResultHandler()
     
-    func test_handle_withInput_responseIsNotHTTPURLResponse_shouldReturnNoResponse() {
-        let expectedResult = sut.handle(.fixture(), response: ResponseModelDummy.self)
-        
-        guard case .failure(.noResponse) = expectedResult else {
-            XCTFail("Should return noResponse error")
-            return
+    func test_handle_withInput_responseIsNotHTTPURLResponse_shouldReturnNoResponse() throws {
+        do {
+            _ = try sut.handle(.fixture(), response: ResponseModelDummy.self)
+        } catch let error as NetworkRequestError {
+            XCTAssertEqual(error, .noResponse)
         }
     }
     
-    func test_handle_withInput_responseError401_shouldReturnUnauthorized() {
+    func test_handle_withInput_responseError401_shouldReturnUnauthorized() throws {
         let expectedResponse = HTTPURLResponseFixture.fixture(statusCode: 401)
         
-        let expectedResult = sut.handle(
-            .fixture(response: expectedResponse),
-            response: ResponseModelDummy.self
-        )
-        
-        guard case .failure(.unauthorized) = expectedResult else {
-            XCTFail("Should return unauthorized error")
-            return
+        do {
+            _ = try sut.handle(
+                .fixture(response: expectedResponse),
+                response: ResponseModelDummy.self
+            )
+        } catch let error as NetworkRequestError {
+            XCTAssertEqual(error, .unauthorized)
         }
     }
     
-    func test_handle_withInput_anyResponseError_shouldReturnUnknown() {
+    func test_handle_withInput_anyResponseError_shouldReturnUnknown() throws {
         let expectedResponse = HTTPURLResponseFixture.fixture(statusCode: 999)
         
-        let expectedResult = sut.handle(
-            .fixture(response: expectedResponse),
-            response: ResponseModelDummy.self
-        )
-        
-        guard case .failure(.unknown) = expectedResult else {
-            XCTFail("Should return unknown error")
-            return
+        do {
+            _ = try sut.handle(
+                .fixture(response: expectedResponse),
+                response: ResponseModelDummy.self
+            )
+        } catch let error as NetworkRequestError {
+            XCTAssertEqual(error, .unknown)
         }
     }
     
-    func test_handle_withInput_with200_badDecode_souldReturnDecodeError() {
+    func test_handle_withInput_with200_badDecode_souldReturnDecodeError() throws {
         let expectedResponse = HTTPURLResponseFixture.fixture(statusCode: 200)
         
-        let expectedResult = sut.handle(
-            .fixture(response: expectedResponse),
-            response: ResponseModelDummy.self
-        )
-        
-        guard case .failure(.decode) = expectedResult else {
-            XCTFail("Should return decode error")
-            return
+        do {
+            _ = try sut.handle(
+                .fixture(response: expectedResponse),
+                response: ResponseModelDummy.self
+            )
+        } catch let error as NetworkRequestError {
+            XCTAssertEqual(error, .decode)
         }
     }
     
-    func test_handle_withInput_with200_successDecoding_shouldReturnDecodedResponse() {
+    func test_handle_withInput_with200_successDecoding_shouldReturnDecodedResponse() throws {
         let expectedResponse = HTTPURLResponseFixture.fixture(statusCode: 200)
         
-        let expectedResult = sut.handle(
+        let expectedResult = try sut.handle(
             .fixture(response: expectedResponse, data: correctDataToRespond ?? Data()),
             response: ResponseModelDummy.self
         )
         
-        guard case .success(let response) = expectedResult else {
-            XCTFail("Should return success response")
-            return
-        }
-        
-        XCTAssertTrue(response.teste)
+        XCTAssertTrue(expectedResult.teste)
     }
     
     private var correctDataToRespond =  """

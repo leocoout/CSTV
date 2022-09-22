@@ -6,16 +6,16 @@ final class MatchListRepositorySpy: MatchListRepository {
     
     private (set) var getMatchesCalled: Bool = false
     private (set) var pagePassed: Int?
-    private (set) var beginningAtDatePassed: String?
-    var getMatchesToBeReturned: Result<[MatchesResponse], NetworkRequestError> = .failure(.unauthorized)
+    var getMatchesToBeReturned: [MatchesResponse]?
     
     override func getMatches(
-        for page: Int,
-        beginningAt date: String
-    ) async -> Result<[MatchesResponse], NetworkRequestError> {
+        for page: Int
+    ) async throws -> [MatchesResponse] {
         getMatchesCalled = true
         pagePassed = page
-        beginningAtDatePassed = date
-        return getMatchesToBeReturned
+        if let getMatchesToBeReturned {
+            return getMatchesToBeReturned
+        }
+        throw MatchListError.generic
     }
 }

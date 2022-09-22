@@ -2,10 +2,14 @@
 
 final class GetMatchesForPageUseCaseSpy: GetMatchesForPageUseCaseProtocol {
     private(set) var executeCalled: Bool = false
-    var executeToBeReturned: Result<[Match], MatchListError> = .failure(.generic)
+    var executeToBeReturned: [Match]?
     
-    func execute() async -> Result<[Match], MatchListError> {
+    func execute() async throws -> [Match] {
         executeCalled = true
-        return executeToBeReturned
+        if let executeToBeReturned {
+            return executeToBeReturned
+        }
+        
+        throw MatchListError.generic
     }
 }

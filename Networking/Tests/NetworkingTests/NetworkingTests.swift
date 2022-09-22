@@ -16,29 +16,28 @@ final class NetworkingTests: XCTestCase {
         urlSession: urlSessionSpy
     )
     
-    func test_request_withInvalidURL_shouldReturnInvalidURLError() async {
+    func test_request_withInvalidURL_shouldReturnInvalidURLError() async throws {
         urlFactorySpy.makeToBeReturned = nil
-        
-        let expectedResult = await sut.request(NetworkRequestFixture(), responseModel: ResponseModelDummy.self)
-        
-        XCTAssertTrue(urlFactorySpy.makeCalled)
-        XCTAssertTrue(urlFactorySpy.makeRequestPassed is NetworkRequestFixture)
-        
-        guard case .failure(.invalidUrl) = expectedResult else {
-            XCTFail("Should return invalidUrl error")
-            return
+        do {
+            _ = try await sut.request(NetworkRequestFixture(), responseModel: ResponseModelDummy.self)
+        } catch let error as NetworkRequestError {
+            XCTAssertTrue(urlFactorySpy.makeCalled)
+            XCTAssertTrue(urlFactorySpy.makeRequestPassed is NetworkRequestFixture)
+            XCTAssertEqual(error, .unknown)
         }
     }
     
-    func test_request_withValidURL_shouldCallDataForRequest() async {
+    func test_request_withValidURL_shouldCallDataForRequest() async throws {
         urlFactorySpy.makeToBeReturned = URLRequest(url: .forcedURL())
         
-        _ = await sut.request(
-            NetworkRequestFixture(),
-            responseModel: ResponseModelDummy.self
-        )
-        
-        XCTAssertTrue(urlSessionSpy.dataForRequestCalled)
+        do {
+            _ = try await sut.request(
+                NetworkRequestFixture(),
+                responseModel: ResponseModelDummy.self
+            )
+        } catch {
+            XCTAssertTrue(urlSessionSpy.dataForRequestCalled)
+        }
     }
 }
 

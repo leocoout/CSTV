@@ -4,24 +4,24 @@ import NetworkingInterface
 public class NetworkRequestResultHandler: NetworkRequestResultHandling {
     public init() {}
     
-    public func handle<T: Codable>(_ input: NetworkRequestResultHandlerInput, response: T.Type) -> Result<T, NetworkRequestError> {
+    public func handle<T: Codable>(_ input: NetworkRequestResultHandlerInput, response: T.Type) throws -> T {
         guard let urlResponse = input.response as? HTTPURLResponse else {
-            return .failure(.noResponse)
+            throw NetworkRequestError.noResponse
         }
         
         switch urlResponse.statusCode {
         case 200...299:
             do {
                 let decodedResponse = try JSONDecoder().decode(response.self, from: input.data)
-                return .success(decodedResponse)
+                return decodedResponse
             } catch {
                 print(error)
             }
-            return .failure(.decode)
+            throw NetworkRequestError.decode
         case 401:
-            return .failure(.unauthorized)
+            throw NetworkRequestError.unauthorized
         default:
-            return .failure(.unknown)
+            throw NetworkRequestError.unknown
         }
     }
 }

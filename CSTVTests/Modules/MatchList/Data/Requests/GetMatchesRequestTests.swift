@@ -5,8 +5,7 @@ import XCTest
 final class GetMatchesRequestTests: XCTestCase {
     private let sut = GetMatchesRequest(
         token: "token",
-        requestPage: 2,
-        beginAt: "date"
+        requestPage: 2
     )
     
     func test_shouldReturnCorrectProperties() {

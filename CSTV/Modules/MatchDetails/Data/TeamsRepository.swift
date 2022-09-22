@@ -13,8 +13,8 @@ class TeamsRepository {
         self.tokenRepository = tokenRepository
     }
     
-    func getPlayers(firstTeamId: Int, secondTeamId: Int) async -> Result<[TeamResponse], NetworkRequestError> {
-        await service.get(
+    func getPlayers(firstTeamId: Int, secondTeamId: Int) async throws -> [TeamResponse] {
+        try await service.get(
             with: tokenRepository.getToken(),
             firstTeamId: firstTeamId,
             secondTeamId: secondTeamId

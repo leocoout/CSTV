@@ -11,15 +11,15 @@ public final class NetworkingProtocolSpy: NetworkingProtocol {
     public func request<T: Codable>(
         _ request: NetworkRequest,
         responseModel: T.Type
-    ) async -> Result<T, NetworkRequestError> {
+    ) async throws -> T {
         requestCalled = true
         requestPassed = request
         responseModelPassed = responseModel
         
-        if let result = requestToBeReturned as? Result<T, NetworkRequestError> {
+        if let result = requestToBeReturned as? T {
             return result
         }
         
-        return .failure(.unknown)
+        throw NetworkRequestError.unknown
     }
 }

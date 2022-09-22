@@ -1,7 +1,9 @@
 @testable import CSTV
 
 final class MatchDetailsViewModelSpy: MatchDetailsViewModelProtocol {
-    var didUpdateHeader: ((CSTV.MatchDetailsHeaderModel) -> Void)?
+    
+    var didUpdateMatchDetails: ((CSTV.MatchDetails) -> Void)?
+    var didUpdateListState: ((CSTV.MatchDetailsListState) -> Void)?
 
     private(set) var initializeCalled: Bool = false
     

@@ -3,7 +3,7 @@ import UIKit
 protocol MatchDetailsTableViewResponderProtocol: UITableViewDelegate, UITableViewDataSource {
     var tableView: UITableView? { get }
     
-    func updateDataSource(_ dataSource: MatchDetailsTableViewDataSource)
+    func updateDataSource(_ dataSource: MatchDetailsTableViewDataSource?)
     func setBackgroundView(_ view: UIView?)
 }
 
@@ -32,7 +32,7 @@ final class MatchDetailsTableViewResponder: NSObject, MatchDetailsTableViewRespo
         self.dispatchQueue = dispatchQueue
     }
     
-    func updateDataSource(_ dataSource: MatchDetailsTableViewDataSource) {
+    func updateDataSource(_ dataSource: MatchDetailsTableViewDataSource?) {
         tableDataSource = dataSource
         dispatchQueue.async(group: nil, qos: .unspecified, flags: []) {
             self.tableView?.reloadData()
