@@ -18,7 +18,7 @@ This project was made using **Xcode 14.0**, Swift and UIKit and the following SP
 
 ### Architecture
 
-The diagram below shows the entire app architecture. Basically, it was built using a Clean Architecture approach, dividing layers into:
+The diagram below I've made before starting developing the app and used as a "guide" while coding. Of course, it was changed during the development to match the project necessities. The diagram shows the entire app architecture. Basically, it was built using a Clean Architecture approach, dividing layers into:
 - `Data` (in green), which is responsible for talking directly to the networking package for making requests and contains the repository to get the token for each network call;
 - `Domain` (in yellow) is the main layer, which contains the business logic and domain models. This layer should be decoupled from everything else 
 - `Presentation` is the layer that contains all UI logic and the MVVM pattern that we'll talk more soon.
