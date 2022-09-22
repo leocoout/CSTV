@@ -40,7 +40,7 @@ final class MatchDetailsViewController: UITableViewController {
     }
 }
 
-extension MatchDetailsViewController {
+private extension MatchDetailsViewController {
     func updateDataSource() {
         viewModel.didUpdateMatchDetails = { [weak self] details in
             let teamsCellModel = MatchCellTeamsView.ViewModel(

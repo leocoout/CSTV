@@ -2,14 +2,14 @@
 
 extension MatchesResponse {
     static func fixture(
-        id: Int = 0,
+        id: String? = nil,
         games: [GameResponse] = [],
         serie: SerieResponse = .fixture(),
         league: LeagueResponse = .fixture(),
         opponents: [MatchOpponentResponse] = []
     ) -> Self {
         .init(
-            id: id,
+            beginAt: id,
             games: games,
             serie: serie,
             league: league,
@@ -22,15 +22,11 @@ extension MatchesResponse {
 extension GameResponse {
     static func fixture(
         id: Int = 0,
-        status: GameResponse.Status = .notPlayed,
-        beginAt: String? = nil,
-        endAt: String? = nil
+        status: GameResponse.Status = .notPlayed
     ) -> Self {
         .init(
             id: id,
-            status: status,
-            beginAt: beginAt,
-            endAt: endAt
+            status: status
         )
     }
 }

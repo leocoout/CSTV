@@ -24,17 +24,17 @@ public class Networking: NetworkingProtocol {
     public func request<T: Codable>(
         _ request: NetworkRequest,
         responseModel: T.Type
-    ) async -> Result<T, NetworkRequestError> {
+    ) async throws -> T {
         guard let urlRequest = urlFactory.make(from: request) else {
-            return .failure(.invalidUrl)
+            throw NetworkRequestError.unknown
         }
 
         do {
             let (data, response) = try await urlSession.data(for: urlRequest, delegate: nil)
             let handlerInput = NetworkRequestResultHandlerInput(response: response, data: data)
-            return resultHandler.handle(handlerInput, response: responseModel)
+            return try resultHandler.handle(handlerInput, response: responseModel)
         } catch {
-            return .failure(.unknown)
+            throw NetworkRequestError.unknown
         }
     }
 }

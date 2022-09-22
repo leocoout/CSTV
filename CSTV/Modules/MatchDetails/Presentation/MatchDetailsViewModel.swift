@@ -1,3 +1,5 @@
+import Foundation
+
 protocol MatchDetailsViewModelProtocol {
     func initialize()
     
@@ -16,17 +18,20 @@ final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
     
     private var dependencies: MatchDetailsFactory.Dependencies
     private let getTeamsUseCase: GetTeamsUseCaseProtocol
+    private let dispatchQueueProtocol: DispatchQueueProtocol
     
     init(
         depedencies: MatchDetailsFactory.Dependencies,
-        getTeamsUseCase: GetTeamsUseCaseProtocol
+        getTeamsUseCase: GetTeamsUseCaseProtocol,
+        dispatchQueueProtocol: DispatchQueueProtocol = DispatchQueue.main
     ) {
         self.dependencies = depedencies
         self.getTeamsUseCase = getTeamsUseCase
+        self.dispatchQueueProtocol = dispatchQueueProtocol
     }
     
     func initialize() {
-        didUpdateListState?(.loading)
+        updateListState(.loading)
         getTeams()
     }
 }
@@ -34,17 +39,16 @@ final class MatchDetailsViewModel: MatchDetailsViewModelProtocol {
 private extension MatchDetailsViewModel {    
     func getTeams() {
         Task {
-            let response = await getTeamsUseCase.execute(
-                teamA: dependencies.leftTeam.id,
-                teamB: dependencies.rightTeam.id
-            )
-            
-            switch response {
-            case .success(let teams):
-                handleGetTeamsSuccessResponse(teams)
-                didUpdateListState?(.content)
-            case .failure:
-                didUpdateListState?( .error(message: "Erro ao carregar lista de partidas."))
+            do {
+                let response = try await getTeamsUseCase.execute(
+                    teamA: dependencies.leftTeam.id,
+                    teamB: dependencies.rightTeam.id
+                )
+                
+                handleGetTeamsSuccessResponse(response)
+                updateListState(.content)
+            } catch {
+                updateListState(.error(message: "Erro ao carregar lista de partidas."))
             }
         }
     }
@@ -64,6 +68,12 @@ private extension MatchDetailsViewModel {
         )
         
         didUpdateMatchDetails?(matchDetails)
+    }
+    
+    func updateListState(_ state: MatchDetailsListState) {
+        dispatchQueueProtocol.async(group: nil, qos: .unspecified, flags: .noQoS) { [weak self] in
+            self?.didUpdateListState?(state)
+        }
     }
 }
 
@@ -91,7 +101,7 @@ extension MatchDetailsViewModel {
 extension Array where Element == Player {
     var mapToTeamPlayer: [MatchDetailsPlayers.TeamPlayer] {
         map { player in
-            let fullName = (player.firstName ?? "") + (player.lastName ?? "")
+            let fullName = (player.firstName ?? "") + " " + (player.lastName ?? "")
             
             return MatchDetailsPlayers.TeamPlayer(
                 nickname: player.name ?? "",

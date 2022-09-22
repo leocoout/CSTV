@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol NetworkRequestResultHandling {
-    func handle<T: Codable>(_ input: NetworkRequestResultHandlerInput, response: T.Type) -> Result<T, NetworkRequestError>
+    func handle<T: Codable>(_ input: NetworkRequestResultHandlerInput, response: T.Type) throws -> T
 }
 
 public struct NetworkRequestResultHandlerInput {

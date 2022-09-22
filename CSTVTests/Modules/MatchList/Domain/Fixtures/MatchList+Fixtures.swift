@@ -2,22 +2,22 @@
 
 extension Match {
     static func fixture(
-        id: Int = 0,
         status: Status = .notPlayed,
         opponents: [MatchListOpponent] = [],
         leagueName: String? = nil,
         leagueImageUrl: String? = nil,
         serieName: String? = nil,
-        matchStartTime: String? = nil
+        matchStartTime: String? = nil,
+        priority: Int = 0
     ) -> Self {
         .init(
-            id: id,
             status: status,
             opponents: opponents,
             leagueName: leagueName,
             leagueImageUrl: leagueImageUrl,
             serieName: serieName,
-            matchStartTime: matchStartTime
+            matchStartTime: matchStartTime,
+            priority: priority
         )
     }
 }

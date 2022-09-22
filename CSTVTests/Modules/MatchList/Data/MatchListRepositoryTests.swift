@@ -12,41 +12,35 @@ final class MatchListRepositoryTests: XCTestCase {
         tokenRepository: tokenRepositorySpy
     )
     
-    func test_getMatches_shouldCallServiceWithCorrectParameters() async {
+    func test_getMatches_shouldCallServiceWithCorrectParameters() async throws {
         tokenRepositorySpy.getTokenToBeReturned = "token"
         
-        _ = await sut.getMatches(for: 2, beginningAt: "date")
-        
-        XCTAssertTrue(serviceSpy.getCalled)
-        XCTAssertTrue(tokenRepositorySpy.getTokenCalled)
-        XCTAssertEqual(serviceSpy.tokenPassed, "token")
-        XCTAssertEqual(serviceSpy.pagePassed, 2)
-        XCTAssertEqual(serviceSpy.begginingAtPassed, "date")
-    }
-    
-    func test_getMatches_givenFailure_shouldReturnResponseCorrectly() async {
-        serviceSpy.getToBeReturned = .failure(.unauthorized)
-        
-        let expectedResult = await sut.getMatches(for: 2, beginningAt: "")
-        
-        XCTAssertTrue(serviceSpy.getCalled)
-        guard case .failure(.unauthorized) = expectedResult else {
-            XCTFail("Expected result to be unauthorized error")
-            return
+        do {
+            _ = try await sut.getMatches(for: 2)
+        } catch {
+            XCTAssertTrue(serviceSpy.getCalled)
+            XCTAssertTrue(tokenRepositorySpy.getTokenCalled)
+            XCTAssertEqual(serviceSpy.tokenPassed, "token")
+            XCTAssertEqual(serviceSpy.pagePassed, 2)
         }
     }
     
-    func test_getMatches_givenSuccess_shouldReturnResponseCorrectly() async {
-        serviceSpy.getToBeReturned = .success([.fixture(id: 123)])
+    func test_getMatches_givenFailure_shouldReturnResponseCorrectly() async throws{
         
-        let expectedResult = await sut.getMatches(for: 2, beginningAt: "")
+        do {
+            _ = try await sut.getMatches(for: 2)
+        } catch let error as MatchListError{
+            XCTAssertTrue(serviceSpy.getCalled)
+            XCTAssertEqual(error, .generic)
+        }
+    }
+    
+    func test_getMatches_givenSuccess_shouldReturnResponseCorrectly() async throws {
+        serviceSpy.getToBeReturned = [.fixture()]
+        
+        let expectedResult = try await sut.getMatches(for: 2)
         
         XCTAssertTrue(serviceSpy.getCalled)
-        guard case .success(let response) = expectedResult else {
-            XCTFail("Expected result to be success")
-            return
-        }
-        
-        XCTAssertEqual(response.first?.id, 123)
+        XCTAssertNotNil(expectedResult.first)
     }
 }

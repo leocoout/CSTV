@@ -9,12 +9,12 @@ class GetTeamsService {
         self.networking = networking
     }
     
-    func get(with token: String, firstTeamId: Int, secondTeamId: Int) async -> Result<[TeamResponse], NetworkRequestError> {
+    func get(with token: String, firstTeamId: Int, secondTeamId: Int) async throws -> [TeamResponse] {
         let request = GetTeamsRequest(
             token: token,
             firstTeamId: firstTeamId,
             secondTeamId: secondTeamId
         )
-        return await networking.request(request, responseModel: [TeamResponse].self)
+        return try await networking.request(request, responseModel: [TeamResponse].self)
     }
 }

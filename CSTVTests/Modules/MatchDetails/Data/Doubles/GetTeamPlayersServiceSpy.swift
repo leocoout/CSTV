@@ -3,24 +3,28 @@ import NetworkingInterface
 
 @testable import CSTV
 
-final class GetTeamPlayersServiceSpy: GetTeamsService {
+final class GetTeamsServiceSpy: GetTeamsService {
     
     private(set) var getCalled: Bool = false
     private(set) var tokenPassed: String?
     private(set) var firstTeamIdPassed: Int?
     private(set) var secondTeamIdPassed: Int?
-    var getToBeReturned: Result<[TeamResponse], NetworkRequestError>?
+    var getToBeReturned: [TeamResponse]?
     
     override func get(
         with token: String,
         firstTeamId: Int,
         secondTeamId: Int
-    ) async -> Result<[TeamResponse], NetworkRequestError> {
+    ) async throws -> [TeamResponse] {
         getCalled = true
         tokenPassed = token
         firstTeamIdPassed = firstTeamId
         secondTeamIdPassed = secondTeamId
         
-        return getToBeReturned ?? .failure(.decode)
+        if let getToBeReturned {
+            return getToBeReturned
+        }
+        
+        throw TeamError.generic
     }
 }
