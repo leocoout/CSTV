@@ -67,7 +67,9 @@ private extension MatchDetailsViewModel {
             players: teamsToMatchDetailsPlayers(leftTeam, rightTeam)
         )
         
-        didUpdateMatchDetails?(matchDetails)
+        dispatchQueueProtocol.async(group: nil, qos: .unspecified, flags: .noQoS) { [weak self] in
+            self?.didUpdateMatchDetails?(matchDetails)
+        }
     }
     
     func updateListState(_ state: MatchDetailsListState) {

@@ -119,7 +119,6 @@
 		FDEA36DB28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */; };
 		FDEA36E728DAC152008BB89F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36E628DAC152008BB89F /* ErrorView.swift */; };
 		FDEA36EE28DAD9C6008BB89F /* ErrorViewDisplaySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36ED28DAD9C6008BB89F /* ErrorViewDisplaySpy.swift */; };
-		FDEA36F028DADC59008BB89F /* DateExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36EF28DADC59008BB89F /* DateExtensionsTest.swift */; };
 		FDEA36F528DADF00008BB89F /* DispatchQueueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36F428DADF00008BB89F /* DispatchQueueSpy.swift */; };
 		FDEA36F828DADF60008BB89F /* CSTVNetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36F728DADF60008BB89F /* CSTVNetworkRequestTests.swift */; };
 		FDEA36FB28DAE058008BB89F /* MatchDetailsTableViewResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEA36FA28DAE058008BB89F /* MatchDetailsTableViewResponderTests.swift */; };
@@ -247,7 +246,6 @@
 		FDEA36DA28D96ACF008BB89F /* GetTeamsUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamsUseCaseFactory.swift; sourceTree = "<group>"; };
 		FDEA36E628DAC152008BB89F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		FDEA36ED28DAD9C6008BB89F /* ErrorViewDisplaySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewDisplaySpy.swift; sourceTree = "<group>"; };
-		FDEA36EF28DADC59008BB89F /* DateExtensionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionsTest.swift; sourceTree = "<group>"; };
 		FDEA36F428DADF00008BB89F /* DispatchQueueSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueSpy.swift; sourceTree = "<group>"; };
 		FDEA36F728DADF60008BB89F /* CSTVNetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVNetworkRequestTests.swift; sourceTree = "<group>"; };
 		FDEA36FA28DAE058008BB89F /* MatchDetailsTableViewResponderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsTableViewResponderTests.swift; sourceTree = "<group>"; };
@@ -455,7 +453,6 @@
 			children = (
 				FDEA36F328DADEF6008BB89F /* Doubles */,
 				FDC6613F28D6BC0600234DA7 /* Date+Fixture.swift */,
-				FDEA36EF28DADC59008BB89F /* DateExtensionsTest.swift */,
 				FD215D3F28DC088300FCFE25 /* MatchDateFormatterTests.swift */,
 			);
 			path = Extensions;
@@ -1194,7 +1191,6 @@
 				FDC6617028D6DF7C00234DA7 /* TeamPlayersResponse+Fixture.swift in Sources */,
 				FD215D3828DBF2A000FCFE25 /* MatchListRouterTests.swift in Sources */,
 				FDC6614028D6BC0600234DA7 /* Date+Fixture.swift in Sources */,
-				FDEA36F028DADC59008BB89F /* DateExtensionsTest.swift in Sources */,
 				FD5851DE28D655A800B9ACC9 /* KeychainProviderSpy.swift in Sources */,
 				FDC661BC28D7A68F00234DA7 /* MatchListViewControllerTests.swift in Sources */,
 				FDC661C328D7A91000234DA7 /* MatchListViewModelSpy.swift in Sources */,
